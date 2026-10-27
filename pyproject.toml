@@ -1,0 +1,28 @@
+[project]
+name = "gapcaster"
+version = "0.1.0"
+description = "Offline audio-description drafting: fit narration into the silences between dialogue."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "soundfile",
+  "pyyaml",
+  "scenedetect[opencv-headless]",
+  "silero-vad",
+  "requests",
+]
+
+[project.optional-dependencies]
+mac = ["mlx-whisper", "mlx-vlm", "mlx-audio", "misaki[en]"]
+
+[project.scripts]
+gapcaster = "gapcaster.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["gapcaster"]

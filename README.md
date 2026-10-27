@@ -88,7 +88,7 @@ gapcaster run film.mp4 --out runs/b70 --backend openai --base-url http://<server
 | Speech recognition | mlx-whisper | OpenVINO GenAI WhisperPipeline (`--asr openvino`, CPU or GPU) | runs on a laptop CPU: dialogue map IoU 0.835 against MLX |
 | Text-to-speech | mlx-audio Kokoro | PyTorch Kokoro (`--tts kokoro`, CPU or XPU) | runs on a laptop CPU: line durations within 33 ms of MLX |
 
-`python eval/parity.py runs/<run>` reproduces the speech-path comparison. Set `GAPCASTER_VLM` to use a model folder that is already on disk.
+`python eval/parity.py runs/<run>` reproduces the speech-path comparison. The whole portable path has also run end to end on a laptop: `--backend openai --concurrency 4` against the local test server in `eval/local_server.py`, with `--asr openvino --tts kokoro`, on a 50-second window (7/7 lines fit; [`samples/portable-path-e2e-metrics.json`](samples/portable-path-e2e-metrics.json)). Set `GAPCASTER_VLM` to use a model folder that is already on disk.
 
 ## Outputs
 
@@ -127,7 +127,8 @@ Stage II measurements: processing time per content minute, throughput against co
 gapcaster/      pipeline: media, scenes, gapmap (Whisper MLX/OpenVINO + VAD), llm (MLX + OpenAI
                 backends), tts (MLX/PyTorch), prompts, styleguard, inject, pipeline, export,
                 review, approve, cli
-eval/           parity check for the portable speech path; manual frame spot-check
+eval/           parity check for the portable speech path; local OpenAI-compatible test server;
+                manual frame spot-check
 configs/        cast sheet for the demo film
 samples/        outputs of the 140-second demo run
 tests/          unit tests (pytest)

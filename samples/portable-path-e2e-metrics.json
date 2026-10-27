@@ -1,0 +1,51 @@
+{
+ "clip_seconds": 50.0,
+ "shots": 13,
+ "gaps": 4,
+ "lines": 7,
+ "lines_placed": 7,
+ "fit_after_loop": 7,
+ "ad_overlap_with_detected_dialogue_s": 0.0,
+ "ad_overlap_with_reference_subtitles_s": 0.35,
+ "processing_seconds": 181.0,
+ "stages": {
+  "prepare": 0.99,
+  "shots": 0.98,
+  "dialogue_map": 13.09,
+  "load_models": 7.33,
+  "shot_facts": 123.26,
+  "write_fit_verify": 21.51,
+  "verify": 13.26,
+  "mix": 0.61,
+  "injected_error_test": 25.37
+ },
+ "setup": {
+  "window": "Tears of Steel 0:40-1:30",
+  "llm": "--backend openai --concurrency 4 (local OpenAI-compatible test server, eval/local_server.py)",
+  "asr": "--asr openvino (CPU)",
+  "tts": "--tts kokoro (PyTorch, CPU)"
+ },
+ "injected_error_test": {
+  "clean_lines": 5,
+  "false_alarms_on_clean_lines": 1,
+  "easy": {
+   "planted": 5,
+   "caught": 5,
+   "catch_rate": 1.0
+  },
+  "hard": {
+   "planted": 5,
+   "caught": 5,
+   "catch_rate": 1.0,
+   "by_kind": {
+    "noun": "2/2",
+    "verb": "1/1",
+    "character": "0/0",
+    "neighbour": "2/2"
+   }
+  },
+  "planted": 5,
+  "caught": 5,
+  "catch_rate": 1.0
+ }
+}

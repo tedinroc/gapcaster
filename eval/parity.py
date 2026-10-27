@@ -40,6 +40,9 @@ def main(run):
     w_ov, _ = gapmap.transcribe_openvino(wav, s.asr_ov_model, "CPU")
     out["openvino_cpu_asr_seconds"] = round(time.time() - t, 1)
     a, b = gapmap.speech_spans(w_mlx, s.merge_pause), gapmap.speech_spans(w_ov, s.merge_pause)
+    out["asr_only_iou_mlx_vs_openvino"] = round(span_set_iou(a, b, total), 3)
+    vad = gapmap.vad_speech(wav)          # the pipeline's dialogue map is ASR ∪ VAD
+    a, b = gapmap.merge(a, vad, s.merge_pause), gapmap.merge(b, vad, s.merge_pause)
     out["speech_iou_mlx_vs_openvino"] = round(span_set_iou(a, b, total), 3)
     ga = gapmap.gaps(a, total, s.lead, s.tail, s.min_slot)
     gb = gapmap.gaps(b, total, s.lead, s.tail, s.min_slot)

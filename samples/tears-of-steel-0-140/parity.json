@@ -1,0 +1,14 @@
+{
+ "mlx_asr_seconds": 4.3,
+ "openvino_cpu_asr_seconds": 14.9,
+ "asr_only_iou_mlx_vs_openvino": 0.77,
+ "speech_iou_mlx_vs_openvino": 0.835,
+ "gaps_mlx": 9,
+ "gaps_openvino": 10,
+ "usable_gap_seconds_mlx": 92.3,
+ "usable_gap_seconds_openvino": 88.0,
+ "kokoro_pytorch_cpu_seconds": 9.1,
+ "tts_lines": 17,
+ "tts_duration_abs_diff_mean_s": 0.005,
+ "tts_duration_abs_diff_max_s": 0.033
+}

@@ -1,0 +1,458 @@
+{
+ "clip_seconds": 140.0,
+ "shots": 25,
+ "dialogue_spans": 9,
+ "gaps": 9,
+ "speech_seconds_asr": 36.5,
+ "speech_seconds_vad": 32.7,
+ "speech_seconds_merged": 41.5,
+ "usable_gap_seconds": 92.3,
+ "slots": 19,
+ "lines": 17,
+ "lines_placed": 17,
+ "skipped_repeats": 0,
+ "first_try_fit": 15,
+ "fit_after_loop": 17,
+ "mean_attempts": 1.0,
+ "rewrites": 0,
+ "ad_seconds": 51.2,
+ "ad_overlap_with_detected_dialogue_s": 0.0,
+ "flagged_lines": 1,
+ "unsupported_flags": 1,
+ "rescued_by_speed": 2,
+ "rescued_by_rewrite": 0,
+ "style_or_text_gate_rewrites": 0,
+ "shots_covered": 19,
+ "processing_seconds": 291.4,
+ "seconds_per_content_minute": 124.9,
+ "stages": {
+  "prepare": 2.47,
+  "shots": 2.11,
+  "dialogue_map": 6.13,
+  "load_models": 8.28,
+  "shot_facts": 207.92,
+  "write_fit_verify": 36.1,
+  "verify": 27.08,
+  "mix": 1.3,
+  "injected_error_test": 71.86
+ },
+ "llm": {
+  "calls": 61,
+  "seconds": 269.3,
+  "prompt_tokens": 28264,
+  "gen_tokens": 3534
+ },
+ "tts": {
+  "calls": 20,
+  "audio_seconds": 58.7
+ },
+ "mlx_peak_memory_gb": 33.2,
+ "reference_dialogue_cues": 14,
+ "ad_overlap_with_reference_subtitles_s": 0.4,
+ "injected_error_test": {
+  "clean_lines": 17,
+  "false_alarms_on_clean_lines": 1,
+  "cases": [
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD001",
+    "original": "Multiple rocket engines ignite, shooting bright white and pink flames downward.",
+    "corrupted": "Multiple rocket engines ignite, shooting bright white and pink flames downward, holding a red umbrella.",
+    "caught": true,
+    "unsupported": [
+     "holding a red umbrella"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "noun",
+    "line": "AD001",
+    "original": "Multiple rocket engines ignite, shooting bright white and pink flames downward.",
+    "corrupted": "Multiple screen engines ignite, shooting bright white and pink flames downward.",
+    "caught": true,
+    "unsupported": [
+     "screen engines"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD002",
+    "original": "A bright beam of light shoots up from the industrial site.",
+    "corrupted": "A bright beam of light shoots up from the industrial site as rain falls.",
+    "caught": true,
+    "unsupported": [
+     "rain falls"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD002",
+    "original": "A bright beam of light shoots up from the industrial site.",
+    "corrupted": "A caption: Simulation ready. Two people work at a cluttered electronics bench.",
+    "caught": true,
+    "unsupported": [
+     "A caption: Simulation ready",
+     "Two people work at a cluttered electronics bench"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD003",
+    "original": "A caption: Forty years later.",
+    "corrupted": "A caption: Forty years later in a crowded train station.",
+    "caught": true,
+    "unsupported": [
+     "crowded train station"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD003",
+    "original": "A caption: Forty years later.",
+    "corrupted": "A caption: Tears of Steel.",
+    "caught": true,
+    "unsupported": [
+     "A caption: Tears of Steel."
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD004",
+    "original": "A caption: Simulation ready. Two people work at a cluttered electronics bench.",
+    "corrupted": "A caption: Simulation ready. Two people work at a cluttered electronics bench. A sign reads EXIT.",
+    "caught": true,
+    "unsupported": [
+     "A sign reads EXIT."
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD004",
+    "original": "A caption: Simulation ready. Two people work at a cluttered electronics bench.",
+    "corrupted": "A foggy city skyline blends old rooftops with industrial machinery.",
+    "caught": true,
+    "unsupported": [
+     "A foggy city skyline",
+     "old rooftops",
+     "industrial machinery"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD005",
+    "original": "A caption: Tears of Steel.",
+    "corrupted": "A caption: Tears of Steel beside a white horse.",
+    "caught": true,
+    "unsupported": [
+     "A caption: Tears of Steel beside a white horse."
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "noun",
+    "line": "AD005",
+    "original": "A caption: Tears of Steel.",
+    "corrupted": "A caption: individuals of Steel.",
+    "caught": true,
+    "unsupported": [
+     "A caption: individuals of Steel."
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD006",
+    "original": "A foggy city skyline blends old rooftops with industrial machinery.",
+    "corrupted": "A foggy city skyline blends old rooftops with industrial machinery, holding a red umbrella.",
+    "caught": true,
+    "unsupported": [
+     "holding a red umbrella"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "verb",
+    "line": "AD006",
+    "original": "A foggy city skyline blends old rooftops with industrial machinery.",
+    "corrupted": "A foggy city skyline sits old rooftops with industrial machinery.",
+    "caught": false,
+    "unsupported": []
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD007",
+    "original": "A person lies motionless on the floor near two lit candles.",
+    "corrupted": "A person lies motionless on the floor near two lit candles as rain falls.",
+    "caught": true,
+    "unsupported": [
+     "rain falls"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD007",
+    "original": "A person lies motionless on the floor near two lit candles.",
+    "corrupted": "The sniper aims his rifle.",
+    "caught": true,
+    "unsupported": [
+     "The sniper",
+     "aims his rifle"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD008",
+    "original": "A headline: Roboticist creates killer robots.",
+    "corrupted": "A headline: Roboticist creates killer robots in a crowded train station.",
+    "caught": true,
+    "unsupported": [
+     "crowded train station"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD008",
+    "original": "A headline: Roboticist creates killer robots.",
+    "corrupted": "A circular scope frames a large, stationary mechanical structure with turrets in the fog.",
+    "caught": true,
+    "unsupported": [
+     "circular scope",
+     "large, stationary mechanical structure",
+     "turrets",
+     "fog"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD009",
+    "original": "The sniper aims his rifle.",
+    "corrupted": "The sniper aims his rifle. A sign reads EXIT.",
+    "caught": true,
+    "unsupported": [
+     "A sign reads EXIT"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "noun",
+    "line": "AD009",
+    "original": "The sniper aims his rifle.",
+    "corrupted": "The bench aims his rifle.",
+    "caught": true,
+    "unsupported": [
+     "The bench"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD010",
+    "original": "A circular scope frames a large, stationary mechanical structure with turrets in the fog.",
+    "corrupted": "A circular scope frames a large, stationary mechanical structure with turrets in the fog beside a white horse.",
+    "caught": true,
+    "unsupported": [
+     "white horse"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "verb",
+    "line": "AD010",
+    "original": "A circular scope frames a large, stationary mechanical structure with turrets in the fog.",
+    "corrupted": "A circular scope leans a large, stationary mechanical structure with turrets in the fog.",
+    "caught": false,
+    "unsupported": []
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD011",
+    "original": "The sniper peers through the rifle scope.",
+    "corrupted": "The old man peers through the rifle scope.",
+    "caught": true,
+    "unsupported": [
+     "old man"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "character",
+    "line": "AD011",
+    "original": "The sniper peers through the rifle scope.",
+    "corrupted": "The old man peers through the rifle scope.",
+    "caught": true,
+    "unsupported": [
+     "old man"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD012",
+    "original": "The airship hovers above the city.",
+    "corrupted": "The airship hovers above the city as rain falls.",
+    "caught": true,
+    "unsupported": [
+     "rain falls"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD012",
+    "original": "The airship hovers above the city.",
+    "corrupted": "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light.",
+    "caught": true,
+    "unsupported": [
+     "armed",
+     "emitting smoke"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD013",
+    "original": "The old man lies prone, eyes closed, while the sniper aims.",
+    "corrupted": "The old man lies prone, eyes closed, while the sniper aims in a crowded train station.",
+    "caught": true,
+    "unsupported": [
+     "crowded train station"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "noun",
+    "line": "AD013",
+    "original": "The old man lies prone, eyes closed, while the sniper aims.",
+    "corrupted": "The old man lies prone, candles closed, while the sniper aims.",
+    "caught": true,
+    "unsupported": [
+     "candles closed"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD014",
+    "original": "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light.",
+    "corrupted": "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light. A sign reads EXIT.",
+    "caught": true,
+    "unsupported": [
+     "A sign reads EXIT."
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "verb",
+    "line": "AD014",
+    "original": "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light.",
+    "corrupted": "A dark, armed airship hovers over red-scoped buildings, emitting smoke and bright light.",
+    "caught": true,
+    "unsupported": [
+     "red-scoped buildings"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD015",
+    "original": "The sniper aims his rifle through a scope.",
+    "corrupted": "The sniper aims his rifle through a scope beside a white horse.",
+    "caught": true,
+    "unsupported": [
+     "sniper",
+     "aims his rifle",
+     "white horse"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "character",
+    "line": "AD015",
+    "original": "The sniper aims his rifle through a scope.",
+    "corrupted": "The old man aims his rifle through a scope.",
+    "caught": true,
+    "unsupported": [
+     "old man",
+     "aims his rifle"
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD016",
+    "original": "The old man raises his head and gestures, while the sniper aims in the background.",
+    "corrupted": "The old man raises his head and gestures, while the sniper aims in the background, holding a red umbrella.",
+    "caught": true,
+    "unsupported": [
+     "holding a red umbrella"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "neighbour",
+    "line": "AD016",
+    "original": "The old man raises his head and gestures, while the sniper aims in the background.",
+    "corrupted": "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light.",
+    "caught": true,
+    "unsupported": [
+     "A dark, armed airship hovers over red-roofed buildings, emitting smoke and bright light."
+    ]
+   },
+   {
+    "set": "easy",
+    "kind": "append/swap",
+    "line": "AD017",
+    "original": "The old man looks down.",
+    "corrupted": "The sniper looks down.",
+    "caught": true,
+    "unsupported": [
+     "The sniper looks down"
+    ]
+   },
+   {
+    "set": "hard",
+    "kind": "verb",
+    "line": "AD017",
+    "original": "The old man looks down.",
+    "corrupted": "The old man displays down.",
+    "caught": true,
+    "unsupported": [
+     "displays down"
+    ]
+   }
+  ],
+  "easy": {
+   "planted": 17,
+   "caught": 17,
+   "catch_rate": 1.0
+  },
+  "hard": {
+   "planted": 17,
+   "caught": 15,
+   "catch_rate": 0.88,
+   "by_kind": {
+    "noun": "4/4",
+    "verb": "2/4",
+    "character": "2/2",
+    "neighbour": "7/7"
+   }
+  },
+  "planted": 17,
+  "caught": 17,
+  "catch_rate": 1.0
+ }
+}

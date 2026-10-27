@@ -31,6 +31,7 @@ Line: {line}"""
 
 RESTYLE = """Rewrite this audio description line to fix these problems: {problems}.
 Describe only what is visible, present tense, no guessing words (seems, appears, maybe), no camera language, no "I/we".
+If the problem is "credits": describe the visible image instead of reading production credits, sponsors or logos.
 At most {budget} words. Reply with the line only.
 Line: {line}"""
 

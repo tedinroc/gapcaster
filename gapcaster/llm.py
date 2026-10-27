@@ -14,6 +14,8 @@ import time
 
 class Stats:
     def __init__(self):
+        import threading
+        self.lock = threading.Lock()
         self.calls = 0
         self.seconds = 0.0
         self.prompt_tokens = 0
@@ -68,12 +70,14 @@ class OpenAIBackend:
         r = self.requests.post(self.url, json=body, timeout=600)
         r.raise_for_status()
         data = r.json()
-        self.stats.calls += 1
-        self.stats.seconds += time.time() - t
         u = data.get("usage") or {}
-        self.stats.prompt_tokens += u.get("prompt_tokens", 0)
-        self.stats.gen_tokens += u.get("completion_tokens", 0)
-        return data["choices"][0]["message"]["content"].strip()
+        with self.stats.lock:
+            self.stats.calls += 1
+            self.stats.seconds += time.time() - t
+            self.stats.prompt_tokens += u.get("prompt_tokens", 0)
+            self.stats.gen_tokens += u.get("completion_tokens", 0)
+        text = data["choices"][0]["message"]["content"] or ""
+        return re.sub(r"<think>.*?</think>", "", text, flags=re.S).strip()
 
 
 def make(settings):
@@ -91,3 +95,14 @@ def parse_json(text: str):
         return json.loads(m.group(0))
     except json.JSONDecodeError:
         return None
+
+
+def pmap(model, fn, items, workers: int = 1):
+    """Map fn over items; concurrent only for backends that can serve parallel requests."""
+    if workers <= 1 or isinstance(model, MLXBackend):
+        for it in items:
+            yield fn(it)
+        return
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        yield from ex.map(fn, items)

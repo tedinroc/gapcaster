@@ -35,6 +35,30 @@ def transcribe(audio_path, model: str, lang: str | None = "en"):
     return words, res.get("text", "")
 
 
+def transcribe_openvino(audio_path, model: str, device: str = "CPU", lang: str | None = "en"):
+    """Same output as transcribe(), from OpenVINO GenAI's WhisperPipeline (CPU here, Arc GPU on a B70)."""
+    import os
+
+    import openvino_genai as og
+    import soundfile as sf
+    path = model if os.path.isdir(model) else __import__("huggingface_hub").snapshot_download(model)
+    pipe = og.WhisperPipeline(path, device, word_timestamps=True)
+    cfg = pipe.get_generation_config()
+    if lang:
+        cfg.language = f"<|{lang}|>"
+    cfg.task, cfg.return_timestamps = "transcribe", True
+    a, _ = sf.read(str(audio_path), dtype="float32")
+    res = pipe.generate(a.tolist(), cfg)
+    words = []
+    for w in res.words or []:
+        s0, e0 = float(w.start_ts), float(w.end_ts)
+        if e0 - s0 > 1.5:            # a first word after long silence absorbs the silence; keep its last 1.5 s at most
+            s0 = e0 - 1.5
+        if e0 > s0 and _norm(w.word) not in HALLUCINATIONS:
+            words.append({"w": w.word.strip(), "start": s0, "end": e0, "p": 1.0})
+    return words, " ".join(res.texts)
+
+
 def vad_speech(audio_path, threshold: float = 0.5):
     """Second, independent speech detector (Silero VAD, MIT). Empty if not installed."""
     try:

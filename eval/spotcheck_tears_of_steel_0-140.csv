@@ -1,0 +1,18 @@
+line,start_s,verdict,note
+AD001,11.3,accurate,engines igniting with white and pink flames
+AD002,18.4,accurate,beam of light rising from the industrial site
+AD003,45.5,accurate,title card shown during the previous line of dialogue; read in the next silence
+AD004,54.0,accurate,on-screen text and two people at an electronics bench
+AD005,62.6,accurate,title card read; the brain close-up on screen is not described
+AD006,69.9,accurate,foggy skyline with old rooftops and industrial structures
+AD007,74.8,minor,dark interior; the lying figure is hard to see and no candles are visible at mid-line
+AD008,79.4,accurate,headline read correctly
+AD009,82.8,accurate,the sniper aims his rifle
+AD010,85.1,accurate,scope view of a large mechanical structure in fog
+AD011,92.4,accurate,close-up of the sniper at the scope
+AD012,95.4,accurate,airship over the city
+AD013,98.2,minor,"""prone"" is wrong: the old man lies on his back; eyes not visible"
+AD014,102.4,minor,airship over red roofs; smoke is not clearly visible
+AD015,112.1,minor,scope point-of-view shot; the sniper himself is not on screen (verifier also flagged it)
+AD016,119.0,accurate,old man raises his head and gestures; sniper in the background
+AD017,133.2,accurate,old man seated looking down

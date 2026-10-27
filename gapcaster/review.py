@@ -32,7 +32,38 @@ video{width:100%;border-radius:10px;background:#000}
 .chip.ok{color:var(--ok)}.chip.warn{color:var(--warn)}
 .facts{font-size:12.5px;color:var(--muted)}
 audio{width:100%;height:32px}
+.bar2{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--rule)}
+.bar2 b{font-variant-numeric:tabular-nums}
+button{font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:8px;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer}
+button:focus-visible{outline:2px solid var(--ad);outline-offset:2px}
+button.ok{border-color:var(--ok);color:var(--ok)}button.no{border-color:#b91c1c;color:#b91c1c}button.primary{background:var(--ad);border-color:var(--ad);color:#fff}
+.acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.line[data-state=approved]{border-color:var(--ok)}.line[data-state=edited]{border-color:var(--ad)}.line[data-state=rejected]{opacity:.55}
+.state{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.txt[contenteditable=true]{outline:2px dashed var(--ad);outline-offset:4px;border-radius:4px}
 @media (max-width:820px){.line{grid-template-columns:1fr}}
+"""
+
+JS = r"""
+const KEY='gapcaster-review:'+document.body.dataset.run;
+let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+function paint(){let c={approved:0,edited:0,rejected:0,pending:0};
+ document.querySelectorAll('.line').forEach(el=>{const id=el.dataset.id,s=st[id];const state=s?s.status:'pending';el.dataset.state=state;
+  el.querySelector('.state').textContent=state;if(s&&s.text)el.querySelector('.txt').textContent=s.text;c[state]++;});
+ for(const k in c)document.getElementById('n-'+k).textContent=c[k];}
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const el=b.closest('.line'),id=el.dataset.id,t=el.querySelector('.txt');
+ if(b.dataset.act==='approve'){st[id]={status:'approved',text:t.textContent.trim()};}
+ if(b.dataset.act==='reject'){st[id]={status:'rejected',text:t.textContent.trim()};}
+ if(b.dataset.act==='edit'){if(t.isContentEditable){t.contentEditable=false;b.textContent='Edit';const orig=el.dataset.orig;const nt=t.textContent.trim();st[id]={status:nt===orig?'approved':'edited',text:nt};}
+  else{t.contentEditable=true;t.focus();b.textContent='Save';return;}}
+ save();paint();});
+function download(name,data,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type}));a.download=name;a.click();}
+document.getElementById('dl-json').onclick=()=>{const lines=[...document.querySelectorAll('.line')].map(el=>({id:el.dataset.id,status:(st[el.dataset.id]||{}).status||'pending',text:(st[el.dataset.id]||{}).text||el.dataset.orig}));
+ download('approved.json',JSON.stringify({run:document.body.dataset.run,lines},null,1),'application/json');};
+document.getElementById('dl-vtt').onclick=()=>{let v='WEBVTT\nKind: descriptions\n\n';document.querySelectorAll('.line').forEach(el=>{const s=st[el.dataset.id];if(!s||s.status==='rejected'||s.status==='pending')return;
+ v+=el.dataset.id+'\n'+el.dataset.a+' --> '+el.dataset.b+'\n'+s.text+'\n\n';});download('approved.vtt',v,'text/vtt');};
+paint();
 """
 
 
@@ -67,19 +98,22 @@ def build(run_dir):
     shots = {s["id"]: s for s in doc["shots"]}
     n = max(1, m["lines"])
     inj = m.get("injected_error_test")
-    kpis = [
-        (f'{m["fit_after_loop"]}/{m["lines"]}', "lines fit their silence"),
-        (f'{m["first_try_fit"]}/{m["lines"]}', "fit on the first draft"),
-        (f'{m["ad_overlap_with_detected_dialogue_s"]:.1f} s', "AD over dialogue"),
-        (f'{m["seconds_per_content_minute"]:.0f} s', "processing per content minute"),
-        (f'{m["shots"]}', "shots described"),
-    ]
+    kpis = [(f'{m["fit_after_loop"]}/{m["lines"]}', "lines fit their silence"),
+            (f'{m["first_try_fit"]}/{m["lines"]}', "fit on the first draft")]
     if "ad_overlap_with_reference_subtitles_s" in m:
-        kpis.insert(3, (f'{m["ad_overlap_with_reference_subtitles_s"]:.1f} s', "AD over official subtitle cues"))
-    if inj:
+        kpis.append((f'{m["ad_overlap_with_reference_subtitles_s"]:.1f} s', "AD over official subtitle cues"))
+    kpis += [(f'{m["ad_overlap_with_detected_dialogue_s"]:.1f} s', "AD over detected speech"),
+             (f'{m["seconds_per_content_minute"]:.0f} s', "processing per content minute"),
+             (f'{m["shots"]}', "shots analysed")]
+    if inj and "hard" in inj:
+        kpis.append((f'{inj["easy"]["caught"]}/{inj["easy"]["planted"]} · {inj["hard"]["caught"]}/{inj["hard"]["planted"]}', "planted errors flagged (easy · hard)"))
+    elif inj:
         kpis.append((f'{inj["caught"]}/{inj["planted"]}', "planted false details flagged"))
-    out = [f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>GapCaster review</title><style>{CSS}</style><div class=wrap>"]
+    run_id = html.escape(f'{doc["source"]["file"]}:{doc["source"]["start"]:.0f}-{doc["source"]["end"]:.0f}')
+    out = [f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>GapCaster review</title><style>{CSS}</style><body data-run=\"{run_id}\"><div class=wrap>"]
     out.append(f'<div><h1>Gap<span>Caster</span> review</h1><div class=sub>{html.escape(doc["source"]["file"])} · {doc["source"]["start"]:.0f}–{doc["source"]["end"]:.0f} s · {m["lines"]} draft lines awaiting describer approval</div></div>')
+    out.append('<div class=bar2><span>Describer review:</span> <b id=n-approved>0</b> approved · <b id=n-edited>0</b> edited · <b id=n-rejected>0</b> rejected · <b id=n-pending>0</b> pending <span style="flex:1"></span>'
+               '<button class=primary id=dl-json>Download approved.json</button><button id=dl-vtt>Download approved .vtt</button></div>')
     out.append('<div class=kpis>' + "".join(f'<div class=kpi><b>{a}</b><small>{b}</small></div>' for a, b in kpis) + '</div>')
     out.append(f'<div class=tl>{timeline_svg(doc)}<div class=legend><span><i style="background:var(--dlg)"></i>dialogue</span><span><i style="background:var(--gap)"></i>silence</span><span><i style="background:var(--ad)"></i>audio description</span></div></div>')
     if (run / "clip_with_ad.mp4").exists():
@@ -99,10 +133,12 @@ def build(run_dir):
         chips += "".join(f'<span class="chip warn">{html.escape(f)}</span>' for f in r["flags"])
         facts = "<br>".join(f'{i}: {html.escape(str((shots[i].get("facts") or {}).get("key", "")))}' for i in r["shots"] if i in shots)
         audio = f'<audio controls preload=none src="{html.escape(r["audio"])}"></audio>' if r.get("audio") else ""
-        out.append(f'''<div class=line><div>{f'<img alt="" src="{img}">' if img else ''}<div class=t>{r["id"]} · {r["start"]:.1f}s</div></div>
+        from .export import ts as _ts
+        a_ts, b_ts = _ts(r["start"], "."), _ts(r["start"] + (r["duration"] or 0), ".")
+        out.append(f'''<div class=line data-id="{r["id"]}" data-orig="{html.escape(r["text"])}" data-a="{a_ts}" data-b="{b_ts}"><div>{f'<img alt="" src="{img}">' if img else ''}<div class=t>{r["id"]} · {r["start"]:.1f}s</div><div class=state>pending</div></div>
 <div><div class=txt>{html.escape(r["text"])}</div>{f'<div class=att><b>Earlier drafts</b>{atts}</div>' if atts else ''}<div class=facts>Evidence · {facts}</div></div>
-<div><div class=fit>{(r["duration"] or 0):.1f} s of {r["avail"]:.1f} s silence{f" · {r['speed']}×" if r.get("speed") and r["speed"] != 1.0 else ""}</div><div class=bar><i style="width:{fit_pct:.0f}%"></i></div>{chips}{audio}</div></div>''')
-    out.append("</div>")
+<div><div class=fit>{(r["duration"] or 0):.1f} s of {r["avail"]:.1f} s silence{f" · {r['speed']}×" if r.get("speed") and r["speed"] != 1.0 else ""}</div><div class=bar><i style="width:{fit_pct:.0f}%"></i></div>{chips}{audio}<div class=acts><button class=ok data-act=approve>Approve</button><button data-act=edit>Edit</button><button class=no data-act=reject>Reject</button></div></div></div>''')
+    out.append(f"</div><script>{JS}</script>")
     p = run / "review.html"
     p.write_text("\n".join(out))
     return str(p)

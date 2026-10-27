@@ -25,5 +25,10 @@ class Settings:
     tts_voice: str = "af_heart"
     llm_backend: str = "mlx"        # "mlx" (in-process, Mac) or "openai" (any OpenAI-compatible server, e.g. vLLM on Arc Pro B70)
     llm_base_url: str = "http://127.0.0.1:8000/v1"
-    llm_model_name: str = "qwen"
+    llm_model_name: str = "qwen"             # must match vLLM --served-model-name
+    concurrency: int = 8                     # parallel requests to an OpenAI-compatible server
+    asr_backend: str = "mlx"                 # "mlx" (mlx-whisper) or "openvino" (OpenVINO GenAI WhisperPipeline)
+    asr_ov_model: str = os.environ.get("GAPCASTER_OV_WHISPER", "OpenVINO/whisper-large-v3-turbo-int8-ov")
+    asr_device: str = "CPU"                  # OpenVINO device: CPU or GPU (Arc)
+    tts_backend: str = "mlx"                 # "mlx" (mlx-audio) or "kokoro" (PyTorch, CPU or Intel XPU)
     extra: dict = field(default_factory=dict)

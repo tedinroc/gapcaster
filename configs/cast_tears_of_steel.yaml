@@ -1,9 +1,13 @@
 # Cast sheet entered by the describer before the run: one entry per recurring character.
 # Labels without a known name (e.g. "the sniper") are used like names in the script.
+# named_from: seconds from the start of the programme when the film first says the name;
+# before that the writer describes the person by look, as AD guidelines advise.
 - name: Celia
   look: young woman, red hair tied back, blue jacket under a dark vest, a robotic hand
+  named_from: 25
 - name: Thom
   look: young man, dark hair, black leather jacket over a printed T-shirt
+  named_from: 23
 - name: the sniper
   look: young Black man, short dark hair, dark padded jacket, futuristic rifle with a scope
 - name: the old man

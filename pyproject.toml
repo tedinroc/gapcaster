@@ -15,7 +15,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-mac = ["mlx-whisper", "mlx-vlm", "mlx-audio", "misaki[en]"]
+mac = ["mlx-whisper", "mlx-vlm", "mlx-audio", "misaki[en]", "spacy"]
+intel = ["openvino-genai", "kokoro", "torch", "misaki[en]", "spacy"]
 
 [project.scripts]
 gapcaster = "gapcaster.cli:main"

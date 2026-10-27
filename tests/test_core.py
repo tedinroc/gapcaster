@@ -60,3 +60,26 @@ def test_merge_takes_union_of_detectors():
     b = [{"start": 2.3, "end": 3.0}, {"start": 8.0, "end": 8.5}]
     m = gapmap.merge(a, b, merge_pause=0.6)
     assert [(x["start"], x["end"]) for x in m] == [(1.0, 3.0), (8.0, 8.5)]
+
+
+def test_first_person_is_case_insensitive_for_we():
+    hard, _ = styleguard.check("We follow Celia across the bridge.")
+    assert "first-person" in hard
+
+
+def test_roman_numeral_and_quoted_text_pass():
+    assert styleguard.check("A caption: Act I.") == ([], [])
+    assert styleguard.check('A sign reads "We are open".') == ([], [])
+
+
+def test_slots_separate_on_screen_and_cut_away_shots():
+    shots = [{"id": "S1", "start": 0, "end": 4}, {"id": "S2", "start": 4, "end": 9}]
+    slots = build_slots([{"start": 5.0, "end": 8.0}], shots, Settings())
+    assert slots[0]["shots"] == ["S2"] and slots[0]["prev"] == ["S1"]
+
+
+def test_cast_sheet_hides_names_before_named_from():
+    from gapcaster.pipeline import cast_text
+    cast = [{"name": "Celia", "look": "young woman, red hair", "named_from": 23}]
+    assert "Celia:" not in cast_text(cast, 10.0) and "do not say 'Celia'" in cast_text(cast, 10.0)
+    assert cast_text(cast, 30.0).startswith("Celia:")

@@ -9,7 +9,7 @@ import re
 HARD = {
     "camera-language": r"\b(we see|we hear|we watch|the camera|camera (?:pans|zooms|cuts)|shot of|the scene shows|on screen we)\b",
     "speculation": r"\b(seems?|seemingly|appears? to|apparently|probably|perhaps|maybe|possibly|it looks like|presumably|likely)\b",
-    "first-person": r"\b(I|we|us|our)\b",
+    "first-person": r"\bI\b(?=\s+(?:am|was|have|had|see|saw|think|hear|notice|feel|can|will|would|do|did|know)\b)|\bI['’](?:m|ve|d|ll)\b|\b(?i:we|us|our)\b",
 }
 SOFT = {
     "inner-state": r"\b(sad|happy|angry|upset|worried|nervous|scared|afraid|excited|confused|annoyed|frustrated|guilty|jealous|in love|exhausted|exhaustion|tired|weary|relieved|determined|hopeful|desperate|bored)\b",
@@ -20,6 +20,7 @@ SOFT = {
 
 def check(line: str, max_words: int | None = None):
     hard, soft = [], []
+    line = re.sub(r"[\"“][^\"”]*[\"”]|'[^']{3,}'", "", line)   # quoted on-screen text is read verbatim, not judged
     low = line.lower()
     for k, pat in HARD.items():
         flags = 0 if k == "first-person" else re.I

@@ -67,8 +67,18 @@ class OpenAIBackend:
                 "max_tokens": max_tokens, "temperature": temperature, "top_p": 0.8,
                 "chat_template_kwargs": {"enable_thinking": False}}
         t = time.time()
-        r = self.requests.post(self.url, json=body, timeout=600)
-        r.raise_for_status()
+        for attempt in range(4):        # retry transient failures: connection, timeout, 429, 5xx
+            try:
+                r = self.requests.post(self.url, json=body, timeout=600)
+                if r.status_code == 429 or r.status_code >= 500:
+                    raise self.requests.HTTPError(f"HTTP {r.status_code}", response=r)
+                r.raise_for_status()
+                break
+            except (self.requests.ConnectionError, self.requests.Timeout, self.requests.HTTPError) as e:
+                status = getattr(getattr(e, "response", None), "status_code", None)
+                if attempt == 3 or (status is not None and 400 <= status < 500 and status != 429):
+                    raise
+                time.sleep(2 ** attempt)
         data = r.json()
         u = data.get("usage") or {}
         with self.stats.lock:
@@ -77,7 +87,8 @@ class OpenAIBackend:
             self.stats.prompt_tokens += u.get("prompt_tokens", 0)
             self.stats.gen_tokens += u.get("completion_tokens", 0)
         text = data["choices"][0]["message"]["content"] or ""
-        return re.sub(r"<think>.*?</think>", "", text, flags=re.S).strip()
+        # a server that ignores enable_thinking returns "reasoning</think>answer" (the opening tag is in the prompt)
+        return text.rsplit("</think>", 1)[-1].strip() if "</think>" in text else text.strip()
 
 
 def make(settings):

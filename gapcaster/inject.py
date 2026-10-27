@@ -100,13 +100,18 @@ def injected_error_test(model, lines, shots_by_id, n: int, workers: int = 1):
 
     def run(job):
         level, kind, r, f, bad = job
-        v = llm.parse_json(model.chat(prompts.VERIFY.format(facts=f, line=bad), max_tokens=120, temperature=0.0)) or {}
+        v = llm.parse_json(model.chat(prompts.VERIFY.format(facts=f, line=bad), max_tokens=120, temperature=0.0))
+        ok = isinstance(v, dict) and isinstance(v.get("supported"), bool)
         return {"set": level, "kind": kind, "line": r["id"], "original": r["text"], "corrupted": bad,
-                "caught": v.get("supported") is False, "unsupported": v.get("unsupported", [])}
+                "caught": ok and v["supported"] is False, "verdict_missing": not ok,
+                "unsupported": v.get("unsupported", []) if ok else []}
 
     cases = list(llm.pmap(model, run, jobs, workers))
+    # "flags on unmodified lines": the verifier's own flags on lines nobody corrupted. They are not
+    # all false alarms; some point at real perception errors (see the manual frame check).
     out = {"clean_lines": len(pool),
            "false_alarms_on_clean_lines": sum(1 for r in pool if (r.get("verify") or {}).get("supported") is False),
+           "verdict_missing": sum(1 for c in cases if c["verdict_missing"]),
            "cases": cases}
     for level in ("easy", "hard"):
         cs = [c for c in cases if c["set"] == level]

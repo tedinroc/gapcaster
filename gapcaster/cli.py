@@ -14,7 +14,7 @@ def main():
     r.add_argument("--end", type=float, default=None)
     r.add_argument("--cast", help="YAML cast sheet: [{name, look}]")
     r.add_argument("--ref-srt", help="reference subtitles, used only for evaluation")
-    r.add_argument("--lang", default="en")
+    r.add_argument("--lang", default="en", choices=["en"], help="narration language (English; Traditional Chinese is planned)")
     r.add_argument("--backend", default="mlx", choices=["mlx", "openai"])
     r.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     r.add_argument("--model", default="qwen", help="model name on the OpenAI-compatible server (vLLM --served-model-name)")
@@ -28,7 +28,7 @@ def main():
     x = sub.add_parser("export", help="re-mix a run from the describer's approved.json")
     x.add_argument("run_dir")
     x.add_argument("--approved", required=True)
-    x.add_argument("--tts", default="mlx", choices=["mlx", "kokoro"])
+    x.add_argument("--tts", default=None, choices=["mlx", "kokoro"], help="TTS runtime for edited lines (default: the run's own)")
     a = ap.parse_args()
     if a.cmd == "run":
         from .pipeline import run
@@ -40,7 +40,7 @@ def main():
         print(json.dumps({k: v for k, v in doc["metrics"].items() if k != "injected_error_test"}, indent=1))
     elif a.cmd == "export":
         from .approve import apply
-        print(json.dumps(apply(a.run_dir, a.approved, Settings(tts_backend=a.tts)), indent=1))
+        print(json.dumps(apply(a.run_dir, a.approved, tts_backend=a.tts), indent=1))
     else:
         from .review import build
         print(build(a.run_dir))

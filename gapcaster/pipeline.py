@@ -14,7 +14,26 @@ from .config import Settings
 from .tts import TTS
 
 
-CREDITS = re.compile(r"supported by|presents|film fund|foundation|copyright|©|www\.|\.org|\.com|produced by|directed by", re.I)
+CREDITS = re.compile(r"\b(?:supported by|film fund|foundation presents|copyright|produced by|directed by|music by|"
+                     r"screenplay by|written by|render farm|end credits|credits)\b|\bpresents\.?$|©|www\.|\.(?:org|com)\b", re.I)
+
+
+def clean(reply: str) -> str:
+    """Normalise a model reply to one line of narration; '' when it is unusable (empty, SKIP, reasoning only)."""
+    t = reply.rsplit("</think>", 1)[-1] if "</think>" in reply else reply
+    if "<think>" in t:
+        return ""
+    t = t.strip().strip('"').strip()
+    if not t or re.fullmatch(r"skip\W*", t, re.I) or not re.search(r"[A-Za-z]{2,}", t):
+        return ""
+    return t
+
+
+def portable(value):
+    """Settings for script.json without local filesystem paths."""
+    if isinstance(value, str) and value.startswith(("/", "~")):
+        return Path(value).name
+    return value
 
 
 class Timer:
@@ -129,7 +148,7 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
     with T("shot_facts"):
         def facts_for(sh):
             ctx = " ".join(x["text"] for x in spans if gapmap.overlap(sh["start"] - 3, sh["end"] + 3, x["start"], x["end"]) > 0)[:300]
-            reply = model.chat(prompts.SHOT.format(cast=cast_text(cast, sh["start"]), ctx=ctx or "(none)", dur=sh["end"] - sh["start"]),
+            reply = model.chat(prompts.SHOT.format(cast=cast_text(cast, start + sh["start"]), ctx=ctx or "(none)", dur=sh["end"] - sh["start"]),
                                images=sh["frames"], max_tokens=220, temperature=0.2)
             return sh, reply
         # shots are independent: an OpenAI-compatible server (vLLM) batches them; in-process MLX runs them one by one
@@ -156,12 +175,12 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
                     read_text.add(t.lower())
             text_note = ("On-screen text not read yet (read the story-relevant part, e.g. a headline): "
                          + " | ".join(f'"{u}"' for u in unread)) if unread else ""
-            text = model.chat(prompts.WRITE.format(text_note=text_note,
-                cast=cast_text(cast, slot["start"]), recent=" | ".join(recent[-3:]) or "(none)",
+            text = clean(model.chat(prompts.WRITE.format(text_note=text_note,
+                cast=cast_text(cast, start + slot["start"]), recent=" | ".join(recent[-3:]) or "(none)",
                 before=dialogue_near(spans, slot["start"], slot["end"], True),
                 after=dialogue_near(spans, slot["start"], slot["end"], False),
-                facts=facts, avail=avail, budget=budget), max_tokens=80).strip().strip('"')
-            if text.upper().startswith("SKIP") or not text:
+                facts=facts, avail=avail, budget=budget), max_tokens=80))
+            if not text:
                 continue
             if styleguard.is_repeat(text, recent):
                 skipped_repeats += 1
@@ -171,10 +190,10 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
             story = unread
             if story and not any(styleguard.content_words(u) & styleguard.content_words(text) for u in story):
                 attempts.append({"text": text, "seconds": None, "fit": False, "reason": "text gate: on-screen text not read"})
-                text = model.chat(prompts.READ_TEXT.format(text=" | ".join(story), budget=budget, line=text),
-                                  max_tokens=80).strip().strip('"')
+                text = clean(model.chat(prompts.READ_TEXT.format(text=" | ".join(story), budget=budget, line=text),
+                                        max_tokens=80)) or text
             for k in range(s.max_rewrites + 1):
-                hard, soft = styleguard.check(text, budget)
+                hard, soft = styleguard.check(text, budget, exempt=unread)
                 if CREDITS.search(text):
                     hard.append("credits")
                 if hard:
@@ -182,8 +201,8 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
                     if k == s.max_rewrites:
                         status = "style"
                         break
-                    text = model.chat(prompts.RESTYLE.format(problems=", ".join(hard), budget=budget, line=text),
-                                      max_tokens=80).strip().strip('"')
+                    text = clean(model.chat(prompts.RESTYLE.format(problems=", ".join(hard), budget=budget, line=text),
+                                            max_tokens=80)) or text
                     continue
                 fit = False
                 for sp in s.speeds:
@@ -201,15 +220,21 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
                 if k == s.max_rewrites:
                     break
                 target = max(2, math.floor(len(text.split()) * avail / d1 * 0.9))
-                text = model.chat(prompts.SHORTEN.format(dur=d1, avail=avail, target=target, line=text),
-                                  max_tokens=60).strip().strip('"')
-            hard, soft = styleguard.check(text, budget)
+                shorter = clean(model.chat(prompts.SHORTEN.format(dur=d1, avail=avail, target=target, line=text),
+                                           max_tokens=60))
+                if not shorter:
+                    break
+                text = shorter
+            hard, soft = styleguard.check(text, budget, exempt=unread)
             conf = min([float((by_id[i].get("facts") or {}).get("confidence", 0.5) or 0.5) for i in slot["shots"]])
             flags = list(soft)
             if conf < 0.6:
                 flags.append(f"low vision confidence {conf:.2f}")
-            if status != "fit":
-                flags.append("needs extended AD (pause) or a cut")
+            if status == "style":
+                last = attempts[-1]["reason"] if attempts else "style"
+                flags.append(f"held by the style gate ({last.replace('style: ', '')}); describer decides")
+            elif status != "fit":
+                flags.append("does not fit: needs extended AD (pause) or a cut")
             n = len(lines) + 1
             rec = {"id": f"AD{n:03d}", "start": round(begin, 2), "window_end": slot["end"], "avail": round(avail, 2),
                    "text": text, "duration": round(dur, 2) if audio is not None else None, "speed": speed,
@@ -230,11 +255,15 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
             t1 = rec["start"] + (rec["duration"] or rec["avail"])
             ids = [sh["id"] for sh in shot_list if gapmap.overlap(rec["start"], t1, sh["start"], sh["end"]) > 0.05] or rec["shots"]
             f = facts_text(by_id, ids) + ("\nOn-screen text shown just before: " + " | ".join(rec["text_read"]) if rec["text_read"] else "")
-            v = llm.parse_json(model.chat(prompts.VERIFY.format(facts=f, line=rec["text"]), max_tokens=120, temperature=0.0)) or {}
+            v = llm.parse_json(model.chat(prompts.VERIFY.format(facts=f, line=rec["text"]), max_tokens=120, temperature=0.0))
+            if not isinstance(v, dict) or not isinstance(v.get("supported"), bool):
+                v = {"error": "no verdict"}
             return rec, ids, v
         for rec, ids, v in llm.pmap(model, check, lines, s.concurrency):
             rec["verify"], rec["verify_shots"] = v, ids
-            if v.get("supported") is False:
+            if "error" in v:
+                rec["flags"].append("verifier: no verdict")
+            elif v.get("supported") is False:
                 rec["flags"].append("unsupported: " + "; ".join(v.get("unsupported", []))[:160])
 
     with T("mix"):
@@ -290,7 +319,7 @@ def run(video, out_dir, start=0.0, end=None, cast_path=None, ref_srt=None, setti
         with T("injected_error_test"):
             metrics["injected_error_test"] = injected_error_test(model, lines, by_id, inject, s.concurrency)
 
-    doc = {"source": {"file": Path(video).name, "start": start, "end": start + total}, "settings": vars(s) | {"speeds": list(s.speeds)},
+    doc = {"source": {"file": Path(video).name, "start": start, "end": start + total}, "settings": {k: portable(v) for k, v in vars(s).items()} | {"speeds": list(s.speeds)},
            "cast": cast, "shots": [{k: v for k, v in sh.items()} for sh in shot_list], "dialogue": spans,
            "dialogue_asr": asr_spans, "speech_vad": vad_spans, "gaps": gaps,
            "slots": slots, "lines": lines, "metrics": metrics}

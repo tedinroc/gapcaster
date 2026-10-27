@@ -83,3 +83,70 @@ def test_cast_sheet_hides_names_before_named_from():
     cast = [{"name": "Celia", "look": "young woman, red hair", "named_from": 23}]
     assert "Celia:" not in cast_text(cast, 10.0) and "do not say 'Celia'" in cast_text(cast, 10.0)
     assert cast_text(cast, 30.0).startswith("Celia:")
+
+
+def test_possessives_do_not_hide_rules():
+    assert styleguard.check("Celia's hand probably reaches for Thom's arm.")[0] == ["speculation"]
+
+
+def test_on_screen_text_read_verbatim_is_exempt():
+    line = "A caption reads: Look, Celia, we have to follow our passions."
+    assert "first-person" in styleguard.check(line)[0]
+    assert styleguard.check(line, exempt=["Look, Celia, we have to follow our passions"])[0] == []
+
+
+def test_timestamps_round_into_the_next_second():
+    assert ts(59.9996) == "00:01:00,000"
+    assert ts(3599.9999, ".") == "01:00:00.000"
+
+
+def test_model_replies_are_cleaned():
+    from gapcaster.pipeline import clean
+    assert clean("SKIP") == "" and clean("  ") == "" and clean("<think>long reasoning") == ""
+    assert clean("reasoning...</think>\n\n\"The sniper aims.\"") == "The sniper aims."
+
+
+def test_credits_pattern_spares_ordinary_description():
+    from gapcaster.pipeline import CREDITS
+    assert CREDITS.search("Blender Foundation presents")
+    assert CREDITS.search("Credits: render farm JustaCluster")
+    assert not CREDITS.search("She presents a gift to Thom.")
+    assert not CREDITS.search("Cracks run through the concrete foundation.")
+
+
+def test_cut_free_clip_is_one_shot(tmp_path):
+    import shutil
+    import subprocess
+    import pytest
+    if not shutil.which("ffmpeg"):
+        pytest.skip("ffmpeg not installed")
+    clip = tmp_path / "still.mp4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "color=c=gray:s=320x240:d=3", "-r", "24", str(clip)], check=True)
+    from gapcaster import scenes
+    assert len(scenes.shots(clip)) == 1
+
+
+def test_export_keeps_approved_drops_rejected_and_reports_unplaced(tmp_path):
+    import json
+    import numpy as np
+    import soundfile as sf
+    from gapcaster import approve
+    run = tmp_path
+    (run / "lines").mkdir()
+    sf.write(run / "lines" / "AD001.wav", np.zeros(2400, dtype=np.float32), 24000)
+    sf.write(run / "lines" / "AD002.wav", np.zeros(2400, dtype=np.float32), 24000)
+    lines = [
+        {"id": "AD001", "start": 1.0, "duration": 0.1, "avail": 2.0, "text": "A.", "audio": "lines/AD001.wav", "speed": 1.0},
+        {"id": "AD002", "start": 3.0, "duration": 0.1, "avail": 2.0, "text": "B.", "audio": "lines/AD002.wav", "speed": 1.0},
+        {"id": "AD003", "start": 5.0, "duration": None, "avail": 2.0, "text": "C.", "speed": 1.0},
+    ]
+    (run / "script.json").write_text(json.dumps({"lines": lines, "metrics": {"clip_seconds": 8.0}, "settings": {}}))
+    subprocess_free = {"lines": [{"id": "AD001", "status": "approved", "text": "A."},
+                                 {"id": "AD002", "status": "rejected", "text": "B."},
+                                 {"id": "AD003", "status": "approved", "text": "C."}]}
+    (run / "approved.json").write_text(json.dumps(subprocess_free))
+    approve.media.mux_mix = lambda *a, **k: None          # no video in this unit test
+    out = approve.apply(run, run / "approved.json")
+    report = {r["id"]: r for r in json.loads((run / "approved" / "report.json").read_text())}
+    assert out["kept"] == 1 and report["AD001"]["kept"] and not report["AD002"]["kept"]
+    assert not report["AD003"]["kept"] and "not placed" in report["AD003"]["reason"]

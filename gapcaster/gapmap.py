@@ -6,7 +6,7 @@ HALLUCINATIONS = {"you", "thank you", "thanks for watching", "bye", ""}
 
 
 def _norm(t: str) -> str:
-    return re.sub(r"[^a-z' ]", "", t.lower()).strip()
+    return re.sub(r"[^a-z0-9' ]", "", t.lower()).strip()
 
 
 def transcribe(audio_path, model: str, lang: str | None = "en"):
@@ -54,7 +54,7 @@ def transcribe_openvino(audio_path, model: str, device: str = "CPU", lang: str |
         s0, e0 = float(w.start_ts), float(w.end_ts)
         if e0 - s0 > 1.5:            # a first word after long silence absorbs the silence; keep its last 1.5 s at most
             s0 = e0 - 1.5
-        if e0 > s0 and _norm(w.word) not in HALLUCINATIONS:
+        if e0 > s0 and _norm(w.word):        # keep every real word; only pure punctuation is dropped
             words.append({"w": w.word.strip(), "start": s0, "end": e0, "p": 1.0})
     return words, " ".join(res.texts)
 

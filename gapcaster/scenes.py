@@ -3,10 +3,10 @@ from scenedetect import AdaptiveDetector, detect
 
 
 def shots(video_path, min_len: float = 0.6):
-    scenes = detect(str(video_path), AdaptiveDetector())
+    scenes = detect(str(video_path), AdaptiveDetector(), start_in_scene=True)  # a clip with no cuts is one shot
     out = []
     for i, (a, b) in enumerate(scenes):
-        s, e = a.get_seconds(), b.get_seconds()
+        s, e = (a.seconds, b.seconds) if hasattr(a, "seconds") else (a.get_seconds(), b.get_seconds())
         if out and e - s < min_len:          # fold flicker-length shots into the previous one
             out[-1]["end"] = e
             continue

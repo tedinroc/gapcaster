@@ -18,9 +18,20 @@ SOFT = {
 }
 
 
-def check(line: str, max_words: int | None = None):
+def _norm(t: str) -> str:
+    return re.sub(r"[^a-z0-9 ]", " ", t.lower())
+
+
+def check(line: str, max_words: int | None = None, exempt=()):
+    """Return (hard, soft) rule names. `exempt` holds on-screen texts the line may read verbatim:
+    they are removed before the rules run, so a caption containing "we" is not first person."""
     hard, soft = [], []
-    line = re.sub(r"[\"“][^\"”]*[\"”]|'[^']{3,}'", "", line)   # quoted on-screen text is read verbatim, not judged
+    # quoted text is read verbatim, not judged; a single quote inside a word (Celia's) is an apostrophe
+    line = re.sub(r"[\"“][^\"”]*[\"”]|(?<![A-Za-z])['‘][^'’]{3,}['’](?![A-Za-z])", "", line)
+    for t in exempt or ():
+        words = [re.escape(w) for w in _norm(t).split() if w]
+        if len(words) >= 2:
+            line = re.sub(r"\W+".join(words), " ", line, flags=re.I)
     low = line.lower()
     for k, pat in HARD.items():
         flags = 0 if k == "first-person" else re.I

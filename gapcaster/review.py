@@ -52,14 +52,16 @@ function paint(){let c={approved:0,edited:0,rejected:0,pending:0};
  document.querySelectorAll('.line').forEach(el=>{const id=el.dataset.id,s=st[id];const state=s?s.status:'pending';el.dataset.state=state;
   el.querySelector('.state').textContent=state;if(s&&s.text)el.querySelector('.txt').textContent=s.text;c[state]++;});
  for(const k in c)document.getElementById('n-'+k).textContent=c[k];}
+function finishEdit(el){const t=el.querySelector('.txt');if(t.isContentEditable){t.contentEditable=false;el.querySelector('button[data-act=edit]').textContent='Edit';}return t.textContent.trim();}
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const el=b.closest('.line'),id=el.dataset.id,t=el.querySelector('.txt');
- if(b.dataset.act==='approve'){st[id]={status:'approved',text:t.textContent.trim()};}
- if(b.dataset.act==='reject'){st[id]={status:'rejected',text:t.textContent.trim()};}
+ if(b.dataset.act==='approve'){const nt=finishEdit(el);st[id]={status:nt===el.dataset.orig?'approved':'edited',text:nt};}
+ if(b.dataset.act==='reject'){st[id]={status:'rejected',text:finishEdit(el)};}
  if(b.dataset.act==='edit'){if(t.isContentEditable){t.contentEditable=false;b.textContent='Edit';const orig=el.dataset.orig;const nt=t.textContent.trim();st[id]={status:nt===orig?'approved':'edited',text:nt};}
   else{t.contentEditable=true;t.focus();b.textContent='Save';return;}}
  save();paint();});
 function download(name,data,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type}));a.download=name;a.click();}
-document.getElementById('dl-json').onclick=()=>{const lines=[...document.querySelectorAll('.line')].map(el=>({id:el.dataset.id,status:(st[el.dataset.id]||{}).status||'pending',text:(st[el.dataset.id]||{}).text||el.dataset.orig}));
+document.getElementById('dl-json').onclick=()=>{document.querySelectorAll('.line').forEach(el=>{if(el.querySelector('.txt').isContentEditable)el.querySelector('button[data-act=edit]').click();});
+ const lines=[...document.querySelectorAll('.line')].map(el=>({id:el.dataset.id,status:(st[el.dataset.id]||{}).status||'pending',original:el.dataset.orig,text:(st[el.dataset.id]||{}).text||el.dataset.orig}));
  download('approved.json',JSON.stringify({run:document.body.dataset.run,lines},null,1),'application/json');};
 document.getElementById('dl-vtt').onclick=()=>{let v='WEBVTT\nKind: descriptions\n\n';document.querySelectorAll('.line').forEach(el=>{const s=st[el.dataset.id];if(!s||s.status==='rejected'||s.status==='pending')return;
  v+=el.dataset.id+'\n'+el.dataset.a+' --> '+el.dataset.b+'\n'+s.text+'\n\n';});download('approved.vtt',v,'text/vtt');};
@@ -109,7 +111,9 @@ def build(run_dir):
         kpis.append((f'{inj["easy"]["caught"]}/{inj["easy"]["planted"]} · {inj["hard"]["caught"]}/{inj["hard"]["planted"]}', "planted errors flagged (easy · hard)"))
     elif inj:
         kpis.append((f'{inj["caught"]}/{inj["planted"]}', "planted false details flagged"))
-    run_id = html.escape(f'{doc["source"]["file"]}:{doc["source"]["start"]:.0f}-{doc["source"]["end"]:.0f}')
+    import hashlib
+    digest = hashlib.sha1(json.dumps([(r["id"], r["start"], r["text"]) for r in doc["lines"]]).encode()).hexdigest()[:12]
+    run_id = html.escape(f'{doc["source"]["file"]}:{doc["source"]["start"]:.0f}-{doc["source"]["end"]:.0f}:{digest}')
     out = [f"<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>GapCaster review</title><style>{CSS}</style><body data-run=\"{run_id}\"><div class=wrap>"]
     out.append(f'<div><h1>Gap<span>Caster</span> review</h1><div class=sub>{html.escape(doc["source"]["file"])} · {doc["source"]["start"]:.0f}–{doc["source"]["end"]:.0f} s · {m["lines"]} draft lines awaiting describer approval</div></div>')
     out.append('<div class=bar2><span>Describer review:</span> <b id=n-approved>0</b> approved · <b id=n-edited>0</b> edited · <b id=n-rejected>0</b> rejected · <b id=n-pending>0</b> pending <span style="flex:1"></span>'
@@ -129,7 +133,7 @@ def build(run_dir):
         atts = "".join(
             f'<div class="{"" if a["fit"] else "x"}">{html.escape(a["text"])} <span class=t>— {html.escape(a["reason"])}</span></div>'
             for a in r["attempts"][:-1]) if len(r["attempts"]) > 1 else ""
-        chips = '<span class="chip ok">fits</span>' if r["status"] == "fit" else '<span class="chip warn">does not fit</span>'
+        chips = {"fit": '<span class="chip ok">fits</span>', "style": '<span class="chip warn">held by style gate</span>'}.get(r["status"], '<span class="chip warn">does not fit</span>')
         chips += "".join(f'<span class="chip warn">{html.escape(f)}</span>' for f in r["flags"])
         facts = "<br>".join(f'{i}: {html.escape(str((shots[i].get("facts") or {}).get("key", "")))}' for i in r["shots"] if i in shots)
         audio = f'<audio controls preload=none src="{html.escape(r["audio"])}"></audio>' if r.get("audio") else ""

@@ -1,0 +1,70 @@
+[00:00:00.300] White text on black background.
+[00:00:11.350] Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards.
+[00:00:18.420] A bright white beam rises from the industrial city.
+[00:00:45.550] A caption: Forty years later.
+[00:00:53.950] A caption: Simulation ready. Two people sit at a workbench facing a large screen.
+[00:01:02.650] A caption: Tears of Steel.
+[00:01:09.920] Smoke rises from a foggy, industrial city skyline.
+[00:01:14.080] The room remains still and unchanged.
+[00:01:19.380] A headline: Roboticist creates killer robots.
+[00:01:22.810] The sniper aims his rifle.
+[00:01:25.070] A mechanical vehicle with turrets sits in the fog.
+[00:01:35.420] An airship hovers over the city.
+[00:01:38.210] The old man lies motionless on the balcony floor.
+[00:01:42.420] The sniper aims his futuristic rifle through the scope at the hovering airship.
+[00:01:58.950] The old man sits up and gestures while the sniper aims his rifle in the background.
+[00:02:13.250] The old man crouches, looking down.
+[00:02:17.830] The sniper aims his rifle through the scope, looking intently.
+[00:02:23.290] The old man grips a thick rope.
+[00:02:25.790] The sniper drinks from a mango juice pouch, then lowers it to look forward.
+[00:02:32.880] A figure in a dark coat hangs suspended in mid-air before the organ pipes.
+[00:02:39.310] The old man touches his chest, then walks away toward a tunnel.
+[00:02:52.290] The old man and Celia stand facing each other, staring intently in the dimly lit room.
+[00:03:03.250] The old man stands on a cobblestone street, facing a massive mechanical structure in the fog.
+[00:03:15.050] The man raises a gun.
+[00:03:28.470] Clock ticks.
+[00:03:34.850] A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.
+[00:03:46.250] A man with a mechanical eye points and sticks out his tongue.
+[00:04:08.110] A heavyset man leans in to whisper to the old man.
+[00:04:13.420] Celia and two men watch green holograms.
+[00:04:17.930] Thom walks across a bridge with green railings, looking around with a serious expression.
+[00:04:45.730] A heavyset man sits at a desk, a device attached to his head.
+[00:05:05.590] A man in a futuristic suit glows with white energy.
+[00:05:23.150] Thom looks off-camera.
+[00:05:28.150] A giant mechanical robot rises from the street, towering over historic buildings.
+[00:05:50.250] A caption: Celia, I love your robot hand.
+[00:06:08.850] A robotic hand covers Thom’s face.
+[00:06:14.750] A caption: Playback.
+[00:06:32.950] Thom presses a rifle to his face.
+[00:06:37.770] A curly-haired man stares in shock.
+[00:06:40.420] The old man looks up with concern.
+[00:06:44.040] A caption: Cool, I love your new hand.
+[00:06:48.350] Thom mouths a word.
+[00:06:51.150] Celia stares at her robotic hand.
+[00:06:55.000] A wireframe hologram touches Thom’s face.
+[00:07:00.210] A caption: 80:0
+[00:07:02.990] A man with a mechanical eye holds a device to his mouth.
+[00:07:11.550] The sniper aims a smoking rifle at a distant structure.
+[00:07:21.210] White smoke vents from a circular metal component.
+[00:07:24.880] A man in a white jacket holds a cylindrical mechanical device, looking at it with concern.
+[00:07:41.790] Two large grey robots face each other in the dust.
+[00:07:47.470] Four people in white suits kneel on the floor, aiming futuristic firearms at a large mechanical structure.
+[00:07:58.960] Dark, cluttered industrial space rushes by.
+[00:08:02.300] The sniper rests his head against his rifle.
+[00:08:05.500] Golden light reflects off the dark corridor.
+[00:08:08.560] A masked figure raises a weapon as a mechanical creature crashes through the organ pipes.
+[00:08:17.430] An explosion erupts in the cathedral, sending fire and debris toward the organ pipes.
+[00:08:28.430] Thom stands on a bridge, staring at a large mechanical structure beside him.
+[00:08:40.590] Thom speaks seriously near a stone sculpture, then a large robot stands in a ruined interior.
+[00:08:47.420] Steam rises from a complex mechanical structure.
+[00:08:51.210] The old man smiles faintly.
+[00:08:59.470] A caption: Memory overwrite ninety-nine point seven eight percent.
+[00:09:03.890] The old man presses his hand against a glowing purple component of the large machine.
+[00:09:12.830] The old man stares intently at a large metallic object.
+[00:09:23.950] Celia gestures.
+[00:09:27.150] Celia gestures at the large mechanical structure beside her on the metal platform.
+[00:09:48.000] A cast list appears over a close-up of a blue-outlined robotic hand.
+[00:10:16.880] Blender development and studio pipeline
+[00:10:20.500] Credits: JustaCluster, Dell Lab Amsterdam
+[00:11:49.500] The sniper sits atop a pile of rusted robot wreckage, holding a rifle and a small white cup.
+[00:12:09.710] The screen fades to black.

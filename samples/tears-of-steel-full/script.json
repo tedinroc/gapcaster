@@ -1,0 +1,7684 @@
+{
+ "source": {
+  "file": "tears_of_steel_720p.mov",
+  "start": 0.0,
+  "end": 734.166667
+ },
+ "settings": {
+  "lang": "en",
+  "merge_pause": 0.6,
+  "lead": 0.25,
+  "tail": 0.3,
+  "min_slot": 1.1,
+  "breath": 0.8,
+  "max_slot": 7.0,
+  "words_per_sec": 2.6,
+  "speeds": [
+   1.0,
+   1.08,
+   1.15
+  ],
+  "max_rewrites": 3,
+  "whisper_model": "mlx-community/whisper-large-v3-turbo",
+  "vlm_model": "lmstudio-community/Qwen3.8-27B-MLX-8bit",
+  "tts_model": "mlx-community/Kokoro-82M-bf16",
+  "tts_voice": "af_heart",
+  "llm_backend": "mlx",
+  "llm_base_url": "http://127.0.0.1:8000/v1",
+  "llm_model_name": "qwen",
+  "concurrency": 8,
+  "asr_backend": "mlx",
+  "asr_ov_model": "OpenVINO/whisper-large-v3-turbo-int8-ov",
+  "asr_device": "CPU",
+  "tts_backend": "mlx",
+  "extra": {}
+ },
+ "cast": [
+  {
+   "name": "Celia",
+   "look": "young woman, red hair tied back, blue jacket under a dark vest, a robotic hand",
+   "named_from": 25
+  },
+  {
+   "name": "Thom",
+   "look": "young man, dark hair, black leather jacket over a printed T-shirt",
+   "named_from": 23
+  },
+  {
+   "name": "the sniper",
+   "look": "young Black man, short dark hair, dark padded jacket, futuristic rifle with a scope"
+  },
+  {
+   "name": "the old man",
+   "look": "older man, shoulder-length grey hair, dark checked jacket"
+  }
+ ],
+ "shots": [
+  {
+   "id": "S001",
+   "start": 0.0,
+   "end": 8.917,
+   "frames": [
+    "frames/S001_0.jpg",
+    "frames/S001_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a black screen",
+    "action": "White text appears in the center of the screen.",
+    "text": "Blender Foundation Presents the Mango Open Movie project",
+    "key": "The shot is a title card introducing the Blender Foundation and the Mango Open Movie project.",
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "S002",
+   "start": 8.917,
+   "end": 13.458,
+   "frames": [
+    "frames/S002_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "An industrial launch facility or hangar interior, surrounded by metal scaffolding, walkways, and structural beams.",
+    "action": "Multiple large rocket engines ignite simultaneously, emitting bright, glowing plumes of light and exhaust downwards.",
+    "text": "",
+    "key": "The massive rocket engines are firing, producing intense light and thrust.",
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "S003",
+   "start": 13.458,
+   "end": 18.417,
+   "frames": [
+    "frames/S003_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "the interior of a large spacecraft or industrial facility, looking up at a ceiling lined with massive machinery",
+    "action": "Multiple large, cylindrical engine nozzles fire simultaneously, projecting intense, bright white beams of light downward",
+    "text": "",
+    "key": "A row of massive engines ignites, filling the frame with blinding light as they power up",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S004",
+   "start": 18.417,
+   "end": 25.0,
+   "frames": [
+    "frames/S004_0.jpg",
+    "frames/S004_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "An industrial cityscape featuring a dense cluster of tall, dark metal towers and scaffolding structures, with traditional gabled rooftops in the immediate foreground.",
+    "action": "A bright, vertical beam of white light rises from the center of the industrial complex, illuminating the surrounding haze and smoke.",
+    "text": "This film is supported by the Netherlands Film Fund",
+    "key": "A bright vertical beam of light shoots up from the center of a dark, hazy industrial skyline.",
+    "confidence": 0.98
+   }
+  },
+  {
+   "id": "S005",
+   "start": 25.0,
+   "end": 40.25,
+   "frames": [
+    "frames/S005_0.jpg",
+    "frames/S005_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom, Celia",
+    "where": "on a bridge over a canal in a city with brick buildings and trees",
+    "action": "Thom and Celia stand leaning against the bridge railing, facing each other. Celia gestures with her robotic hand while speaking to Thom, who listens with a slight smile.",
+    "text": "",
+    "key": "Celia is using her robotic hand to gesture during a conversation with Thom on a bridge.",
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "S006",
+   "start": 40.25,
+   "end": 42.083,
+   "frames": [
+    "frames/S006_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, cluttered industrial workshop or storage area",
+    "action": "Two glowing, wireframe holographic figures, one orange and one blue, stand facing each other; the blue figure raises its hand toward the orange figure.",
+    "text": "",
+    "key": "Two holographic wireframe figures, one orange and one blue, interact in a dark, cluttered space.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S007",
+   "start": 42.083,
+   "end": 45.625,
+   "frames": [
+    "frames/S007_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A dark, dilapidated urban environment featuring a ruined stone building on the left and a complex, elevated industrial structure on the right, with a glowing pink holographic projection visible on the far left.",
+    "action": "The camera holds a static wide shot of the desolate, futuristic cityscape.",
+    "text": "40 YEARS LATER",
+    "key": "The scene establishes a post-apocalyptic setting forty years in the future, contrasting a crumbling building with advanced, glowing technology.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S008",
+   "start": 45.625,
+   "end": 49.792,
+   "frames": [
+    "frames/S008_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, cluttered interior space filled with cables and equipment",
+    "action": "Neon wireframe holographic projections of a chair and a small structure glow in orange and blue against the dark background, while a pink horizontal line of light flickers across the center of the frame.",
+    "text": "",
+    "key": "Glowing neon wireframe holograms of objects are projected in a dark, tech-filled room.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S009",
+   "start": 49.792,
+   "end": 51.125,
+   "frames": [
+    "frames/S009_0.jpg"
+   ],
+   "facts": {
+    "who": "a person's hand and arm, wearing a patterned sleeve",
+    "where": "a close-up of a complex electronic control panel with glowing green and blue displays",
+    "action": "A hand reaches in to manipulate the controls, pressing buttons and adjusting components on the circuit board",
+    "text": "LOCK-IN 10 Hz - 100 kHz, 98% RT, KEY RESTORE, 00:00:02",
+    "key": "A hand is actively operating a futuristic, glowing control panel with various dials, buttons, and digital readouts.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S010",
+   "start": 51.125,
+   "end": 53.667,
+   "frames": [
+    "frames/S010_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with curly brown hair and glasses, flanked by two people in white lab coats",
+    "where": "a high-tech laboratory filled with glowing green and purple equipment and holographic displays",
+    "action": "The man in the center looks forward with a focused expression while the two figures in lab coats stand on either side of him",
+    "text": "",
+    "key": "A man in a lab setting is surrounded by glowing green and purple technological equipment",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S011",
+   "start": 53.667,
+   "end": 56.667,
+   "frames": [
+    "frames/S011_0.jpg"
+   ],
+   "facts": {
+    "who": "a person with long hair tied back wearing a white shirt, and a person in a purple jacket",
+    "where": "a cluttered workspace filled with electronic equipment, wires, and glowing screens",
+    "action": "Two people sit at a workbench covered in gadgets and wires, facing away from the camera toward a large screen",
+    "text": "SIMULATION READY...",
+    "key": "Two individuals are seated at a high-tech workbench in front of a large screen displaying a simulation status",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S012",
+   "start": 56.667,
+   "end": 64.458,
+   "frames": [
+    "frames/S012_0.jpg",
+    "frames/S012_1.jpg"
+   ],
+   "facts": {
+    "who": "an older man with a single mechanical eye implant",
+    "where": "a dimly lit, high-tech workshop or laboratory",
+    "action": "The man leans over a table, staring intently at a human brain that sits on a white plate in the foreground. The brain is connected to a small electronic device and has thin needles or wires protruding from the top. A glowing pink circular holographic interface surrounds the brain. The man's hands are visible on either side of the setup.",
+    "text": "",
+    "key": "A man with a cybernetic eye is examining a human brain that is wired into a device and surrounded by a glowing holographic ring.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S013",
+   "start": 64.458,
+   "end": 69.917,
+   "frames": [
+    "frames/S013_0.jpg",
+    "frames/S013_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a black background",
+    "action": "The title card remains static on screen.",
+    "text": "TEARS OF STEEL",
+    "key": "The film title 'TEARS OF STEEL' is displayed in white text on a black background.",
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "S014",
+   "start": 69.917,
+   "end": 74.083,
+   "frames": [
+    "frames/S014_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A dense, fog-shrouded cityscape featuring a mix of traditional European-style rooftops and industrial structures, including a tall clock tower and a large, dark mechanical apparatus in the center.",
+    "action": "The camera holds a static wide shot of the city skyline as smoke rises from the background and the large central machine remains stationary.",
+    "text": "",
+    "key": "A massive, dark mechanical structure dominates the center of a foggy, industrial city skyline.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S015",
+   "start": 74.083,
+   "end": 79.375,
+   "frames": [
+    "frames/S015_0.jpg",
+    "frames/S015_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A dimly lit, cluttered interior space, likely a ship's cabin or control room, looking out onto a foggy, industrial exterior",
+    "action": "The camera holds a static shot of the room, which is filled with hanging cables, pipes, and large dark lampshades in the foreground",
+    "text": "",
+    "key": "The scene is a static, atmospheric view of a dark, cluttered room with a view of a foggy, industrial landscape outside",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S016",
+   "start": 79.375,
+   "end": 82.125,
+   "frames": [
+    "frames/S016_0.jpg"
+   ],
+   "facts": {
+    "who": "a person with a robotic hand",
+    "where": "indistinct, dimly lit setting",
+    "action": "A robotic hand rests on a folded newspaper",
+    "text": "De Amsteldam ROBOTICIST CREATES KILLER ROBOTS PINK IN THE TWILIGHT AS A NAGGED AND FURIOUS CROWD REJECTS FLAMERS ROBOTICS PLAN",
+    "key": "A robotic hand is holding a newspaper with a headline about killer robots",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S017",
+   "start": 82.125,
+   "end": 84.833,
+   "frames": [
+    "frames/S017_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "on a balcony or terrace with stone balusters, overlooking a hazy, blue-toned background",
+    "action": "aims a large, futuristic rifle equipped with a scope and bipod, holding it steady in a prone shooting position",
+    "text": "",
+    "key": "A young Black man in a dark padded jacket aims a high-tech rifle with a scope from a balcony.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S018",
+   "start": 84.833,
+   "end": 92.417,
+   "frames": [
+    "frames/S018_0.jpg",
+    "frames/S018_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A dark, foggy environment, likely a dock or industrial area, viewed through a circular scope or lens",
+    "action": "A large, complex mechanical structure with multiple turrets and antennas is visible in the center, appearing to be a stationary vehicle or platform",
+    "text": "",
+    "key": "A large, stationary mechanical vehicle with turrets is seen through a circular scope in a dark, foggy setting",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S019",
+   "start": 92.417,
+   "end": 95.417,
+   "frames": [
+    "frames/S019_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "an indistinct, dimly lit interior space",
+    "action": "A young Black man aims a large, futuristic rifle with a scope, his eye pressed against the eyepiece as he looks through it.",
+    "text": "",
+    "key": "A sniper aims a futuristic rifle through a scope.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S020",
+   "start": 95.417,
+   "end": 98.208,
+   "frames": [
+    "frames/S020_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A view through a circular scope looking down at a dense city with traditional-style buildings featuring red and dark roofs.",
+    "action": "A large, dark military airship with multiple glowing lights hovers in the misty air above the city rooftops.",
+    "text": "",
+    "key": "The scene is framed as a view through a sniper scope, targeting a large airship hovering over a city.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S021",
+   "start": 98.208,
+   "end": 102.417,
+   "frames": [
+    "frames/S021_0.jpg"
+   ],
+   "facts": {
+    "who": "the old man, the sniper",
+    "where": "an outdoor balcony or terrace with a wooden balustrade, overlooking a foggy blue landscape",
+    "action": "The old man lies on his back in the foreground, eyes closed, while the sniper crouches in the background aiming a rifle with a scope",
+    "text": "",
+    "key": "The old man lies motionless in the foreground while the sniper aims a rifle in the background",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S022",
+   "start": 102.417,
+   "end": 116.708,
+   "frames": [
+    "frames/S022_0.jpg",
+    "frames/S022_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A view through a circular scope or porthole looking out over a city with red-roofed buildings.",
+    "action": "A large, dark, heavily armed flying vehicle hovers in the air, emitting smoke and bright light from its engines and weapons.",
+    "text": "",
+    "key": "A large, menacing flying vehicle is seen hovering over a city through a scope.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S023",
+   "start": 116.708,
+   "end": 119.875,
+   "frames": [
+    "frames/S023_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "a balcony or elevated position with stone balusters, in a dimly lit, blue-toned environment",
+    "action": "A young Black man in a dark padded jacket holds a futuristic rifle with a scope, aiming it forward while looking through the scope",
+    "text": "",
+    "key": "A sniper is aiming a futuristic rifle with a scope from a balcony",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S024",
+   "start": 119.875,
+   "end": 134.917,
+   "frames": [
+    "frames/S024_0.jpg",
+    "frames/S024_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, the sniper",
+    "where": "a dimly lit interior with a stone balustrade overlooking a foggy exterior",
+    "action": "The old man is hunched over in the foreground, then sits up and gestures with his hand while speaking. In the background, the sniper sits on the floor, aiming a rifle through the opening.",
+    "text": "",
+    "key": "The old man in the foreground is speaking and gesturing while the sniper in the background remains in a defensive position with a rifle.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S025",
+   "start": 134.917,
+   "end": 139.917,
+   "frames": [
+    "frames/S025_0.jpg"
+   ],
+   "facts": {
+    "who": "the old man, the sniper",
+    "where": "A dimly lit, cluttered interior space, possibly a ship's cabin or storage area, with a view of a balcony railing and foggy exterior in the background.",
+    "action": "The old man crouches in the center of the frame, looking down and to his left, while the sniper sits in the background near the railing, holding a rifle.",
+    "text": "",
+    "key": "An older man with grey hair crouches in a dark, cluttered room while a young man with a rifle sits in the background.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S026",
+   "start": 139.917,
+   "end": 143.292,
+   "frames": [
+    "frames/S026_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "an outdoor balcony or terrace with white balusters, in a dim, blue-lit environment",
+    "action": "A young Black man in a dark padded jacket aims a large, futuristic rifle with a scope, looking intently through the sight",
+    "text": "",
+    "key": "A man aims a large, futuristic sniper rifle with a scope",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S027",
+   "start": 143.292,
+   "end": 145.792,
+   "frames": [
+    "frames/S027_0.jpg"
+   ],
+   "facts": {
+    "who": "the old man, the sniper",
+    "where": "a dimly lit balcony or upper deck with a stone balustrade, overlooking a foggy blue background",
+    "action": "The old man stands in the foreground, gripping a thick rope with his right hand and looking down, while the sniper crouches in the background aiming a rifle",
+    "text": "",
+    "key": "An older man stands in the foreground looking down while a sniper aims a rifle in the background",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S028",
+   "start": 145.792,
+   "end": 152.875,
+   "frames": [
+    "frames/S028_0.jpg",
+    "frames/S028_1.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "A dimly lit outdoor location at night, positioned behind a stone balustrade",
+    "action": "The sniper is positioned behind a stone railing next to a large rifle with a scope. In the first part of the shot, he drinks from a juice pouch, and then he lowers it to look forward with a serious expression.",
+    "text": "MANGO",
+    "key": "A sniper drinks from a mango juice pouch while positioned behind a stone railing next to a large rifle.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S029",
+   "start": 152.875,
+   "end": 158.542,
+   "frames": [
+    "frames/S029_0.jpg",
+    "frames/S029_1.jpg"
+   ],
+   "facts": {
+    "who": "a person in a dark coat",
+    "where": "the interior of a large, gothic cathedral featuring a massive pipe organ and stone pillars covered in ivy",
+    "action": "A person in a dark coat is suspended in mid-air in front of the organ pipes, appearing to fall or hang from a metal beam",
+    "text": "",
+    "key": "A figure is suspended in mid-air in front of a large pipe organ",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S030",
+   "start": 158.542,
+   "end": 172.292,
+   "frames": [
+    "frames/S030_0.jpg",
+    "frames/S030_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man",
+    "where": "a dimly lit, dilapidated industrial interior with wooden crates and debris",
+    "action": "The old man stands in profile facing left, his hand resting on his chest, then turns and walks away from the camera toward a tunnel in the background.",
+    "text": "",
+    "key": "An older man with shoulder-length grey hair stands in a ruined room, touches his chest, and then walks away.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S031",
+   "start": 172.292,
+   "end": 183.25,
+   "frames": [
+    "frames/S031_0.jpg",
+    "frames/S031_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, a young woman",
+    "where": "a dimly lit room with a desk, books, and a lamp",
+    "action": "The old man and the young woman stand facing each other, looking intently at one another.",
+    "text": "",
+    "key": "The old man and the young woman are in a tense, silent standoff.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S032",
+   "start": 183.25,
+   "end": 189.5,
+   "frames": [
+    "frames/S032_0.jpg",
+    "frames/S032_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, Celia",
+    "where": "the overgrown, dilapidated interior of a house with exposed brick walls and a balcony",
+    "action": "The old man stands in the center of the room, while Celia stands behind a wooden desk to his left.",
+    "text": "",
+    "key": "The old man stands in a ruined, plant-filled room with Celia positioned behind a desk.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S033",
+   "start": 189.5,
+   "end": 193.083,
+   "frames": [
+    "frames/S033_0.jpg"
+   ],
+   "facts": {
+    "who": "the old man",
+    "where": "a cobblestone street in a city with old brick buildings and vintage street lamps",
+    "action": "The old man stands with his back to the camera, looking toward a large, complex mechanical structure in the distance",
+    "text": "",
+    "key": "An old man with shoulder-length grey hair stands in the foreground, facing away from the viewer toward a massive, intricate machine in a foggy, old-world city street",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S034",
+   "start": 193.083,
+   "end": 198.5,
+   "frames": [
+    "frames/S034_0.jpg",
+    "frames/S034_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, a man with a mechanical device on his head, and a young woman",
+    "where": "a cluttered indoor room with lamps and a mirror",
+    "action": "The man with the head device stands behind the old man with his hand on his shoulder, while the young woman stands to the side; the man with the head device then raises a gun and points it forward",
+    "text": "",
+    "key": "A man wearing a mechanical head device points a gun while standing behind an older man.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S035",
+   "start": 198.5,
+   "end": 201.167,
+   "frames": [
+    "frames/S035_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "an outdoor balcony or terrace, framed by white stone balusters",
+    "action": "The young Black man peers through the scope of a futuristic rifle, his face partially obscured by the weapon and the balustrade as he aims.",
+    "text": "",
+    "key": "A sniper is aiming a high-tech rifle from behind a stone balustrade.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S036",
+   "start": 201.167,
+   "end": 206.667,
+   "frames": [
+    "frames/S036_0.jpg",
+    "frames/S036_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, a man in a red jacket with a mechanical eye implant, and a woman in a military-style jacket",
+    "where": "a cluttered indoor room with lamps and a desk",
+    "action": "The man in the red jacket stands in the foreground looking upward with a tense expression, while the old man and the woman stand behind him, looking forward.",
+    "text": "",
+    "key": "The man in the red jacket has a prominent mechanical device attached to his right eye.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S037",
+   "start": 206.667,
+   "end": 208.667,
+   "frames": [
+    "frames/S037_0.jpg"
+   ],
+   "facts": {
+    "who": "a person in a light-colored jacket",
+    "where": "a high-tech control room with holographic displays",
+    "action": "A person's hand reaches out to interact with a glowing, holographic control interface featuring a mouse and keyboard",
+    "text": "08:12:13:69",
+    "key": "A person operates a futuristic, holographic computer interface",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S038",
+   "start": 208.667,
+   "end": 212.458,
+   "frames": [
+    "frames/S038_0.jpg"
+   ],
+   "facts": {
+    "who": "a person in a dark outfit",
+    "where": "an indoor space with a ceiling covered in a dense web of orange cables",
+    "action": "The person stands in the lower center of the frame, partially obscured by the dense network of orange cables and wires crisscrossing the foreground",
+    "text": "",
+    "key": "A dense, chaotic web of orange cables or wires fills the entire frame, partially obscuring a person standing below",
+    "confidence": 0.85
+   }
+  },
+  {
+   "id": "S039",
+   "start": 212.458,
+   "end": 213.917,
+   "frames": [
+    "frames/S039_0.jpg"
+   ],
+   "facts": {
+    "who": "two men, one with long hair and a headband facing the camera, and one with a purple jacket facing away",
+    "where": "a cluttered workshop or control room filled with electronic equipment, wires, and glowing screens",
+    "action": "The man in the purple jacket reaches toward a console while the man with long hair looks on",
+    "text": "",
+    "key": "Two men operate a complex array of electronic equipment and glowing displays in a workshop setting",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S040",
+   "start": 213.917,
+   "end": 222.417,
+   "frames": [
+    "frames/S040_0.jpg",
+    "frames/S040_1.jpg"
+   ],
+   "facts": {
+    "who": "a person in a reddish-brown jacket",
+    "where": "an outdoor area with a brick wall on the left, surrounded by glowing geometric light patterns and floating square shapes",
+    "action": "The person stands with their back to the camera, raising both arms upward toward a bright, complex structure of light and geometric shapes that fills the sky",
+    "text": "",
+    "key": "A person stands with arms raised in front of a massive, glowing geometric light display",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S041",
+   "start": 222.417,
+   "end": 225.083,
+   "frames": [
+    "frames/S041_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an outdoor urban street with a brick building and trees in the background",
+    "action": "A large, complex silver robot stands stationary in the center of the frame, facing the camera",
+    "text": "",
+    "key": "A large, intricate silver robot stands in the middle of a city street",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S042",
+   "start": 225.083,
+   "end": 234.583,
+   "frames": [
+    "frames/S042_0.jpg",
+    "frames/S042_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, a heavyset man with a mechanical eye, a young woman",
+    "where": "a cluttered interior room with maps on the wall and vintage electronics",
+    "action": "The heavyset man with the mechanical eye points his finger forward while sticking his tongue out, then places his arm around the shoulders of the old man standing next to him, while the young woman stands to the right looking on with a neutral expression.",
+    "text": "",
+    "key": "A man with a mechanical eye makes a mocking face and points, then puts his arm around an older man.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S043",
+   "start": 234.583,
+   "end": 238.667,
+   "frames": [
+    "frames/S043_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper, the old man, and a man in a red jacket",
+    "where": "an outdoor urban street with trees and buildings in the background",
+    "action": "Three men stand with their backs to the camera; the man in the red jacket has his arm around the old man's shoulder while they look out at the street, and the sniper stands to their left",
+    "text": "",
+    "key": "A man in a red jacket embraces an older man with grey hair as they stand together on a street, with a third man standing nearby",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S044",
+   "start": 238.667,
+   "end": 253.417,
+   "frames": [
+    "frames/S044_0.jpg",
+    "frames/S044_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man, a heavyset man with slicked-back dark hair wearing a red patterned shirt, and a young Asian woman",
+    "where": "an indoor room with a map on the wall and a lamp in the background",
+    "action": "The heavyset man stands behind the old man with his arm around his shoulder, leaning in to speak to him while gesturing with his other hand, while the young woman stands to the right observing them",
+    "text": "",
+    "key": "A heavyset man leans in close to whisper to the older man while placing a hand on his shoulder",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S045",
+   "start": 253.417,
+   "end": 257.917,
+   "frames": [
+    "frames/S045_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, the old man, and a man in a red jacket",
+    "where": "an outdoor urban street with brick buildings and trees in the background",
+    "action": "Three people stand with their backs to the camera, looking at a large piece of machinery suspended above them, while green holographic outlines are projected onto the surrounding buildings",
+    "text": "",
+    "key": "Green holographic building outlines are projected into the air around the group",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S046",
+   "start": 257.917,
+   "end": 289.542,
+   "frames": [
+    "frames/S046_0.jpg",
+    "frames/S046_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "a city street with a bridge, green railings, and buildings in the background",
+    "action": "Thom walks across the bridge, looking around with a serious expression",
+    "text": "",
+    "key": "Thom is walking alone on a bridge in a city setting",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S047",
+   "start": 289.542,
+   "end": 295.125,
+   "frames": [
+    "frames/S047_0.jpg",
+    "frames/S047_1.jpg"
+   ],
+   "facts": {
+    "who": "a heavyset man with a mechanical device attached to his head, and a young woman with dark hair in a military-style uniform",
+    "where": "a cluttered room with a desk, books, and a lamp",
+    "action": "The man sits at a desk, holding a device connected to his head, while the woman stands behind him holding a cable",
+    "text": "",
+    "key": "A man is undergoing a procedure involving a device attached to his head, supervised by a woman",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S048",
+   "start": 295.125,
+   "end": 296.5,
+   "frames": [
+    "frames/S048_0.jpg"
+   ],
+   "facts": {
+    "who": "a person's hand and forearm wearing a dark jacket with a white fur-lined cuff",
+    "where": "a close-up of a retro-futuristic electronic device on a white surface",
+    "action": "A hand presses down on a large, glowing green button on a control panel",
+    "text": "PLAYBACK",
+    "key": "A hand presses a large green button labeled PLAYBACK on a piece of electronic equipment",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S049",
+   "start": 296.5,
+   "end": 297.5,
+   "frames": [
+    "frames/S049_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with glasses and a patterned jacket, flanked by two people in white hooded jackets seen from behind",
+    "where": "a high-tech control room filled with glowing screens and holographic displays",
+    "action": "The central man sits at a console with his mouth open in shock, while two others stand on either side of him facing away from the camera",
+    "text": "timers and data readouts on the screens",
+    "key": "A man in a control room reacts with shock while surrounded by complex, glowing technology",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S050",
+   "start": 297.5,
+   "end": 298.958,
+   "frames": [
+    "frames/S050_0.jpg"
+   ],
+   "facts": {
+    "who": "a person seen from behind, out of focus",
+    "where": "an indoor setting with a glowing digital display",
+    "action": "A person stands in the foreground, facing a large screen that displays a progress bar and technical data",
+    "text": "MEMORY OVERWRITE, 004.80%",
+    "key": "A digital interface displays 'MEMORY OVERWRITE' with a progress bar at 4.80%",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S051",
+   "start": 298.958,
+   "end": 300.875,
+   "frames": [
+    "frames/S051_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an outdoor urban street with blurred buildings and parked cars in the background",
+    "action": "A close-up of a large, weathered robot's head and upper torso remains stationary, its white eyes glowing",
+    "text": "",
+    "key": "A close-up of a large, battle-damaged robot with glowing white eyes and exposed mechanical components",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S052",
+   "start": 300.875,
+   "end": 302.708,
+   "frames": [
+    "frames/S052_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "an outdoor bridge with a canal, brick buildings, and trees in the background",
+    "action": "Thom stands in profile facing right, looking at a large, complex mechanical structure that occupies the right side of the frame",
+    "text": "",
+    "key": "A young man stands on a bridge looking at a large, intricate mechanical device",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S053",
+   "start": 302.708,
+   "end": 307.708,
+   "frames": [
+    "frames/S053_0.jpg"
+   ],
+   "facts": {
+    "who": "a young man with dark curly hair and glasses, a person with light hair",
+    "where": "a control room filled with glowing green and purple screens and consoles",
+    "action": "The young man looks upward with his mouth open, while the person with light hair leans forward over a desk with a lamp",
+    "text": "",
+    "key": "A young man in a high-tech control room reacts with an open mouth while surrounded by glowing screens",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S054",
+   "start": 307.708,
+   "end": 310.583,
+   "frames": [
+    "frames/S054_0.jpg"
+   ],
+   "facts": {
+    "who": "a person in a futuristic armored suit, viewed from behind",
+    "where": "an outdoor residential street with trees and houses in the background",
+    "action": "The armored figure stands still while a glowing, translucent white energy effect emanates from around their neck and shoulders",
+    "text": "",
+    "key": "A glowing energy effect surrounds the neck and shoulders of a person in a futuristic armored suit",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S055",
+   "start": 310.583,
+   "end": 312.375,
+   "frames": [
+    "frames/S055_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom, a young woman with brown hair tied back",
+    "where": "an outdoor urban street with trees and buildings in the background",
+    "action": "Thom stands facing the woman, looking at her with a serious expression",
+    "text": "",
+    "key": "Thom is in a tense, face-to-face conversation with a woman",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S056",
+   "start": 312.375,
+   "end": 315.375,
+   "frames": [
+    "frames/S056_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "A city street with a canal, lined with European-style buildings and trees",
+    "action": "Thom is seen in profile in the foreground, looking out across the canal toward the buildings",
+    "text": "“LOOK, CELIA, WE HAVE TO FOLLOW OUR PASSIONS...”",
+    "key": "A man looks out over a canal toward a row of buildings while pink subtitles appear on screen",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S057",
+   "start": 315.375,
+   "end": 319.958,
+   "frames": [
+    "frames/S057_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "Outdoors in a city street with trees and buildings in the background",
+    "action": "Thom stands in a close-up, looking slightly off-camera with a serious, contemplative expression",
+    "text": "",
+    "key": "A close-up of a young man with dark hair looking off-camera with a serious expression",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S058",
+   "start": 319.958,
+   "end": 322.208,
+   "frames": [
+    "frames/S058_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia",
+    "where": "outdoors in a residential area with blurred buildings and green trees in the background",
+    "action": "stands still, looking off to the side with a serious, concerned expression",
+    "text": "",
+    "key": "A young woman with red hair tied back stands in the foreground with a serious expression, while the background is out of focus.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S059",
+   "start": 322.208,
+   "end": 324.083,
+   "frames": [
+    "frames/S059_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "A canal-side street in a European city, likely Amsterdam, with traditional brick buildings and trees lining the water",
+    "action": "Thom is seen in profile in the foreground, looking out towards the canal and buildings",
+    "text": "...AND I JUST WANT TO BE AWESOME IN SPACE.\"",
+    "key": "A young man stands in the foreground looking out over a canal in a European city, with a quote about wanting to be awesome in space overlaid on the scene",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S060",
+   "start": 324.083,
+   "end": 328.458,
+   "frames": [
+    "frames/S060_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "an outdoor urban street with trees and buildings in the background",
+    "action": "Thom is shown in a close-up profile, looking off-camera to the right with his mouth slightly open as if speaking",
+    "text": "",
+    "key": "A close-up of a young man with dark hair speaking while looking off-camera",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S061",
+   "start": 328.458,
+   "end": 330.292,
+   "frames": [
+    "frames/S061_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "An outdoor urban setting featuring ornate, classical-style domed buildings in the foreground, with a dense background of tall industrial structures, cranes, and scaffolding.",
+    "action": "The camera holds a static wide shot of the cityscape as a bright, hazy sun shines low in the sky, creating a strong backlight and lens flare that silhouettes the architecture.",
+    "text": "",
+    "key": "A hazy, sun-drenched view of a city skyline that blends ornate historical domes with a dense forest of industrial cranes and construction scaffolding.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S062",
+   "start": 330.292,
+   "end": 338.917,
+   "frames": [
+    "frames/S062_0.jpg",
+    "frames/S062_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a European-style city street with traditional gabled buildings and tiled roofs",
+    "action": "A large, complex mechanical robot rises up from the street level, emerging between the buildings and towering over the rooftops",
+    "text": "",
+    "key": "A giant robot emerges from the street, dwarfing the surrounding historic buildings",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S063",
+   "start": 338.917,
+   "end": 341.208,
+   "frames": [
+    "frames/S063_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "an outdoor balcony or terrace, framed by white stone balusters",
+    "action": "The sniper aims a futuristic rifle with a scope, looking intently through the lens while holding the weapon steady",
+    "text": "",
+    "key": "A sniper aims a high-tech rifle from behind a stone balustrade",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S064",
+   "start": 341.208,
+   "end": 346.458,
+   "frames": [
+    "frames/S064_0.jpg",
+    "frames/S064_1.jpg"
+   ],
+   "facts": {
+    "who": "an older man with grey hair",
+    "where": "an indoor setting with a blurred background",
+    "action": "The man stares forward with a tense expression while a mechanical device with multiple lenses is mounted over his right eye, projecting red digital text onto the air in front of his face.",
+    "text": "01:22:20:00",
+    "key": "A mechanical eye implant projects a red digital timer onto the air in front of the man's face.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S065",
+   "start": 346.458,
+   "end": 348.417,
+   "frames": [
+    "frames/S065_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia",
+    "where": "An outdoor residential street with trees and houses in the background",
+    "action": "speaking with an annoyed and confrontational expression, her mouth open mid-sentence",
+    "text": "",
+    "key": "A young woman with reddish-brown hair tied back speaks with a scowling, irritated expression.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S066",
+   "start": 348.417,
+   "end": 350.208,
+   "frames": [
+    "frames/S066_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, Thom",
+    "where": "a bridge over a canal in a city with brick buildings and green trees",
+    "action": "Celia and Thom stand facing each other on the bridge; Celia raises her robotic hand toward Thom's face",
+    "text": "",
+    "key": "Celia raises her robotic hand toward Thom's face as they face each other",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S067",
+   "start": 350.208,
+   "end": 352.708,
+   "frames": [
+    "frames/S067_0.jpg"
+   ],
+   "facts": {
+    "who": "a woman with long dark hair in a white robe, a person with shoulder-length grey hair in a white jacket, and a person with dark hair in a dark jacket",
+    "where": "a cluttered workshop or garage interior with a staircase in the background, overlaid with glowing pink and blue digital graphics",
+    "action": "Three people stand around a workbench cluttered with equipment, while large, glowing pink digital shapes and lines float across the scene",
+    "text": "",
+    "key": "The scene is overlaid with a bright pink and blue digital interface or holographic display, suggesting a virtual or augmented reality perspective",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S068",
+   "start": 352.708,
+   "end": 356.333,
+   "frames": [
+    "frames/S068_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom, a robotic hand",
+    "where": "an outdoor urban street with a canal and European-style buildings in the background",
+    "action": "Thom is seen in profile in the foreground, looking toward a robotic hand that is raised in the middle ground",
+    "text": "CELIA, I LOVE YOUR ROBOT HAND",
+    "key": "A young man looks at a robotic hand while pink text appears on screen declaring 'CELIA, I LOVE YOUR ROBOT HAND'",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S069",
+   "start": 356.333,
+   "end": 362.125,
+   "frames": [
+    "frames/S069_0.jpg",
+    "frames/S069_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom, Celia",
+    "where": "an outdoor street with trees and buildings in the background",
+    "action": "Thom stands facing Celia, speaking to her, while Celia's robotic hand is raised in the space between them.",
+    "text": "",
+    "key": "A young man with dark hair is speaking to a woman whose back is to the camera, and a robotic hand is visible between them.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S070",
+   "start": 362.125,
+   "end": 364.5,
+   "frames": [
+    "frames/S070_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, a robotic hand, and the back of a man's head and shoulder",
+    "where": "an outdoor urban setting with blurred buildings and greenery in the background",
+    "action": "Celia stares intently at the man in the foreground, her expression serious and concerned, while a robotic hand is raised near the man's shoulder",
+    "text": "",
+    "key": "Celia's intense, worried facial expression as she looks at the man, with a robotic hand visible in the scene",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S071",
+   "start": 364.5,
+   "end": 367.667,
+   "frames": [
+    "frames/S071_0.jpg"
+   ],
+   "facts": {
+    "who": "a woman with dark hair tied back, wearing a dark padded jacket with a headset and coiled microphone",
+    "where": "an indoor room with warm lighting, featuring a bookshelf with a lamp on the left and a patterned wall in the background",
+    "action": "The woman stands facing slightly to the left, looking off-camera with a serious expression",
+    "text": "",
+    "key": "A woman in tactical gear with a headset stands in a warmly lit room, looking off-camera",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S072",
+   "start": 367.667,
+   "end": 368.958,
+   "frames": [
+    "frames/S072_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an interior room with a large blackboard on a dark wooden wall, a framed painting to the left, and a table in the foreground holding a white mug and a plate of food garnished with lemon slices",
+    "action": "The camera holds a static shot of the blackboard and the table setting",
+    "text": "CANDID JUDGEMENT, HELLO, CHOCOLATE, 1. a rose, 2. roses, 3. a dozen roses, FRENCH ACCENT, WUNDERKIND, RED FAUCET, NEVER HAVING TO SAY YOUR SORRY",
+    "key": "A blackboard covered in handwritten notes and lists, including the phrase 'CANDID JUDGEMENT' and a numbered list of roses, sits in a room with a table set in the foreground",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S073",
+   "start": 368.958,
+   "end": 369.583,
+   "frames": [
+    "frames/S073_0.jpg"
+   ],
+   "facts": {
+    "who": "a person's profile in the foreground, a robotic hand",
+    "where": "an outdoor setting with blurred background structures",
+    "action": "The robotic hand moves rapidly, creating a motion blur effect, while a person's profile is visible in the foreground.",
+    "text": "",
+    "key": "A robotic hand moves quickly in front of a person's profile.",
+    "confidence": 0.85
+   }
+  },
+  {
+   "id": "S074",
+   "start": 369.583,
+   "end": 371.625,
+   "frames": [
+    "frames/S074_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom, a partially visible young woman with red hair",
+    "where": "an outdoor urban street with buildings in the background",
+    "action": "A complex robotic hand is attached to the face of a young man, with its fingers covering his mouth and nose area, while a small robotic arm extends from the device.",
+    "text": "GELR, I LOVE YOUR ROBOT HAND",
+    "key": "A robotic hand is physically attached to a man's face, covering his mouth and nose.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S075",
+   "start": 371.625,
+   "end": 373.875,
+   "frames": [
+    "frames/S075_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with a mechanical eye implant and a woman",
+    "where": "a dimly lit room with bookshelves and framed pictures in the background",
+    "action": "The man, wearing a reddish shirt, holds a handgun pointed at the woman beside him, who wears a green jacket and looks alarmed",
+    "text": "",
+    "key": "A man with a mechanical eye holds a gun at a woman in a tense standoff",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S076",
+   "start": 373.875,
+   "end": 376.0,
+   "frames": [
+    "frames/S076_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with short curly brown hair and glasses",
+    "where": "an indoor setting with a desk lamp in the foreground and colorful, glowing screens or displays in the background",
+    "action": "The man stares forward with wide eyes and an open mouth, expressing shock or alarm.",
+    "text": "",
+    "key": "A man's face is shown in close-up with an expression of extreme shock or panic.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S077",
+   "start": 376.0,
+   "end": 377.208,
+   "frames": [
+    "frames/S077_0.jpg"
+   ],
+   "facts": {
+    "who": "a person's hand and forearm",
+    "where": "a close-up of a cluttered workbench or control panel",
+    "action": "A hand reaches down to press a large, illuminated green button labeled PLAYBACK on a piece of electronic equipment.",
+    "text": "PLAYBACK",
+    "key": "A hand presses a large green PLAYBACK button on a piece of machinery.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S078",
+   "start": 377.208,
+   "end": 378.0,
+   "frames": [
+    "frames/S078_0.jpg"
+   ],
+   "facts": {
+    "who": "a young man with curly brown hair and glasses, a person with blonde hair (partially visible on the left)",
+    "where": "an indoor setting with a blue grid-like structure in the background",
+    "action": "The young man looks down with a distressed expression, his mouth open as if shouting or gasping",
+    "text": "",
+    "key": "A young man with glasses reacts with visible distress, shouting or gasping",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S079",
+   "start": 378.0,
+   "end": 380.0,
+   "frames": [
+    "frames/S079_0.jpg"
+   ],
+   "facts": {
+    "who": "a person's hand and forearm",
+    "where": "a close-up of a desk or workbench",
+    "action": "A hand reaches down and presses a button on a control panel, which triggers a mechanical device to slide open, revealing two red panels with the word ERROR printed on them.",
+    "text": "ERROR!!",
+    "key": "A hand activates a machine that displays a prominent ERROR message on sliding panels.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S080",
+   "start": 380.0,
+   "end": 383.125,
+   "frames": [
+    "frames/S080_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with curly hair and glasses",
+    "where": "an indoor control room with glowing screens in the background",
+    "action": "The man screams with his mouth wide open, his face contorted in anguish, while colorful digital data overlays flicker across the foreground",
+    "text": "",
+    "key": "A man in a high-tech environment screams in apparent emotional distress",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S081",
+   "start": 383.125,
+   "end": 385.417,
+   "frames": [
+    "frames/S081_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, a robotic hand",
+    "where": "outdoors with blurred green foliage in the background",
+    "action": "Celia stares with a shocked, open-mouthed expression at a robotic hand that is positioned in front of her face",
+    "text": "",
+    "key": "A robotic hand is held directly in front of Celia's face, and she reacts with visible distress",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S082",
+   "start": 385.417,
+   "end": 386.958,
+   "frames": [
+    "frames/S082_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "Outdoors in a park or street with blurred green trees and buildings in the background",
+    "action": "Thom tilts his head back with his eyes closed as a grey robotic hand presses against his face, its fingers touching his nose and cheek.",
+    "text": "",
+    "key": "A robotic hand is touching the face of a young man with his eyes closed.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S083",
+   "start": 386.958,
+   "end": 388.958,
+   "frames": [
+    "frames/S083_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, a robotic hand",
+    "where": "outdoors with a blurred green background",
+    "action": "Celia looks up with a distressed expression, her mouth open as if speaking, while a robotic hand is raised in front of her face",
+    "text": "",
+    "key": "A robotic hand is positioned directly in front of Celia's face as she looks up with an expression of distress",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S084",
+   "start": 388.958,
+   "end": 390.167,
+   "frames": [
+    "frames/S084_0.jpg"
+   ],
+   "facts": {
+    "who": "a young man with dark hair",
+    "where": "an outdoor setting with blurred green trees and buildings in the background",
+    "action": "A mechanical robotic arm presses against the young man's face, with a component clamped over his mouth and another part touching his forehead, while his eyes are closed.",
+    "text": "",
+    "key": "A robotic arm is physically restraining the man's face, holding his mouth shut.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S085",
+   "start": 390.167,
+   "end": 392.5,
+   "frames": [
+    "frames/S085_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, a robotic arm",
+    "where": "outdoors with a blurred green background",
+    "action": "Celia faces a robotic arm, her face contorted in an angry expression with her mouth open as if shouting, while a purple holographic projection shimmers across her face",
+    "text": "",
+    "key": "A woman's face is contorted in anger as a robotic arm extends toward her, with a purple holographic image projected over her features",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S086",
+   "start": 392.5,
+   "end": 399.0,
+   "frames": [
+    "frames/S086_0.jpg",
+    "frames/S086_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "an outdoor setting with blurred green foliage in the background",
+    "action": "Thom holds a futuristic grey rifle to his face, with the weapon's mechanism pressed against his cheek and mouth, his eyes closed.",
+    "text": "",
+    "key": "A young man holds a gun to his own face in a gesture of self-harm or threat.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S087",
+   "start": 399.0,
+   "end": 400.417,
+   "frames": [
+    "frames/S087_0.jpg"
+   ],
+   "facts": {
+    "who": "a young man with curly hair and glasses",
+    "where": "an indoor setting with a blurred, colorful background featuring glowing screens or lights",
+    "action": "The man stares forward with a wide-eyed, surprised expression, his mouth slightly open.",
+    "text": "",
+    "key": "A close-up of a man's face showing a look of shock or surprise.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S088",
+   "start": 400.417,
+   "end": 404.042,
+   "frames": [
+    "frames/S088_0.jpg"
+   ],
+   "facts": {
+    "who": "an older man with a mechanical eye implant and a young Asian woman",
+    "where": "an indoor office with warm lighting, bookshelves, and a framed picture on the wall",
+    "action": "The older man sits in the foreground looking upward with a concerned expression, while the young woman stands behind him to the right, observing the scene",
+    "text": "",
+    "key": "The older man has a red and black mechanical device attached to his right eye",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S089",
+   "start": 404.042,
+   "end": 409.083,
+   "frames": [
+    "frames/S089_0.jpg",
+    "frames/S089_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "an outdoor urban street with buildings and trees in the background",
+    "action": "A robotic hand is positioned in front of Thom's face, with its fingers touching his lips and a small gun-like mechanism pointed at his mouth.",
+    "text": "COOL I LOVE YOUR NEW HAND",
+    "key": "A robotic hand is interacting with a man's face, holding a small weapon to his mouth.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S090",
+   "start": 409.083,
+   "end": 411.875,
+   "frames": [
+    "frames/S090_0.jpg"
+   ],
+   "facts": {
+    "who": "an older man with a mechanical eye implant and a young Asian woman",
+    "where": "an indoor room with warm lighting, a lamp, and framed pictures on the wall",
+    "action": "The older man, wearing a jacket with red floral embellishments, touches his chin with his hand while looking upward, and the young woman stands behind him to the right, observing the scene",
+    "text": "",
+    "key": "The older man has a prominent mechanical device covering his right eye, featuring red glowing lights",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S091",
+   "start": 411.875,
+   "end": 415.0,
+   "frames": [
+    "frames/S091_0.jpg"
+   ],
+   "facts": {
+    "who": "Celia, a robotic arm",
+    "where": "outdoors with a blurred green background",
+    "action": "Celia stares intently at the robotic arm positioned in front of her",
+    "text": "",
+    "key": "A mechanical robotic arm is extended directly in front of Celia's face as she looks at it with a serious expression",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S092",
+   "start": 415.0,
+   "end": 416.625,
+   "frames": [
+    "frames/S092_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom and a wireframe holographic figure",
+    "where": "an outdoor street with trees and brick buildings in the background",
+    "action": "The wireframe figure reaches out and touches Thom's face with its hand",
+    "text": "",
+    "key": "A translucent, white wireframe hologram of a person is interacting physically with the man",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S093",
+   "start": 416.625,
+   "end": 418.792,
+   "frames": [
+    "frames/S093_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom, a large robot",
+    "where": "an outdoor urban street with brick buildings and green trees in the background",
+    "action": "Thom stands with his back to the camera, looking up at the towering robot that leans down toward him",
+    "text": "",
+    "key": "A young man stands face-to-face with a giant, imposing robot in a city street.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S094",
+   "start": 418.792,
+   "end": 425.5,
+   "frames": [
+    "frames/S094_0.jpg",
+    "frames/S094_1.jpg"
+   ],
+   "facts": {
+    "who": "a man with glasses and messy hair",
+    "where": "a high-tech room filled with glowing screens and data displays",
+    "action": "The man sits at a workstation, looking down with a slight smirk, then shifts his gaze slightly to the side.",
+    "text": "80:0",
+    "key": "A man with glasses sits in a futuristic control room surrounded by glowing screens.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S095",
+   "start": 425.5,
+   "end": 427.792,
+   "frames": [
+    "frames/S095_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A dark, industrial interior, likely a large hangar or facility, featuring a curved wall with a hexagonal panel pattern on the right side.",
+    "action": "The camera looks up at a dark, hazy ceiling where bright, angular white lights are visible, accompanied by a prominent rainbow-colored lens flare in the upper right corner.",
+    "text": "",
+    "key": "A dark, hazy industrial ceiling with angular lights and a rainbow lens flare.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S096",
+   "start": 427.792,
+   "end": 431.458,
+   "frames": [
+    "frames/S096_0.jpg"
+   ],
+   "facts": {
+    "who": "a middle-aged man with a mechanical device attached to his right eye",
+    "where": "a cluttered indoor room with a lamp and framed pictures in the background",
+    "action": "The man looks upward and to the left while holding a small cylindrical device with a thin antenna near his mouth",
+    "text": "",
+    "key": "The man has a complex mechanical attachment over his right eye and is holding a device to his mouth",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S097",
+   "start": 431.458,
+   "end": 434.167,
+   "frames": [
+    "frames/S097_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with a backpack",
+    "where": "an outdoor location with stone pillars and a cloudy sky",
+    "action": "The man stands with his back to the camera, holding a large, futuristic rifle in his right hand, with smoke rising from the weapon.",
+    "text": "",
+    "key": "A man with a backpack holds a smoking futuristic rifle.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S098",
+   "start": 434.167,
+   "end": 438.583,
+   "frames": [
+    "frames/S098_0.jpg"
+   ],
+   "facts": {
+    "who": "a person with short dark hair wearing a dark padded jacket and backpack",
+    "where": "an outdoor balcony with a white balustrade, surrounded by thick ropes and cables, with a large mechanical structure visible in the background",
+    "action": "The person stands on the balcony, holding a large futuristic rifle with a scope, looking out toward the mechanical structure",
+    "text": "",
+    "key": "A person stands on a balcony aiming a large futuristic rifle at a massive mechanical structure in the distance",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S099",
+   "start": 438.583,
+   "end": 441.208,
+   "frames": [
+    "frames/S099_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "outdoors against a cloudy sky",
+    "action": "A tall, ornate tower with a domed top is shown from a low angle, with debris and fragments flying through the air around it.",
+    "text": "",
+    "key": "A tall, ornate tower is shown from a low angle with debris flying around it.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S100",
+   "start": 441.208,
+   "end": 444.875,
+   "frames": [
+    "frames/S100_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "A close-up view of a piece of machinery, likely inside a vehicle or workshop, with a blurred, warm-toned background.",
+    "action": "A stream of white smoke or steam rises from a circular, metallic mechanical component.",
+    "text": "",
+    "key": "White smoke or steam is actively venting from a circular mechanical part.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S101",
+   "start": 444.875,
+   "end": 461.792,
+   "frames": [
+    "frames/S101_0.jpg",
+    "frames/S101_1.jpg"
+   ],
+   "facts": {
+    "who": "a young man with shaggy dark hair wearing a white hooded jacket with sunglasses hanging from the collar",
+    "where": "a dimly lit industrial interior with metal structures and machinery in the background",
+    "action": "The young man stands holding a complex, cylindrical mechanical device with white and black components in his left hand, looking at it with a concerned expression.",
+    "text": "",
+    "key": "A young man in a white jacket holds a complex mechanical device in an industrial setting.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S102",
+   "start": 461.792,
+   "end": 464.833,
+   "frames": [
+    "frames/S102_0.jpg"
+   ],
+   "facts": {
+    "who": "four men, one with a robotic hand, one in a dark checked jacket, one in a white shirt, and one in a white lab coat",
+    "where": "a large, sunlit greenhouse with tall glass walls, columns, and overgrown vegetation",
+    "action": "Four men crouch on the floor in a line, aiming futuristic rifles forward through a large, open, circular metal gate",
+    "text": "",
+    "key": "Four men take cover behind a large circular gate, aiming weapons into a sunlit, overgrown greenhouse.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S103",
+   "start": 464.833,
+   "end": 468.333,
+   "frames": [
+    "frames/S103_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an outdoor setting with green foliage in the background, filled with dust or smoke",
+    "action": "Two large, grey mechanical robot figures stand facing each other in a close-up shot.",
+    "text": "",
+    "key": "A close-up of two large, grey, heavily armored robots facing one another in a dusty environment.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S104",
+   "start": 468.333,
+   "end": 478.958,
+   "frames": [
+    "frames/S104_0.jpg",
+    "frames/S104_1.jpg"
+   ],
+   "facts": {
+    "who": "four people in white protective suits",
+    "where": "a large, high-ceilinged interior space filled with plants and debris",
+    "action": "The people are kneeling on the floor, aiming futuristic firearms toward a large, complex mechanical structure in the background.",
+    "text": "",
+    "key": "Four people in white suits are taking cover and aiming weapons at a large robot.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S105",
+   "start": 478.958,
+   "end": 482.125,
+   "frames": [
+    "frames/S105_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, industrial interior with stone walls, metal beams, and hanging cables",
+    "action": "The camera moves rapidly through the narrow, cluttered space, creating a sense of speed and disorientation",
+    "text": "",
+    "key": "A fast, disorienting camera movement through a dark, industrial environment",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S106",
+   "start": 482.125,
+   "end": 483.417,
+   "frames": [
+    "frames/S106_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "outdoors on a high structure, with large concrete pillars and thick ropes visible in the background",
+    "action": "looks down at a futuristic rifle held in his hands, manipulating a component on the weapon",
+    "text": "",
+    "key": "A young Black man in a dark padded jacket is adjusting or loading a complex, futuristic rifle.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S107",
+   "start": 483.417,
+   "end": 485.5,
+   "frames": [
+    "frames/S107_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "outdoors, in a structure with wooden beams",
+    "action": "leans his head down against the stock of a rifle, eyes closed",
+    "text": "",
+    "key": "A man rests his head against a rifle with his eyes closed, appearing exhausted or in distress.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S108",
+   "start": 485.5,
+   "end": 488.042,
+   "frames": [
+    "frames/S108_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, narrow industrial corridor or shaft with metal structures, cables, and pipes",
+    "action": "The camera looks down a long, dark passage illuminated by patches of golden light reflecting off the walls and floor",
+    "text": "",
+    "key": "A long, dark industrial corridor with golden light reflecting off the surfaces",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S109",
+   "start": 488.042,
+   "end": 489.417,
+   "frames": [
+    "frames/S109_0.jpg"
+   ],
+   "facts": {
+    "who": "a bald man in a dark jacket",
+    "where": "on the metal framework of a large structure, possibly a bridge or tower, against a bright sky",
+    "action": "climbs a vertical rope, gripping it with both hands",
+    "text": "",
+    "key": "A man is climbing a rope on a tall metal structure.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S110",
+   "start": 489.417,
+   "end": 500.75,
+   "frames": [
+    "frames/S110_0.jpg",
+    "frames/S110_1.jpg"
+   ],
+   "facts": {
+    "who": "a person in a dark, textured jacket and a mask with a red glowing center, and a large white and grey mechanical creature",
+    "where": "the interior of a grand building with tall organ pipes in the background",
+    "action": "the masked figure raises their arm while holding a weapon, and the mechanical creature crashes through the structure, causing debris to fly",
+    "text": "",
+    "key": "a masked figure and a large mechanical creature are engaged in a violent confrontation inside a building with organ pipes",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S111",
+   "start": 500.75,
+   "end": 502.375,
+   "frames": [
+    "frames/S111_0.jpg"
+   ],
+   "facts": {
+    "who": "a person in a blue jacket",
+    "where": "the interior of a large, ornate cathedral with tall stone columns and a pipe organ",
+    "action": "A massive explosion erupts in the center of the frame, sending a cloud of fire and debris upward toward the pipe organ, where a figure in a blue jacket is suspended",
+    "text": "",
+    "key": "A large explosion occurs in the middle of a cathedral, destroying the area in front of the pipe organ",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S112",
+   "start": 502.375,
+   "end": 503.708,
+   "frames": [
+    "frames/S112_0.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "inside a large, industrial structure with metal beams and scaffolding",
+    "action": "The young man grips a thick rope with one hand while holding a futuristic rifle with a scope in the other, his mouth open in a shout or grimace as he moves through the dusty, debris-filled space",
+    "text": "",
+    "key": "A man in tactical gear is rappelling or climbing a rope while holding a large weapon in a chaotic, dusty industrial environment",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S113",
+   "start": 503.708,
+   "end": 505.875,
+   "frames": [
+    "frames/S113_0.jpg"
+   ],
+   "facts": {
+    "who": "a young man with dark curly hair and glasses",
+    "where": "a cluttered workshop or lab filled with electronic equipment and glowing holographic displays",
+    "action": "The man leans forward with his mouth open in a shout, looking upward and to the side, surrounded by floating green and purple digital interfaces and wires",
+    "text": "",
+    "key": "A man in a high-tech workshop shouts in alarm while surrounded by glowing holographic data displays",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S114",
+   "start": 505.875,
+   "end": 509.958,
+   "frames": [
+    "frames/S114_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with a red mechanical device attached to his face and a woman with dark hair tied back",
+    "where": "a dimly lit interior room with warm lighting, bookshelves, and framed pictures on the wall",
+    "action": "The man and woman face each other, both holding their hands up in a gesture of surprise or alarm while speaking",
+    "text": "",
+    "key": "The man has a prominent red mechanical device covering his eye and cheek",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S115",
+   "start": 509.958,
+   "end": 517.875,
+   "frames": [
+    "frames/S115_0.jpg",
+    "frames/S115_1.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "on a bridge over a canal in a city with trees and buildings in the background",
+    "action": "Thom stands in profile facing right, looking at a large, complex mechanical structure that is positioned next to him, partially obscured by the bridge railing.",
+    "text": "",
+    "key": "A young man stands on a bridge looking at a large, intricate piece of machinery or robot.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S116",
+   "start": 517.875,
+   "end": 521.0,
+   "frames": [
+    "frames/S116_0.jpg"
+   ],
+   "facts": {
+    "who": "Thom",
+    "where": "an outdoor urban setting with a canal, trees, and buildings in the background, next to a large stone sculpture",
+    "action": "Thom stands in the foreground, looking slightly off-camera to his left with a serious expression, his mouth slightly open as if speaking",
+    "text": "",
+    "key": "A young man with dark hair stands outdoors near a stone sculpture, speaking with a serious expression",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S117",
+   "start": 521.0,
+   "end": 527.417,
+   "frames": [
+    "frames/S117_0.jpg",
+    "frames/S117_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an interior space with stone pillars, hanging chandeliers, and overgrown vegetation",
+    "action": "A large, dark metallic robot stands in the background behind a large, rusty, cylindrical mechanical object in the foreground",
+    "text": "",
+    "key": "A large robot is visible in a ruined, overgrown interior",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S118",
+   "start": 527.417,
+   "end": 531.208,
+   "frames": [
+    "frames/S118_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, industrial environment with visible steam or smoke",
+    "action": "A large, complex mechanical structure with pipes and metallic components is shown in close-up, with steam rising from it.",
+    "text": "",
+    "key": "The shot is a dark, close-up view of heavy machinery or industrial equipment emitting steam.",
+    "confidence": 0.9
+   }
+  },
+  {
+   "id": "S119",
+   "start": 531.208,
+   "end": 537.708,
+   "frames": [
+    "frames/S119_0.jpg",
+    "frames/S119_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man",
+    "where": "an outdoor area with a blurred, cluttered background of structures and debris",
+    "action": "The old man stands in profile, looking towards a large, dark mechanical object on the right side of the frame, his expression shifting from serious to a slight smile.",
+    "text": "",
+    "key": "An older man with grey hair stands next to a large, dark robotic mechanism.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S120",
+   "start": 537.708,
+   "end": 539.208,
+   "frames": [
+    "frames/S120_0.jpg"
+   ],
+   "facts": {
+    "who": "A person seen from behind, out of focus, wearing a dark jacket",
+    "where": "In front of a large digital display screen",
+    "action": "The person stands facing the screen, which shows a progress bar filling up under the heading 'MEMORY OVERWRITE'",
+    "text": "MEMORY OVERWRITE 099.78%",
+    "key": "A digital screen displays 'MEMORY OVERWRITE' with a progress bar at 99.78%, indicating a process is nearly complete.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S121",
+   "start": 539.208,
+   "end": 543.167,
+   "frames": [
+    "frames/S121_0.jpg"
+   ],
+   "facts": {
+    "who": "a man with curly brown hair and glasses",
+    "where": "a cluttered control room filled with monitors, equipment, and glowing holographic displays",
+    "action": "The man leans forward with a strained expression, holding up a large, mechanical robotic hand that is crackling with blue electrical energy",
+    "text": "",
+    "key": "A man holds up a robotic hand that is sparking with blue electricity amidst a chaotic control room environment",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S122",
+   "start": 543.167,
+   "end": 552.833,
+   "frames": [
+    "frames/S122_0.jpg",
+    "frames/S122_1.jpg"
+   ],
+   "facts": {
+    "who": "the old man",
+    "where": "an industrial interior with a metal railing and large machinery",
+    "action": "The old man stands in profile facing a large, complex mechanical structure, holding his hand against a component of the machine as he inspects it.",
+    "text": "",
+    "key": "The old man is closely inspecting a large, intricate machine with glowing purple elements.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S123",
+   "start": 552.833,
+   "end": 556.833,
+   "frames": [
+    "frames/S123_0.jpg"
+   ],
+   "facts": {
+    "who": "the old man",
+    "where": "outdoors, with a blurred, warm-toned background suggesting a forest or wooded area",
+    "action": "The old man stares intently at a large, metallic object held in the foreground, his expression serious and focused.",
+    "text": "",
+    "key": "An older man with grey hair and a beard looks with intense focus at a large, out-of-focus metallic object in the foreground.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S124",
+   "start": 556.833,
+   "end": 564.292,
+   "frames": [
+    "frames/S124_0.jpg",
+    "frames/S124_1.jpg"
+   ],
+   "facts": {
+    "who": "a middle-aged man with a mechanical cybernetic eye implant",
+    "where": "an indoor room with a lamp and a shelf of items in the background",
+    "action": "The man looks forward and to the side while speaking, gesturing with his hand in the first frame and raising his hand with fingers spread in the second frame.",
+    "text": "",
+    "key": "The man has a complex, multi-lensed mechanical device implanted over his right eye.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S125",
+   "start": 564.292,
+   "end": 588.0,
+   "frames": [
+    "frames/S125_0.jpg",
+    "frames/S125_1.jpg"
+   ],
+   "facts": {
+    "who": "Celia",
+    "where": "a large, dilapidated industrial interior with metal walkways and heavy machinery",
+    "action": "The shot begins with a rapid, blurry movement before stabilizing to show Celia standing on a metal platform, gesturing with her hands as she speaks to a large, complex mechanical structure beside her.",
+    "text": "",
+    "key": "Celia stands on a platform next to a large, intricate piece of machinery in a ruined industrial setting.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S126",
+   "start": 588.0,
+   "end": 616.875,
+   "frames": [
+    "frames/S126_0.jpg",
+    "frames/S126_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, abstract background",
+    "action": "A stylized, blue-outlined robotic hand is shown in close-up, with its fingers extended and mechanical details visible.",
+    "text": "Cast: Old Thom DEREK DE LINT, Barley SERGIO HASSELBAINK, Captain ROGIER SCHIPPERS, Thom YANJA RUKAVINA, Celia DENISE REBERGEN, Djenghis JODY BHE, Tech head CHRIS HALEY",
+    "key": "The shot displays a cast list over a graphic of a robotic hand.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S127",
+   "start": 616.875,
+   "end": 620.5,
+   "frames": [
+    "frames/S127_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "an abstract digital graphic background",
+    "action": "A stylized, glowing blue and white brain graphic is positioned on the right side of the screen, overlaid on a dark background with abstract orange geometric shapes.",
+    "text": "Blender development, scripting & studio pipeline, BRECHT VAN LOMMEL, CAMPBELL BARTON, SERGEY SHARYBIN",
+    "key": "A credit screen featuring a glowing blue brain graphic and a list of names for Blender development.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S128",
+   "start": 620.5,
+   "end": 709.5,
+   "frames": [
+    "frames/S128_0.jpg",
+    "frames/S128_1.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a digital credits screen with a dark background and neon orange and blue graphics",
+    "action": "The screen displays scrolling credits and static sponsor information, including a stylized illustration of a brain and a vertical list of icons.",
+    "text": "Render farm 'JustaCluster' Arnd Marinissen, Additional render resources Dell Lab Amsterdam, Studio system administration Koen Martens, Office Manager Sylvie Ashford, Web support Marco Walewens Bart Veldhuizen, Production baby Arseniy Volodin, Powered by C-Chart, Premium sponsor Google, Development sponsor David Jeske, Main sponsors Hewlett-Packard Workstations Camalot AV Services BlenderGuru, Platinum sponsor",
+    "key": "The shot consists of end-credits text and sponsor logos displayed over a dark, abstract background with neon graphics.",
+    "confidence": 1.0
+   }
+  },
+  {
+   "id": "S129",
+   "start": 709.5,
+   "end": 730.333,
+   "frames": [
+    "frames/S129_0.jpg",
+    "frames/S129_1.jpg"
+   ],
+   "facts": {
+    "who": "the sniper",
+    "where": "a vast outdoor pile of destroyed, rusted robotic machinery",
+    "action": "The sniper sits atop the heap of wreckage, holding a futuristic rifle in one hand and a small white cup in the other, looking down at the cup.",
+    "text": "",
+    "key": "A young man sits on a massive pile of destroyed robots, holding a rifle and a cup.",
+    "confidence": 0.95
+   }
+  },
+  {
+   "id": "S130",
+   "start": 730.333,
+   "end": 734.167,
+   "frames": [
+    "frames/S130_0.jpg"
+   ],
+   "facts": {
+    "who": "none",
+    "where": "a dark, indistinct setting",
+    "action": "The screen remains black with no visible movement or figures.",
+    "text": "",
+    "key": "The shot is entirely black with no visible visual information.",
+    "confidence": 1.0
+   }
+  }
+ ],
+ "dialogue": [
+  {
+   "start": 2.9,
+   "end": 3.7,
+   "text": ""
+  },
+  {
+   "start": 4.340000000000002,
+   "end": 11.1,
+   "text": "We have main engine start. Four, three, two, one."
+  },
+  {
+   "start": 22.9,
+   "end": 45.3,
+   "text": "You're a jerk, Tom. Look, Celia, we have to follow our passions. You have your robotics and I just want to be awesome in space. You're Why don't you just admit that you're freaked out by my robot hand? I'm not freaked out by it. It's... Alright, fine. I'm freaked out. I'm having nightmares that I'm being chased by this giant robotic claw... Oh, whatever, Tom. We're done."
+  },
+  {
+   "start": 50.0,
+   "end": 53.7,
+   "text": "Robot's memory synced and... left."
+  },
+  {
+   "start": 60.1,
+   "end": 62.4,
+   "text": "This is pretty freaky."
+  },
+  {
+   "start": 89.98,
+   "end": 91.16,
+   "text": "Charge"
+  },
+  {
+   "start": 117.52000000000001,
+   "end": 118.7,
+   "text": "Should it you be down there?"
+  },
+  {
+   "start": 130.95999999999998,
+   "end": 133.0,
+   "text": "I heard you guys talking last night."
+  },
+  {
+   "start": 136.14,
+   "end": 137.58,
+   "text": "It's not my fault, you know."
+  },
+  {
+   "start": 158.34,
+   "end": 159.06,
+   "text": "Oh,"
+  },
+  {
+   "start": 190.96,
+   "end": 194.8,
+   "text": "Are you ready? Of you're ready. You're a rock star."
+  },
+  {
+   "start": 196.78,
+   "end": 200.7,
+   "text": "How's it looking, Barley? We should have about 10 minutes."
+  },
+  {
+   "start": 201.38,
+   "end": 208.22,
+   "text": "Well, that's perfect. We're only one. All systems go. Yeah, you, go. Go."
+  },
+  {
+   "start": 210.9,
+   "end": 211.5,
+   "text": ""
+  },
+  {
+   "start": 213.1,
+   "end": 214.6,
+   "text": ""
+  },
+  {
+   "start": 222.66,
+   "end": 226.0,
+   "text": "Against flagship Nothing to worry about. Done."
+  },
+  {
+   "start": 230.5,
+   "end": 233.88,
+   "text": "Done. There she is. Now."
+  },
+  {
+   "start": 234.94,
+   "end": 236.22,
+   "text": "You'll love her."
+  },
+  {
+   "start": 237.22,
+   "end": 244.3,
+   "text": "She's your passion. Be tender to her. Be honest. Be tender."
+  },
+  {
+   "start": 245.22,
+   "end": 247.86,
+   "text": "Remind her what love is."
+  },
+  {
+   "start": 256.28000000000003,
+   "end": 257.68,
+   "text": "unmute"
+  },
+  {
+   "start": 284.64000000000004,
+   "end": 285.48,
+   "text": "AOZA"
+  },
+  {
+   "start": 292.76,
+   "end": 294.72,
+   "text": "And... Action!"
+  },
+  {
+   "start": 295.8,
+   "end": 298.4,
+   "text": "Memory override in progress!"
+  },
+  {
+   "start": 299.02,
+   "end": 300.7,
+   "text": "You're a jerk, dog!"
+  },
+  {
+   "start": 301.72,
+   "end": 305.34,
+   "text": "Oh, sorry! Sorry. Sorry."
+  },
+  {
+   "start": 315.54,
+   "end": 322.9,
+   "text": "Look Celia, we have to follow our passions. You have your robotics."
+  },
+  {
+   "start": 324.70000000000005,
+   "end": 327.9,
+   "text": "And I just want to be awesome in space."
+  },
+  {
+   "start": 338.64,
+   "end": 342.2,
+   "text": "Get her coming. Two minutes left. Two minutes."
+  },
+  {
+   "start": 342.9,
+   "end": 343.9,
+   "text": "Spirafunk!"
+  },
+  {
+   "start": 344.69999999999993,
+   "end": 350.0,
+   "text": "Viva Ciccio! Why don't you just admit that you're freaked out by my robot hand?"
+  },
+  {
+   "start": 356.48,
+   "end": 363.2,
+   "text": "Listen, Celia. I was young. And a dick. But there's no reason to destroy the world."
+  },
+  {
+   "start": 364.56,
+   "end": 366.0,
+   "text": "Why does she do this?"
+  },
+  {
+   "start": 366.6,
+   "end": 368.6,
+   "text": "We already tried that one!"
+  },
+  {
+   "start": 371.92,
+   "end": 372.46,
+   "text": "Abort!"
+  },
+  {
+   "start": 373.12,
+   "end": 374.5,
+   "text": "Fuck! Whoa!"
+  },
+  {
+   "start": 378.62,
+   "end": 379.48,
+   "text": "No!"
+  },
+  {
+   "start": 380.77,
+   "end": 381.2,
+   "text": "No!"
+  },
+  {
+   "start": 382.84,
+   "end": 384.9,
+   "text": "You broke my heart."
+  },
+  {
+   "start": 385.75,
+   "end": 392.7,
+   "text": "I know. You forgot me on Earth. I know. I should just crush you!"
+  },
+  {
+   "start": 396.66,
+   "end": 397.52,
+   "text": "I'm..."
+  },
+  {
+   "start": 407.24,
+   "end": 408.1,
+   "text": "I'm sorry."
+  },
+  {
+   "start": 410.1,
+   "end": 410.9,
+   "text": "Who'd that live?"
+  },
+  {
+   "start": 418.92,
+   "end": 419.96,
+   "text": "Got my ball."
+  },
+  {
+   "start": 421.96000000000004,
+   "end": 422.74,
+   "text": "This time."
+  },
+  {
+   "start": 428.3,
+   "end": 429.28,
+   "text": "Quiet outside."
+  },
+  {
+   "start": 430.16,
+   "end": 431.3,
+   "text": "We're out of time. We're out of time."
+  },
+  {
+   "start": 435.5,
+   "end": 437.14,
+   "text": "ew !"
+  },
+  {
+   "start": 466.9,
+   "end": 467.22,
+   "text": "alta"
+  },
+  {
+   "start": 495.78000000000003,
+   "end": 497.18,
+   "text": "CG"
+  },
+  {
+   "start": 503.59999999999997,
+   "end": 505.18,
+   "text": "Memory overrated, 90%."
+  },
+  {
+   "start": 506.09999999999997,
+   "end": 508.18,
+   "text": "Captain, we have to abort."
+  },
+  {
+   "start": 518.6,
+   "end": 520.34,
+   "text": "The world's changed, Celia."
+  },
+  {
+   "start": 534.44,
+   "end": 535.94,
+   "text": "Maybe we can too."
+  },
+  {
+   "start": 538.0,
+   "end": 539.22,
+   "text": "Memory override complete!"
+  },
+  {
+   "start": 558.72,
+   "end": 563.7,
+   "text": "You know, there's a lesson to be learned from this."
+  },
+  {
+   "start": 565.62,
+   "end": 566.9,
+   "text": "Could have gone worse."
+  },
+  {
+   "start": 597.62,
+   "end": 599.46,
+   "text": "We'll right back."
+  },
+  {
+   "start": 624.5,
+   "end": 630.16,
+   "text": "Period Thank you."
+  },
+  {
+   "start": 664.62,
+   "end": 667.42,
+   "text": "I'm out."
+  },
+  {
+   "start": 686.06,
+   "end": 688.56,
+   "text": "I'm sorry."
+  },
+  {
+   "start": 728.0600000000001,
+   "end": 729.46,
+   "text": "Random"
+  },
+  {
+   "start": 733.78,
+   "end": 733.84,
+   "text": "technician"
+  }
+ ],
+ "dialogue_asr": [
+  {
+   "start": 4.340000000000002,
+   "end": 9.56,
+   "text": "We have main engine start. Four, three, two, one."
+  },
+  {
+   "start": 22.9,
+   "end": 35.8,
+   "text": "You're a jerk, Tom. Look, Celia, we have to follow our passions. You have your robotics and I just want to be awesome in space. You're Why don't you just admit that you're freaked out by my robot hand? I'm not freaked out by it."
+  },
+  {
+   "start": 36.44,
+   "end": 43.28,
+   "text": "It's... Alright, fine. I'm freaked out. I'm having nightmares that I'm being chased by this giant robotic claw... Oh, whatever, Tom."
+  },
+  {
+   "start": 43.98,
+   "end": 44.86,
+   "text": "We're done."
+  },
+  {
+   "start": 50.0,
+   "end": 53.5,
+   "text": "Robot's memory synced and... left."
+  },
+  {
+   "start": 60.1,
+   "end": 62.2,
+   "text": "This is pretty freaky."
+  },
+  {
+   "start": 89.98,
+   "end": 91.16,
+   "text": "Charge"
+  },
+  {
+   "start": 117.52000000000001,
+   "end": 118.52,
+   "text": "Should it you be down there?"
+  },
+  {
+   "start": 130.95999999999998,
+   "end": 132.78,
+   "text": "I heard you guys talking last night."
+  },
+  {
+   "start": 136.14,
+   "end": 137.58,
+   "text": "It's not my fault, you know."
+  },
+  {
+   "start": 158.34,
+   "end": 159.06,
+   "text": "Oh,"
+  },
+  {
+   "start": 190.96,
+   "end": 194.46,
+   "text": "Are you ready? Of you're ready. You're a rock star."
+  },
+  {
+   "start": 196.78,
+   "end": 200.32,
+   "text": "How's it looking, Barley? We should have about 10 minutes."
+  },
+  {
+   "start": 201.38,
+   "end": 202.64,
+   "text": "Well, that's perfect."
+  },
+  {
+   "start": 203.4,
+   "end": 208.22,
+   "text": "We're only one. All systems go. Yeah, you, go. Go."
+  },
+  {
+   "start": 222.66,
+   "end": 225.86,
+   "text": "Against flagship Nothing to worry about. Done."
+  },
+  {
+   "start": 230.5,
+   "end": 233.88,
+   "text": "Done. There she is. Now."
+  },
+  {
+   "start": 234.94,
+   "end": 236.22,
+   "text": "You'll love her."
+  },
+  {
+   "start": 237.22,
+   "end": 240.52,
+   "text": "She's your passion. Be tender to her."
+  },
+  {
+   "start": 241.16,
+   "end": 241.96,
+   "text": "Be honest."
+  },
+  {
+   "start": 243.04,
+   "end": 244.14,
+   "text": "Be tender."
+  },
+  {
+   "start": 245.22,
+   "end": 247.86,
+   "text": "Remind her what love is."
+  },
+  {
+   "start": 256.28000000000003,
+   "end": 257.68,
+   "text": "unmute"
+  },
+  {
+   "start": 284.64000000000004,
+   "end": 285.48,
+   "text": "AOZA"
+  },
+  {
+   "start": 292.76,
+   "end": 294.72,
+   "text": "And... Action!"
+  },
+  {
+   "start": 295.8,
+   "end": 298.12,
+   "text": "Memory override in progress!"
+  },
+  {
+   "start": 299.02,
+   "end": 300.4,
+   "text": "You're a jerk, dog!"
+  },
+  {
+   "start": 301.72,
+   "end": 304.02,
+   "text": "Oh, sorry! Sorry."
+  },
+  {
+   "start": 304.66,
+   "end": 305.34,
+   "text": "Sorry."
+  },
+  {
+   "start": 315.54,
+   "end": 320.0,
+   "text": "Look Celia, we have to follow our passions."
+  },
+  {
+   "start": 320.9,
+   "end": 322.44,
+   "text": "You have your robotics."
+  },
+  {
+   "start": 324.70000000000005,
+   "end": 327.62,
+   "text": "And I just want to be awesome in space."
+  },
+  {
+   "start": 338.64,
+   "end": 341.92,
+   "text": "Get her coming. Two minutes left. Two minutes."
+  },
+  {
+   "start": 343.15999999999997,
+   "end": 343.76,
+   "text": "Spirafunk!"
+  },
+  {
+   "start": 344.69999999999993,
+   "end": 345.9,
+   "text": "Viva Ciccio!"
+  },
+  {
+   "start": 346.54,
+   "end": 349.86,
+   "text": "Why don't you just admit that you're freaked out by my robot hand?"
+  },
+  {
+   "start": 356.48,
+   "end": 358.72,
+   "text": "Listen, Celia. I was young."
+  },
+  {
+   "start": 359.52,
+   "end": 362.82,
+   "text": "And a dick. But there's no reason to destroy the world."
+  },
+  {
+   "start": 364.56,
+   "end": 365.76,
+   "text": "Why does she do this?"
+  },
+  {
+   "start": 366.6,
+   "end": 368.42,
+   "text": "We already tried that one!"
+  },
+  {
+   "start": 371.92,
+   "end": 372.46,
+   "text": "Abort!"
+  },
+  {
+   "start": 373.12,
+   "end": 374.5,
+   "text": "Fuck! Whoa!"
+  },
+  {
+   "start": 378.62,
+   "end": 379.48,
+   "text": "No!"
+  },
+  {
+   "start": 380.77,
+   "end": 381.2,
+   "text": "No!"
+  },
+  {
+   "start": 382.84,
+   "end": 384.84,
+   "text": "You broke my heart."
+  },
+  {
+   "start": 385.75,
+   "end": 388.48,
+   "text": "I know. You forgot me on Earth."
+  },
+  {
+   "start": 389.1,
+   "end": 392.1,
+   "text": "I know. I should just crush you!"
+  },
+  {
+   "start": 396.66,
+   "end": 397.52,
+   "text": "I'm..."
+  },
+  {
+   "start": 407.24,
+   "end": 408.1,
+   "text": "I'm sorry."
+  },
+  {
+   "start": 410.1,
+   "end": 410.9,
+   "text": "Who'd that live?"
+  },
+  {
+   "start": 418.92,
+   "end": 419.96,
+   "text": "Got my ball."
+  },
+  {
+   "start": 421.96000000000004,
+   "end": 422.74,
+   "text": "This time."
+  },
+  {
+   "start": 428.3,
+   "end": 429.28,
+   "text": "Quiet outside."
+  },
+  {
+   "start": 430.16,
+   "end": 431.3,
+   "text": "We're out of time. We're out of time."
+  },
+  {
+   "start": 435.5,
+   "end": 437.14,
+   "text": "ew !"
+  },
+  {
+   "start": 466.9,
+   "end": 467.22,
+   "text": "alta"
+  },
+  {
+   "start": 495.78000000000003,
+   "end": 497.18,
+   "text": "CG"
+  },
+  {
+   "start": 503.59999999999997,
+   "end": 505.18,
+   "text": "Memory overrated, 90%."
+  },
+  {
+   "start": 506.09999999999997,
+   "end": 508.18,
+   "text": "Captain, we have to abort."
+  },
+  {
+   "start": 518.6,
+   "end": 520.34,
+   "text": "The world's changed, Celia."
+  },
+  {
+   "start": 534.44,
+   "end": 535.94,
+   "text": "Maybe we can too."
+  },
+  {
+   "start": 538.0,
+   "end": 539.22,
+   "text": "Memory override complete!"
+  },
+  {
+   "start": 558.72,
+   "end": 563.52,
+   "text": "You know, there's a lesson to be learned from this."
+  },
+  {
+   "start": 565.62,
+   "end": 566.76,
+   "text": "Could have gone worse."
+  },
+  {
+   "start": 597.62,
+   "end": 599.46,
+   "text": "We'll right back."
+  },
+  {
+   "start": 624.5,
+   "end": 630.16,
+   "text": "Period Thank you."
+  },
+  {
+   "start": 664.62,
+   "end": 667.42,
+   "text": "I'm out."
+  },
+  {
+   "start": 686.06,
+   "end": 688.56,
+   "text": "I'm sorry."
+  },
+  {
+   "start": 728.0600000000001,
+   "end": 729.46,
+   "text": "Random"
+  },
+  {
+   "start": 733.78,
+   "end": 733.84,
+   "text": "technician"
+  }
+ ],
+ "speech_vad": [
+  {
+   "start": 2.9,
+   "end": 3.7
+  },
+  {
+   "start": 4.7,
+   "end": 6.6
+  },
+  {
+   "start": 6.8,
+   "end": 10.1
+  },
+  {
+   "start": 10.7,
+   "end": 11.1
+  },
+  {
+   "start": 24.6,
+   "end": 36.1
+  },
+  {
+   "start": 37.6,
+   "end": 43.7
+  },
+  {
+   "start": 44.3,
+   "end": 45.3
+  },
+  {
+   "start": 50.2,
+   "end": 51.9
+  },
+  {
+   "start": 52.1,
+   "end": 52.8
+  },
+  {
+   "start": 53.3,
+   "end": 53.7
+  },
+  {
+   "start": 60.9,
+   "end": 62.4
+  },
+  {
+   "start": 117.7,
+   "end": 118.7
+  },
+  {
+   "start": 131.5,
+   "end": 133.0
+  },
+  {
+   "start": 136.6,
+   "end": 137.5
+  },
+  {
+   "start": 192.9,
+   "end": 194.8
+  },
+  {
+   "start": 197.2,
+   "end": 198.4
+  },
+  {
+   "start": 198.8,
+   "end": 200.7
+  },
+  {
+   "start": 201.7,
+   "end": 202.9
+  },
+  {
+   "start": 203.6,
+   "end": 204.7
+  },
+  {
+   "start": 205.1,
+   "end": 208.2
+  },
+  {
+   "start": 210.9,
+   "end": 211.5
+  },
+  {
+   "start": 213.1,
+   "end": 214.6
+  },
+  {
+   "start": 222.9,
+   "end": 223.9
+  },
+  {
+   "start": 224.6,
+   "end": 226.0
+  },
+  {
+   "start": 237.6,
+   "end": 238.5
+  },
+  {
+   "start": 239.7,
+   "end": 240.6
+  },
+  {
+   "start": 241.5,
+   "end": 242.5
+  },
+  {
+   "start": 243.7,
+   "end": 244.3
+  },
+  {
+   "start": 245.8,
+   "end": 246.4
+  },
+  {
+   "start": 247.0,
+   "end": 247.7
+  },
+  {
+   "start": 297.2,
+   "end": 298.4
+  },
+  {
+   "start": 299.7,
+   "end": 300.7
+  },
+  {
+   "start": 302.1,
+   "end": 303.2
+  },
+  {
+   "start": 303.7,
+   "end": 304.2
+  },
+  {
+   "start": 316.3,
+   "end": 316.8
+  },
+  {
+   "start": 318.5,
+   "end": 320.3
+  },
+  {
+   "start": 321.4,
+   "end": 322.9
+  },
+  {
+   "start": 325.9,
+   "end": 327.9
+  },
+  {
+   "start": 339.5,
+   "end": 340.0
+  },
+  {
+   "start": 340.3,
+   "end": 341.4
+  },
+  {
+   "start": 341.6,
+   "end": 342.2
+  },
+  {
+   "start": 342.9,
+   "end": 343.9
+  },
+  {
+   "start": 344.9,
+   "end": 346.4
+  },
+  {
+   "start": 347.0,
+   "end": 350.0
+  },
+  {
+   "start": 356.9,
+   "end": 357.8
+  },
+  {
+   "start": 358.1,
+   "end": 359.2
+  },
+  {
+   "start": 360.0,
+   "end": 360.8
+  },
+  {
+   "start": 361.3,
+   "end": 363.2
+  },
+  {
+   "start": 365.0,
+   "end": 366.0
+  },
+  {
+   "start": 367.1,
+   "end": 368.6
+  },
+  {
+   "start": 383.9,
+   "end": 384.9
+  },
+  {
+   "start": 387.1,
+   "end": 388.8
+  },
+  {
+   "start": 390.5,
+   "end": 392.7
+  },
+  {
+   "start": 562.4,
+   "end": 563.7
+  },
+  {
+   "start": 566.2,
+   "end": 566.9
+  }
+ ],
+ "gaps": [
+  {
+   "start": 0.3,
+   "end": 2.6
+  },
+  {
+   "start": 11.35,
+   "end": 22.6
+  },
+  {
+   "start": 45.55,
+   "end": 49.7
+  },
+  {
+   "start": 53.95,
+   "end": 59.8
+  },
+  {
+   "start": 62.65,
+   "end": 89.68
+  },
+  {
+   "start": 91.41,
+   "end": 117.22
+  },
+  {
+   "start": 118.95,
+   "end": 130.66
+  },
+  {
+   "start": 133.25,
+   "end": 135.84
+  },
+  {
+   "start": 137.83,
+   "end": 158.04
+  },
+  {
+   "start": 159.31,
+   "end": 190.66
+  },
+  {
+   "start": 195.05,
+   "end": 196.48
+  },
+  {
+   "start": 208.47,
+   "end": 210.6
+  },
+  {
+   "start": 214.85,
+   "end": 222.36
+  },
+  {
+   "start": 226.25,
+   "end": 230.2
+  },
+  {
+   "start": 248.11,
+   "end": 255.98
+  },
+  {
+   "start": 257.93,
+   "end": 284.34
+  },
+  {
+   "start": 285.73,
+   "end": 292.46
+  },
+  {
+   "start": 305.59,
+   "end": 315.24
+  },
+  {
+   "start": 323.15,
+   "end": 324.4
+  },
+  {
+   "start": 328.15,
+   "end": 338.34
+  },
+  {
+   "start": 350.25,
+   "end": 356.18
+  },
+  {
+   "start": 368.85,
+   "end": 371.62
+  },
+  {
+   "start": 374.75,
+   "end": 378.32
+  },
+  {
+   "start": 392.95,
+   "end": 396.36
+  },
+  {
+   "start": 397.77,
+   "end": 406.94
+  },
+  {
+   "start": 408.35,
+   "end": 409.8
+  },
+  {
+   "start": 411.15,
+   "end": 418.62
+  },
+  {
+   "start": 420.21,
+   "end": 421.66
+  },
+  {
+   "start": 422.99,
+   "end": 428.0
+  },
+  {
+   "start": 431.55,
+   "end": 435.2
+  },
+  {
+   "start": 437.39,
+   "end": 466.6
+  },
+  {
+   "start": 467.47,
+   "end": 495.48
+  },
+  {
+   "start": 497.43,
+   "end": 503.3
+  },
+  {
+   "start": 508.43,
+   "end": 518.3
+  },
+  {
+   "start": 520.59,
+   "end": 534.14
+  },
+  {
+   "start": 536.19,
+   "end": 537.7
+  },
+  {
+   "start": 539.47,
+   "end": 558.42
+  },
+  {
+   "start": 563.95,
+   "end": 565.32
+  },
+  {
+   "start": 567.15,
+   "end": 597.32
+  },
+  {
+   "start": 599.71,
+   "end": 624.2
+  },
+  {
+   "start": 630.41,
+   "end": 664.32
+  },
+  {
+   "start": 667.67,
+   "end": 685.76
+  },
+  {
+   "start": 688.81,
+   "end": 727.76
+  },
+  {
+   "start": 729.71,
+   "end": 733.48
+  }
+ ],
+ "slots": [
+  {
+   "start": 0.3,
+   "end": 2.6,
+   "shots": [
+    "S001"
+   ],
+   "prev": []
+  },
+  {
+   "start": 11.35,
+   "end": 18.417,
+   "shots": [
+    "S002",
+    "S003"
+   ],
+   "prev": [
+    "S001"
+   ]
+  },
+  {
+   "start": 18.417,
+   "end": 22.6,
+   "shots": [
+    "S004"
+   ],
+   "prev": [
+    "S003"
+   ]
+  },
+  {
+   "start": 45.55,
+   "end": 49.7,
+   "shots": [
+    "S008"
+   ],
+   "prev": [
+    "S007"
+   ]
+  },
+  {
+   "start": 53.95,
+   "end": 59.8,
+   "shots": [
+    "S011",
+    "S012"
+   ],
+   "prev": [
+    "S010"
+   ]
+  },
+  {
+   "start": 62.65,
+   "end": 69.917,
+   "shots": [
+    "S012",
+    "S013"
+   ],
+   "prev": []
+  },
+  {
+   "start": 69.917,
+   "end": 74.083,
+   "shots": [
+    "S014"
+   ],
+   "prev": [
+    "S013"
+   ]
+  },
+  {
+   "start": 74.083,
+   "end": 79.375,
+   "shots": [
+    "S015"
+   ],
+   "prev": [
+    "S014"
+   ]
+  },
+  {
+   "start": 79.375,
+   "end": 82.125,
+   "shots": [
+    "S016"
+   ],
+   "prev": [
+    "S015"
+   ]
+  },
+  {
+   "start": 82.125,
+   "end": 84.833,
+   "shots": [
+    "S017"
+   ],
+   "prev": [
+    "S016"
+   ]
+  },
+  {
+   "start": 84.833,
+   "end": 89.68,
+   "shots": [
+    "S018"
+   ],
+   "prev": [
+    "S017"
+   ]
+  },
+  {
+   "start": 91.41,
+   "end": 95.417,
+   "shots": [
+    "S018",
+    "S019"
+   ],
+   "prev": []
+  },
+  {
+   "start": 95.417,
+   "end": 98.208,
+   "shots": [
+    "S020"
+   ],
+   "prev": [
+    "S019"
+   ]
+  },
+  {
+   "start": 98.208,
+   "end": 102.417,
+   "shots": [
+    "S021"
+   ],
+   "prev": [
+    "S020"
+   ]
+  },
+  {
+   "start": 102.417,
+   "end": 117.22,
+   "shots": [
+    "S022",
+    "S023"
+   ],
+   "prev": [
+    "S021"
+   ]
+  },
+  {
+   "start": 118.95,
+   "end": 130.66,
+   "shots": [
+    "S023",
+    "S024"
+   ],
+   "prev": [
+    "S022"
+   ]
+  },
+  {
+   "start": 133.25,
+   "end": 135.84,
+   "shots": [
+    "S024",
+    "S025"
+   ],
+   "prev": []
+  },
+  {
+   "start": 137.83,
+   "end": 143.292,
+   "shots": [
+    "S025",
+    "S026"
+   ],
+   "prev": []
+  },
+  {
+   "start": 143.292,
+   "end": 145.792,
+   "shots": [
+    "S027"
+   ],
+   "prev": [
+    "S026"
+   ]
+  },
+  {
+   "start": 145.792,
+   "end": 152.875,
+   "shots": [
+    "S028"
+   ],
+   "prev": [
+    "S027"
+   ]
+  },
+  {
+   "start": 152.875,
+   "end": 158.04,
+   "shots": [
+    "S029"
+   ],
+   "prev": [
+    "S028"
+   ]
+  },
+  {
+   "start": 159.31,
+   "end": 172.292,
+   "shots": [
+    "S030"
+   ],
+   "prev": [
+    "S029"
+   ]
+  },
+  {
+   "start": 172.292,
+   "end": 183.25,
+   "shots": [
+    "S031"
+   ],
+   "prev": [
+    "S030"
+   ]
+  },
+  {
+   "start": 183.25,
+   "end": 190.66,
+   "shots": [
+    "S032",
+    "S033"
+   ],
+   "prev": [
+    "S031"
+   ]
+  },
+  {
+   "start": 195.05,
+   "end": 196.48,
+   "shots": [
+    "S034"
+   ],
+   "prev": [
+    "S033"
+   ]
+  },
+  {
+   "start": 208.47,
+   "end": 210.6,
+   "shots": [
+    "S038"
+   ],
+   "prev": [
+    "S036",
+    "S037"
+   ]
+  },
+  {
+   "start": 214.85,
+   "end": 222.36,
+   "shots": [
+    "S040"
+   ],
+   "prev": [
+    "S038",
+    "S039"
+   ]
+  },
+  {
+   "start": 226.25,
+   "end": 230.2,
+   "shots": [
+    "S042"
+   ],
+   "prev": [
+    "S041"
+   ]
+  },
+  {
+   "start": 248.11,
+   "end": 253.417,
+   "shots": [
+    "S044"
+   ],
+   "prev": []
+  },
+  {
+   "start": 253.417,
+   "end": 255.98,
+   "shots": [
+    "S045"
+   ],
+   "prev": [
+    "S044"
+   ]
+  },
+  {
+   "start": 257.93,
+   "end": 284.34,
+   "shots": [
+    "S046"
+   ],
+   "prev": [
+    "S045"
+   ]
+  },
+  {
+   "start": 285.73,
+   "end": 292.46,
+   "shots": [
+    "S046",
+    "S047"
+   ],
+   "prev": []
+  },
+  {
+   "start": 305.59,
+   "end": 310.583,
+   "shots": [
+    "S053",
+    "S054"
+   ],
+   "prev": []
+  },
+  {
+   "start": 310.583,
+   "end": 315.24,
+   "shots": [
+    "S055",
+    "S056"
+   ],
+   "prev": [
+    "S054"
+   ]
+  },
+  {
+   "start": 323.15,
+   "end": 324.4,
+   "shots": [
+    "S059",
+    "S060"
+   ],
+   "prev": [
+    "S058"
+   ]
+  },
+  {
+   "start": 328.15,
+   "end": 338.34,
+   "shots": [
+    "S060",
+    "S061",
+    "S062"
+   ],
+   "prev": []
+  },
+  {
+   "start": 350.25,
+   "end": 356.18,
+   "shots": [
+    "S067",
+    "S068"
+   ],
+   "prev": [
+    "S065",
+    "S066"
+   ]
+  },
+  {
+   "start": 368.85,
+   "end": 371.62,
+   "shots": [
+    "S073",
+    "S074"
+   ],
+   "prev": [
+    "S071",
+    "S072"
+   ]
+  },
+  {
+   "start": 374.75,
+   "end": 378.32,
+   "shots": [
+    "S076",
+    "S077",
+    "S078",
+    "S079"
+   ],
+   "prev": [
+    "S075"
+   ]
+  },
+  {
+   "start": 392.95,
+   "end": 396.36,
+   "shots": [
+    "S086"
+   ],
+   "prev": [
+    "S085"
+   ]
+  },
+  {
+   "start": 397.77,
+   "end": 400.417,
+   "shots": [
+    "S086",
+    "S087"
+   ],
+   "prev": []
+  },
+  {
+   "start": 400.417,
+   "end": 404.042,
+   "shots": [
+    "S088"
+   ],
+   "prev": [
+    "S086",
+    "S087"
+   ]
+  },
+  {
+   "start": 404.042,
+   "end": 406.94,
+   "shots": [
+    "S089"
+   ],
+   "prev": [
+    "S088"
+   ]
+  },
+  {
+   "start": 408.35,
+   "end": 409.8,
+   "shots": [
+    "S089",
+    "S090"
+   ],
+   "prev": []
+  },
+  {
+   "start": 411.15,
+   "end": 415.0,
+   "shots": [
+    "S090",
+    "S091"
+   ],
+   "prev": [
+    "S089"
+   ]
+  },
+  {
+   "start": 415.0,
+   "end": 418.62,
+   "shots": [
+    "S092",
+    "S093"
+   ],
+   "prev": [
+    "S091"
+   ]
+  },
+  {
+   "start": 420.21,
+   "end": 421.66,
+   "shots": [
+    "S094"
+   ],
+   "prev": [
+    "S093"
+   ]
+  },
+  {
+   "start": 422.99,
+   "end": 428.0,
+   "shots": [
+    "S094",
+    "S095",
+    "S096"
+   ],
+   "prev": []
+  },
+  {
+   "start": 431.55,
+   "end": 435.2,
+   "shots": [
+    "S097",
+    "S098"
+   ],
+   "prev": [
+    "S096"
+   ]
+  },
+  {
+   "start": 437.39,
+   "end": 441.208,
+   "shots": [
+    "S098",
+    "S099"
+   ],
+   "prev": []
+  },
+  {
+   "start": 441.208,
+   "end": 444.875,
+   "shots": [
+    "S100"
+   ],
+   "prev": [
+    "S099"
+   ]
+  },
+  {
+   "start": 444.875,
+   "end": 461.792,
+   "shots": [
+    "S101"
+   ],
+   "prev": [
+    "S100"
+   ]
+  },
+  {
+   "start": 461.792,
+   "end": 466.6,
+   "shots": [
+    "S102",
+    "S103"
+   ],
+   "prev": [
+    "S101"
+   ]
+  },
+  {
+   "start": 467.47,
+   "end": 478.958,
+   "shots": [
+    "S103",
+    "S104"
+   ],
+   "prev": []
+  },
+  {
+   "start": 478.958,
+   "end": 482.125,
+   "shots": [
+    "S105"
+   ],
+   "prev": [
+    "S104"
+   ]
+  },
+  {
+   "start": 482.125,
+   "end": 485.5,
+   "shots": [
+    "S106",
+    "S107"
+   ],
+   "prev": [
+    "S105"
+   ]
+  },
+  {
+   "start": 485.5,
+   "end": 488.042,
+   "shots": [
+    "S108"
+   ],
+   "prev": [
+    "S106",
+    "S107"
+   ]
+  },
+  {
+   "start": 488.042,
+   "end": 495.48,
+   "shots": [
+    "S109",
+    "S110"
+   ],
+   "prev": [
+    "S108"
+   ]
+  },
+  {
+   "start": 497.43,
+   "end": 503.3,
+   "shots": [
+    "S110",
+    "S111",
+    "S112"
+   ],
+   "prev": []
+  },
+  {
+   "start": 508.43,
+   "end": 518.3,
+   "shots": [
+    "S114",
+    "S115",
+    "S116"
+   ],
+   "prev": []
+  },
+  {
+   "start": 520.59,
+   "end": 527.417,
+   "shots": [
+    "S116",
+    "S117"
+   ],
+   "prev": []
+  },
+  {
+   "start": 527.417,
+   "end": 531.208,
+   "shots": [
+    "S118"
+   ],
+   "prev": [
+    "S117"
+   ]
+  },
+  {
+   "start": 531.208,
+   "end": 534.14,
+   "shots": [
+    "S119"
+   ],
+   "prev": [
+    "S118"
+   ]
+  },
+  {
+   "start": 536.19,
+   "end": 537.7,
+   "shots": [
+    "S119"
+   ],
+   "prev": []
+  },
+  {
+   "start": 539.47,
+   "end": 543.167,
+   "shots": [
+    "S121"
+   ],
+   "prev": [
+    "S119",
+    "S120"
+   ]
+  },
+  {
+   "start": 543.167,
+   "end": 552.833,
+   "shots": [
+    "S122"
+   ],
+   "prev": [
+    "S121"
+   ]
+  },
+  {
+   "start": 552.833,
+   "end": 558.42,
+   "shots": [
+    "S123",
+    "S124"
+   ],
+   "prev": [
+    "S122"
+   ]
+  },
+  {
+   "start": 563.95,
+   "end": 565.32,
+   "shots": [
+    "S124",
+    "S125"
+   ],
+   "prev": []
+  },
+  {
+   "start": 567.15,
+   "end": 588.0,
+   "shots": [
+    "S125"
+   ],
+   "prev": []
+  },
+  {
+   "start": 588.0,
+   "end": 597.32,
+   "shots": [
+    "S126"
+   ],
+   "prev": [
+    "S125"
+   ]
+  },
+  {
+   "start": 599.71,
+   "end": 616.875,
+   "shots": [
+    "S126"
+   ],
+   "prev": []
+  },
+  {
+   "start": 616.875,
+   "end": 620.5,
+   "shots": [
+    "S127"
+   ],
+   "prev": [
+    "S126"
+   ]
+  },
+  {
+   "start": 620.5,
+   "end": 624.2,
+   "shots": [
+    "S128"
+   ],
+   "prev": [
+    "S127"
+   ]
+  },
+  {
+   "start": 630.41,
+   "end": 664.32,
+   "shots": [
+    "S128"
+   ],
+   "prev": []
+  },
+  {
+   "start": 667.67,
+   "end": 685.76,
+   "shots": [
+    "S128"
+   ],
+   "prev": []
+  },
+  {
+   "start": 688.81,
+   "end": 709.5,
+   "shots": [
+    "S128"
+   ],
+   "prev": []
+  },
+  {
+   "start": 709.5,
+   "end": 727.76,
+   "shots": [
+    "S129"
+   ],
+   "prev": [
+    "S128"
+   ]
+  },
+  {
+   "start": 729.71,
+   "end": 733.48,
+   "shots": [
+    "S129",
+    "S130"
+   ],
+   "prev": []
+  }
+ ],
+ "lines": [
+  {
+   "id": "AD001",
+   "start": 0.3,
+   "window_end": 2.6,
+   "avail": 2.3,
+   "text": "White text on black background.",
+   "duration": 1.66,
+   "speed": 1.0,
+   "budget_words": 5,
+   "attempts": [
+    {
+     "text": "A caption: Blender Foundation Presents.",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: credits"
+    },
+    {
+     "text": "White text on black background.",
+     "seconds": 1.66,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S001"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD001.wav",
+   "verify_shots": [
+    "S001"
+   ]
+  },
+  {
+   "id": "AD002",
+   "start": 11.35,
+   "window_end": 18.417,
+   "avail": 7.07,
+   "text": "Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards.",
+   "duration": 5.91,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards.",
+     "seconds": 5.91,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S002",
+    "S003"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD002.wav",
+   "verify_shots": [
+    "S002",
+    "S003"
+   ]
+  },
+  {
+   "id": "AD003",
+   "start": 18.42,
+   "window_end": 22.6,
+   "avail": 4.18,
+   "text": "A bright white beam rises from the industrial city.",
+   "duration": 2.95,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "A bright white beam rises from the industrial city.",
+     "seconds": 2.95,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S004"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD003.wav",
+   "verify_shots": [
+    "S004"
+   ]
+  },
+  {
+   "id": "AD004",
+   "start": 45.55,
+   "window_end": 49.7,
+   "avail": 4.15,
+   "text": "A caption: Forty years later.",
+   "duration": 1.64,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "A caption: Forty years later.",
+     "seconds": 1.64,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S008"
+   ],
+   "text_read": [
+    "40 YEARS LATER"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD004.wav",
+   "verify_shots": [
+    "S007",
+    "S008"
+   ]
+  },
+  {
+   "id": "AD005",
+   "start": 53.95,
+   "window_end": 59.8,
+   "avail": 5.85,
+   "text": "A caption: Simulation ready. Two people sit at a workbench facing a large screen.",
+   "duration": 4.93,
+   "speed": 1.0,
+   "budget_words": 15,
+   "attempts": [
+    {
+     "text": "A caption: Simulation ready. Two people sit at a workbench facing a large screen.",
+     "seconds": 4.93,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S011",
+    "S012"
+   ],
+   "text_read": [
+    "SIMULATION READY..."
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD005.wav",
+   "verify_shots": [
+    "S011",
+    "S012"
+   ]
+  },
+  {
+   "id": "AD006",
+   "start": 62.65,
+   "window_end": 69.917,
+   "avail": 7.27,
+   "text": "A caption: Tears of Steel.",
+   "duration": 1.4,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "A caption: Tears of Steel.",
+     "seconds": 1.4,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S012",
+    "S013"
+   ],
+   "text_read": [
+    "TEARS OF STEEL"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD006.wav",
+   "verify_shots": [
+    "S012"
+   ]
+  },
+  {
+   "id": "AD007",
+   "start": 69.92,
+   "window_end": 74.083,
+   "avail": 4.17,
+   "text": "Smoke rises from a foggy, industrial city skyline.",
+   "duration": 3.17,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "Smoke rises from a foggy, industrial city skyline.",
+     "seconds": 3.17,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S014"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD007.wav",
+   "verify_shots": [
+    "S014"
+   ]
+  },
+  {
+   "id": "AD008",
+   "start": 74.08,
+   "window_end": 79.375,
+   "avail": 5.29,
+   "text": "The room remains still and unchanged.",
+   "duration": 1.94,
+   "speed": 1.0,
+   "budget_words": 13,
+   "attempts": [
+    {
+     "text": "The camera holds a static shot of the room.",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: camera-language"
+    },
+    {
+     "text": "The room remains still and unchanged.",
+     "seconds": 1.94,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S015"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD008.wav",
+   "verify_shots": [
+    "S015"
+   ]
+  },
+  {
+   "id": "AD009",
+   "start": 79.38,
+   "window_end": 82.125,
+   "avail": 2.75,
+   "text": "A headline: Roboticist creates killer robots.",
+   "duration": 2.64,
+   "speed": 1.08,
+   "budget_words": 7,
+   "attempts": [
+    {
+     "text": "A headline: Roboticist creates killer robots.",
+     "seconds": 2.78,
+     "fit": true,
+     "speed": 1.08,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S016"
+   ],
+   "text_read": [
+    "De Amsteldam ROBOTICIST CREATES KILLER ROBOTS PINK IN THE TWILIGHT AS A NAGGED AND FURIOUS"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD009.wav",
+   "verify_shots": [
+    "S016"
+   ]
+  },
+  {
+   "id": "AD010",
+   "start": 82.81,
+   "window_end": 84.833,
+   "avail": 2.02,
+   "text": "The sniper aims his rifle.",
+   "duration": 1.46,
+   "speed": 1.0,
+   "budget_words": 5,
+   "attempts": [
+    {
+     "text": "The sniper aims his rifle.",
+     "seconds": 1.46,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S017"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD010.wav",
+   "verify_shots": [
+    "S017"
+   ]
+  },
+  {
+   "id": "AD011",
+   "start": 85.07,
+   "window_end": 89.68,
+   "avail": 4.61,
+   "text": "A mechanical vehicle with turrets sits in the fog.",
+   "duration": 2.59,
+   "speed": 1.0,
+   "budget_words": 11,
+   "attempts": [
+    {
+     "text": "A mechanical vehicle with turrets sits in the fog.",
+     "seconds": 2.59,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S018"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD011.wav",
+   "verify_shots": [
+    "S018"
+   ]
+  },
+  {
+   "id": "AD012",
+   "start": 95.42,
+   "window_end": 98.208,
+   "avail": 2.79,
+   "text": "An airship hovers over the city.",
+   "duration": 1.78,
+   "speed": 1.0,
+   "budget_words": 7,
+   "attempts": [
+    {
+     "text": "An airship hovers over the city.",
+     "seconds": 1.78,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S020"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD012.wav",
+   "verify_shots": [
+    "S020"
+   ]
+  },
+  {
+   "id": "AD013",
+   "start": 98.21,
+   "window_end": 102.417,
+   "avail": 4.21,
+   "text": "The old man lies motionless on the balcony floor.",
+   "duration": 2.89,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "The old man lies motionless on the balcony floor.",
+     "seconds": 2.89,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S021"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD013.wav",
+   "verify_shots": [
+    "S021"
+   ]
+  },
+  {
+   "id": "AD014",
+   "start": 102.42,
+   "window_end": 117.22,
+   "avail": 14.8,
+   "text": "The sniper aims his futuristic rifle through the scope at the hovering airship.",
+   "duration": 4.21,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The sniper aims his futuristic rifle through the scope at the hovering airship.",
+     "seconds": 4.21,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S022",
+    "S023"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "sniper",
+     "futuristic rifle"
+    ]
+   },
+   "flags": [
+    "unsupported: sniper; futuristic rifle"
+   ],
+   "review": "pending",
+   "audio": "lines/AD014.wav",
+   "verify_shots": [
+    "S022"
+   ]
+  },
+  {
+   "id": "AD015",
+   "start": 118.95,
+   "window_end": 130.66,
+   "avail": 11.71,
+   "text": "The old man sits up and gestures while the sniper aims his rifle in the background.",
+   "duration": 4.62,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The old man sits up and gestures while the sniper aims his rifle in the background.",
+     "seconds": 4.62,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S023",
+    "S024"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD015.wav",
+   "verify_shots": [
+    "S023",
+    "S024"
+   ]
+  },
+  {
+   "id": "AD016",
+   "start": 133.25,
+   "window_end": 135.84,
+   "avail": 2.59,
+   "text": "The old man crouches, looking down.",
+   "duration": 1.9,
+   "speed": 1.0,
+   "budget_words": 6,
+   "attempts": [
+    {
+     "text": "The old man crouches, looking down.",
+     "seconds": 1.9,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S024",
+    "S025"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD016.wav",
+   "verify_shots": [
+    "S024",
+    "S025"
+   ]
+  },
+  {
+   "id": "AD017",
+   "start": 137.83,
+   "window_end": 143.292,
+   "avail": 5.46,
+   "text": "The sniper aims his rifle through the scope, looking intently.",
+   "duration": 3.27,
+   "speed": 1.0,
+   "budget_words": 14,
+   "attempts": [
+    {
+     "text": "The sniper aims his rifle through the scope, looking intently.",
+     "seconds": 3.27,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S025",
+    "S026"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD017.wav",
+   "verify_shots": [
+    "S025",
+    "S026"
+   ]
+  },
+  {
+   "id": "AD018",
+   "start": 143.29,
+   "window_end": 145.792,
+   "avail": 2.5,
+   "text": "The old man grips a thick rope.",
+   "duration": 1.63,
+   "speed": 1.0,
+   "budget_words": 6,
+   "attempts": [
+    {
+     "text": "The old man grips a thick rope.",
+     "seconds": 1.63,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S027"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD018.wav",
+   "verify_shots": [
+    "S027"
+   ]
+  },
+  {
+   "id": "AD019",
+   "start": 145.79,
+   "window_end": 152.875,
+   "avail": 7.08,
+   "text": "The sniper drinks from a mango juice pouch, then lowers it to look forward.",
+   "duration": 4.0,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The sniper drinks from a mango juice pouch, then lowers it to look forward.",
+     "seconds": 4.0,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S028"
+   ],
+   "text_read": [
+    "MANGO"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD019.wav",
+   "verify_shots": [
+    "S028"
+   ]
+  },
+  {
+   "id": "AD020",
+   "start": 152.88,
+   "window_end": 158.04,
+   "avail": 5.16,
+   "text": "A figure in a dark coat hangs suspended in mid-air before the organ pipes.",
+   "duration": 4.24,
+   "speed": 1.0,
+   "budget_words": 13,
+   "attempts": [
+    {
+     "text": "A figure in a dark coat hangs suspended in mid-air before the organ pipes.",
+     "seconds": 4.24,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S029"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD020.wav",
+   "verify_shots": [
+    "S029"
+   ]
+  },
+  {
+   "id": "AD021",
+   "start": 159.31,
+   "window_end": 172.292,
+   "avail": 12.98,
+   "text": "The old man touches his chest, then walks away toward a tunnel.",
+   "duration": 3.32,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The old man touches his chest, then walks away toward a tunnel.",
+     "seconds": 3.32,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S030"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD021.wav",
+   "verify_shots": [
+    "S030"
+   ]
+  },
+  {
+   "id": "AD022",
+   "start": 172.29,
+   "window_end": 183.25,
+   "avail": 10.96,
+   "text": "The old man and Celia stand facing each other, staring intently in the dimly lit room.",
+   "duration": 4.99,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The old man and Celia stand facing each other, staring intently in the dimly lit room.",
+     "seconds": 4.99,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S031"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "Celia"
+    ]
+   },
+   "flags": [
+    "unsupported: Celia"
+   ],
+   "review": "pending",
+   "audio": "lines/AD022.wav",
+   "verify_shots": [
+    "S031"
+   ]
+  },
+  {
+   "id": "AD023",
+   "start": 183.25,
+   "window_end": 190.66,
+   "avail": 7.41,
+   "text": "The old man stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+   "duration": 5.37,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The old man stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+     "seconds": 5.37,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S032",
+    "S033"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "The old man stands on a cobblestone street",
+     "facing a massive mechanical structure",
+     "in the fog"
+    ]
+   },
+   "flags": [
+    "unsupported: The old man stands on a cobblestone street; facing a massive mechanical structure; in the fog"
+   ],
+   "review": "pending",
+   "audio": "lines/AD023.wav",
+   "verify_shots": [
+    "S032"
+   ]
+  },
+  {
+   "id": "AD024",
+   "start": 195.05,
+   "window_end": 196.48,
+   "avail": 1.43,
+   "text": "The man raises a gun.",
+   "duration": 1.17,
+   "speed": 1.0,
+   "budget_words": 3,
+   "attempts": [
+    {
+     "text": "The man raises a gun.",
+     "seconds": 1.17,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S034"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [
+    "long"
+   ],
+   "review": "pending",
+   "audio": "lines/AD024.wav",
+   "verify_shots": [
+    "S034"
+   ]
+  },
+  {
+   "id": "AD025",
+   "start": 208.47,
+   "window_end": 210.6,
+   "avail": 2.13,
+   "text": "Clock ticks.",
+   "duration": 0.8,
+   "speed": 1.0,
+   "budget_words": 5,
+   "attempts": [
+    {
+     "text": "A digital clock: 08:12:13:69.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "A digital clock: 08:12:13:69.",
+     "seconds": 3.33,
+     "fit": false,
+     "speed": null,
+     "reason": "overflow 3.3s > 2.1s"
+    },
+    {
+     "text": "Clock ticks.",
+     "seconds": 0.8,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S038"
+   ],
+   "text_read": [
+    "08:12:13:69"
+   ],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "Clock ticks"
+    ]
+   },
+   "flags": [
+    "unsupported: Clock ticks"
+   ],
+   "review": "pending",
+   "audio": "lines/AD025.wav",
+   "verify_shots": [
+    "S037",
+    "S038"
+   ]
+  },
+  {
+   "id": "AD026",
+   "start": 214.85,
+   "window_end": 222.36,
+   "avail": 7.51,
+   "text": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.",
+   "duration": 6.29,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.",
+     "seconds": 6.29,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S040"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD026.wav",
+   "verify_shots": [
+    "S040"
+   ]
+  },
+  {
+   "id": "AD027",
+   "start": 226.25,
+   "window_end": 230.2,
+   "avail": 3.95,
+   "text": "A man with a mechanical eye points and sticks out his tongue.",
+   "duration": 3.08,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "A man with a mechanical eye points and sticks out his tongue.",
+     "seconds": 3.08,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S042"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD027.wav",
+   "verify_shots": [
+    "S042"
+   ]
+  },
+  {
+   "id": "AD028",
+   "start": 248.11,
+   "window_end": 253.417,
+   "avail": 5.31,
+   "text": "A heavyset man leans in to whisper to the old man.",
+   "duration": 3.02,
+   "speed": 1.0,
+   "budget_words": 13,
+   "attempts": [
+    {
+     "text": "A heavyset man leans in to whisper to the old man.",
+     "seconds": 3.02,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S044"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD028.wav",
+   "verify_shots": [
+    "S044"
+   ]
+  },
+  {
+   "id": "AD029",
+   "start": 253.42,
+   "window_end": 255.98,
+   "avail": 2.56,
+   "text": "Celia and two men watch green holograms.",
+   "duration": 2.22,
+   "speed": 1.0,
+   "budget_words": 6,
+   "attempts": [
+    {
+     "text": "Celia and two men watch green holograms.",
+     "seconds": 2.22,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S045"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD029.wav",
+   "verify_shots": [
+    "S045"
+   ]
+  },
+  {
+   "id": "AD030",
+   "start": 257.93,
+   "window_end": 284.34,
+   "avail": 26.41,
+   "text": "Thom walks across a bridge with green railings, looking around with a serious expression.",
+   "duration": 4.83,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "Thom walks across a bridge with green railings, looking around with a serious expression.",
+     "seconds": 4.83,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S046"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD030.wav",
+   "verify_shots": [
+    "S046"
+   ]
+  },
+  {
+   "id": "AD031",
+   "start": 285.73,
+   "window_end": 292.46,
+   "avail": 6.73,
+   "text": "A heavyset man sits at a desk, a device attached to his head.",
+   "duration": 3.54,
+   "speed": 1.0,
+   "budget_words": 17,
+   "attempts": [
+    {
+     "text": "A heavyset man sits at a desk, a device attached to his head.",
+     "seconds": 3.54,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S046",
+    "S047"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "A heavyset man sits at a desk",
+     "a device attached to his head"
+    ]
+   },
+   "flags": [
+    "unsupported: A heavyset man sits at a desk; a device attached to his head"
+   ],
+   "review": "pending",
+   "audio": "lines/AD031.wav",
+   "verify_shots": [
+    "S046"
+   ]
+  },
+  {
+   "id": "AD032",
+   "start": 305.59,
+   "window_end": 310.583,
+   "avail": 4.99,
+   "text": "A man in a futuristic suit glows with white energy.",
+   "duration": 3.14,
+   "speed": 1.0,
+   "budget_words": 12,
+   "attempts": [
+    {
+     "text": "A man in a futuristic suit glows with white energy.",
+     "seconds": 3.14,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S053",
+    "S054"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD032.wav",
+   "verify_shots": [
+    "S053",
+    "S054"
+   ]
+  },
+  {
+   "id": "AD033",
+   "start": 310.58,
+   "window_end": 315.24,
+   "avail": 4.66,
+   "text": "A caption reads: Look, Celia, we have to follow our passions",
+   "duration": null,
+   "speed": 1.0,
+   "budget_words": 12,
+   "attempts": [
+    {
+     "text": "Thom stands on a street, looking across a canal.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "A caption: Look, Celia, we have to follow our passions...",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: first-person"
+    },
+    {
+     "text": "A caption reads: Look, Celia, we have to follow our passions...",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: first-person"
+    },
+    {
+     "text": "A caption reads: Look, Celia, we have to follow our passions",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: first-person"
+    },
+    {
+     "text": "A caption reads: Look, Celia, we have to follow our passions",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: first-person"
+    }
+   ],
+   "status": "style",
+   "shots": [
+    "S055",
+    "S056"
+   ],
+   "text_read": [
+    "“LOOK, CELIA, WE HAVE TO FOLLOW OUR PASSIONS...”"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [
+    "needs extended AD (pause) or a cut"
+   ],
+   "review": "pending",
+   "verify_shots": [
+    "S055",
+    "S056"
+   ]
+  },
+  {
+   "id": "AD034",
+   "start": 323.15,
+   "window_end": 324.4,
+   "avail": 1.25,
+   "text": "Thom looks off-camera.",
+   "duration": 1.19,
+   "speed": 1.0,
+   "budget_words": 3,
+   "attempts": [
+    {
+     "text": "Thom looks off-camera, speaking.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "A caption: ...AND I JUST WANT TO BE AWESOME IN SPACE. Thom looks off-camera.",
+     "seconds": 4.12,
+     "fit": false,
+     "speed": null,
+     "reason": "overflow 4.1s > 1.2s"
+    },
+    {
+     "text": "Thom looks off-camera.",
+     "seconds": 1.19,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S059",
+    "S060"
+   ],
+   "text_read": [
+    "...AND I JUST WANT TO BE AWESOME IN SPACE.\""
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD034.wav",
+   "verify_shots": [
+    "S059",
+    "S060"
+   ]
+  },
+  {
+   "id": "AD035",
+   "start": 328.15,
+   "window_end": 338.34,
+   "avail": 10.19,
+   "text": "A giant mechanical robot rises from the street, towering over historic buildings.",
+   "duration": 4.83,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "A giant mechanical robot rises from the street, towering over historic buildings.",
+     "seconds": 4.83,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S060",
+    "S061",
+    "S062"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD035.wav",
+   "verify_shots": [
+    "S060",
+    "S061",
+    "S062"
+   ]
+  },
+  {
+   "id": "AD036",
+   "start": 350.25,
+   "window_end": 356.18,
+   "avail": 5.93,
+   "text": "A caption: Celia, I love your robot hand.",
+   "duration": 2.52,
+   "speed": 1.0,
+   "budget_words": 15,
+   "attempts": [
+    {
+     "text": "A caption: Celia, I love your robot hand.",
+     "seconds": 2.52,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S067",
+    "S068"
+   ],
+   "text_read": [
+    "CELIA, I LOVE YOUR ROBOT HAND"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD036.wav",
+   "verify_shots": [
+    "S067",
+    "S068"
+   ]
+  },
+  {
+   "id": "AD037",
+   "start": 368.85,
+   "window_end": 371.62,
+   "avail": 2.77,
+   "text": "A robotic hand covers Thom’s face.",
+   "duration": 1.96,
+   "speed": 1.0,
+   "budget_words": 7,
+   "attempts": [
+    {
+     "text": "A robotic hand covers Thom’s face.",
+     "seconds": 1.96,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S073",
+    "S074"
+   ],
+   "text_read": [
+    "CANDID JUDGEMENT, HELLO, CHOCOLATE, 1. a rose, 2. roses, 3. a dozen roses, FRENCH ACCENT, ",
+    "GELR, I LOVE YOUR ROBOT HAND"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD037.wav",
+   "verify_shots": [
+    "S072",
+    "S073",
+    "S074"
+   ]
+  },
+  {
+   "id": "AD038",
+   "start": 374.75,
+   "window_end": 378.32,
+   "avail": 3.57,
+   "text": "A caption: Playback.",
+   "duration": 1.21,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "A caption: Playback.",
+     "seconds": 1.21,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S076",
+    "S077",
+    "S078",
+    "S079"
+   ],
+   "text_read": [
+    "PLAYBACK",
+    "ERROR!!"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD038.wav",
+   "verify_shots": [
+    "S076"
+   ]
+  },
+  {
+   "id": "AD039",
+   "start": 392.95,
+   "window_end": 396.36,
+   "avail": 3.41,
+   "text": "Thom presses a rifle to his face.",
+   "duration": 1.86,
+   "speed": 1.0,
+   "budget_words": 8,
+   "attempts": [
+    {
+     "text": "Thom presses a rifle to his face.",
+     "seconds": 1.86,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S086"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD039.wav",
+   "verify_shots": [
+    "S086"
+   ]
+  },
+  {
+   "id": "AD040",
+   "start": 397.77,
+   "window_end": 400.417,
+   "avail": 2.65,
+   "text": "A curly-haired man stares in shock.",
+   "duration": 1.85,
+   "speed": 1.0,
+   "budget_words": 6,
+   "attempts": [
+    {
+     "text": "A curly-haired man stares in shock.",
+     "seconds": 1.85,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S086",
+    "S087"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD040.wav",
+   "verify_shots": [
+    "S086",
+    "S087"
+   ]
+  },
+  {
+   "id": "AD041",
+   "start": 400.42,
+   "window_end": 404.042,
+   "avail": 3.62,
+   "text": "The old man looks up with concern.",
+   "duration": 1.74,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "The old man looks up with concern.",
+     "seconds": 1.74,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S088"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD041.wav",
+   "verify_shots": [
+    "S088"
+   ]
+  },
+  {
+   "id": "AD042",
+   "start": 404.04,
+   "window_end": 406.94,
+   "avail": 2.9,
+   "text": "A caption: Cool, I love your new hand.",
+   "duration": 2.28,
+   "speed": 1.0,
+   "budget_words": 7,
+   "attempts": [
+    {
+     "text": "A caption: Cool, I love your new hand.",
+     "seconds": 2.28,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S089"
+   ],
+   "text_read": [
+    "COOL I LOVE YOUR NEW HAND"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD042.wav",
+   "verify_shots": [
+    "S089"
+   ]
+  },
+  {
+   "id": "AD043",
+   "start": 408.35,
+   "window_end": 409.8,
+   "avail": 1.45,
+   "text": "Thom mouths a word.",
+   "duration": 1.06,
+   "speed": 1.0,
+   "budget_words": 3,
+   "attempts": [
+    {
+     "text": "Thom mouths a word.",
+     "seconds": 1.06,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S089",
+    "S090"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "Thom mouths a word"
+    ]
+   },
+   "flags": [
+    "unsupported: Thom mouths a word"
+   ],
+   "review": "pending",
+   "audio": "lines/AD043.wav",
+   "verify_shots": [
+    "S089",
+    "S090"
+   ]
+  },
+  {
+   "id": "AD044",
+   "start": 411.15,
+   "window_end": 415.0,
+   "avail": 3.85,
+   "text": "Celia stares at her robotic hand.",
+   "duration": 1.9,
+   "speed": 1.0,
+   "budget_words": 10,
+   "attempts": [
+    {
+     "text": "Celia stares at her robotic hand.",
+     "seconds": 1.9,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S090",
+    "S091"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "her robotic hand"
+    ]
+   },
+   "flags": [
+    "unsupported: her robotic hand"
+   ],
+   "review": "pending",
+   "audio": "lines/AD044.wav",
+   "verify_shots": [
+    "S090",
+    "S091"
+   ]
+  },
+  {
+   "id": "AD045",
+   "start": 415.0,
+   "window_end": 418.62,
+   "avail": 3.62,
+   "text": "A wireframe hologram touches Thom’s face.",
+   "duration": 2.36,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "A wireframe hologram touches Thom’s face.",
+     "seconds": 2.36,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S092",
+    "S093"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD045.wav",
+   "verify_shots": [
+    "S092",
+    "S093"
+   ]
+  },
+  {
+   "id": "AD046",
+   "start": 420.21,
+   "window_end": 421.66,
+   "avail": 1.45,
+   "text": "A caption: 80:0",
+   "duration": 1.44,
+   "speed": 1.08,
+   "budget_words": 3,
+   "attempts": [
+    {
+     "text": "A caption: Eighty to zero.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "A caption: 80:0",
+     "seconds": 1.49,
+     "fit": true,
+     "speed": 1.08,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S094"
+   ],
+   "text_read": [
+    "80:0"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD046.wav",
+   "verify_shots": [
+    "S094"
+   ]
+  },
+  {
+   "id": "AD047",
+   "start": 422.99,
+   "window_end": 428.0,
+   "avail": 5.01,
+   "text": "A man with a mechanical eye holds a device to his mouth.",
+   "duration": 3.2,
+   "speed": 1.0,
+   "budget_words": 13,
+   "attempts": [
+    {
+     "text": "A man with a mechanical eye holds a device to his mouth.",
+     "seconds": 3.2,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S094",
+    "S095",
+    "S096"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "man with a mechanical eye",
+     "holds a device to his mouth"
+    ]
+   },
+   "flags": [
+    "unsupported: man with a mechanical eye; holds a device to his mouth"
+   ],
+   "review": "pending",
+   "audio": "lines/AD047.wav",
+   "verify_shots": [
+    "S094",
+    "S095"
+   ]
+  },
+  {
+   "id": "AD048",
+   "start": 431.55,
+   "window_end": 435.2,
+   "avail": 3.65,
+   "text": "The sniper aims a smoking rifle at a distant structure.",
+   "duration": 3.06,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "The sniper aims a smoking rifle at a distant structure.",
+     "seconds": 3.06,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S097",
+    "S098"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "sniper"
+    ]
+   },
+   "flags": [
+    "unsupported: sniper"
+   ],
+   "review": "pending",
+   "audio": "lines/AD048.wav",
+   "verify_shots": [
+    "S097",
+    "S098"
+   ]
+  },
+  {
+   "id": "AD049",
+   "start": 441.21,
+   "window_end": 444.875,
+   "avail": 3.67,
+   "text": "White smoke vents from a circular metal component.",
+   "duration": 2.56,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "White smoke vents from a circular metal component.",
+     "seconds": 2.56,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S100"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD049.wav",
+   "verify_shots": [
+    "S100"
+   ]
+  },
+  {
+   "id": "AD050",
+   "start": 444.88,
+   "window_end": 461.792,
+   "avail": 16.92,
+   "text": "A man in a white jacket holds a cylindrical mechanical device, looking at it with concern.",
+   "duration": 5.28,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "A man in a white jacket holds a cylindrical mechanical device, looking at it with concern.",
+     "seconds": 5.28,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S101"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD050.wav",
+   "verify_shots": [
+    "S101"
+   ]
+  },
+  {
+   "id": "AD051",
+   "start": 461.79,
+   "window_end": 466.6,
+   "avail": 4.81,
+   "text": "Two large grey robots face each other in the dust.",
+   "duration": 2.67,
+   "speed": 1.0,
+   "budget_words": 12,
+   "attempts": [
+    {
+     "text": "Two large grey robots face each other in the dust.",
+     "seconds": 2.67,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S102",
+    "S103"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": false,
+    "unsupported": [
+     "Two large grey robots",
+     "face each other",
+     "in the dust"
+    ]
+   },
+   "flags": [
+    "unsupported: Two large grey robots; face each other; in the dust"
+   ],
+   "review": "pending",
+   "audio": "lines/AD051.wav",
+   "verify_shots": [
+    "S102"
+   ]
+  },
+  {
+   "id": "AD052",
+   "start": 467.47,
+   "window_end": 478.958,
+   "avail": 11.49,
+   "text": "Four people in white suits kneel on the floor, aiming futuristic firearms at a large mechanical structure.",
+   "duration": 6.58,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "Four people in white suits kneel on the floor, aiming futuristic firearms at a large mechanical structure.",
+     "seconds": 6.58,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S103",
+    "S104"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD052.wav",
+   "verify_shots": [
+    "S103",
+    "S104"
+   ]
+  },
+  {
+   "id": "AD053",
+   "start": 478.96,
+   "window_end": 482.125,
+   "avail": 3.17,
+   "text": "Dark, cluttered industrial space rushes by.",
+   "duration": 2.54,
+   "speed": 1.0,
+   "budget_words": 8,
+   "attempts": [
+    {
+     "text": "The camera races through a dark, cluttered industrial space.",
+     "seconds": null,
+     "fit": false,
+     "reason": "style: camera-language"
+    },
+    {
+     "text": "Dark, cluttered industrial space rushes by.",
+     "seconds": 2.54,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S105"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD053.wav",
+   "verify_shots": [
+    "S105"
+   ]
+  },
+  {
+   "id": "AD054",
+   "start": 482.3,
+   "window_end": 485.5,
+   "avail": 3.2,
+   "text": "The sniper rests his head against his rifle.",
+   "duration": 2.3,
+   "speed": 1.0,
+   "budget_words": 8,
+   "attempts": [
+    {
+     "text": "The sniper rests his head against his rifle.",
+     "seconds": 2.3,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S106",
+    "S107"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD054.wav",
+   "verify_shots": [
+    "S106",
+    "S107"
+   ]
+  },
+  {
+   "id": "AD055",
+   "start": 485.5,
+   "window_end": 488.042,
+   "avail": 2.54,
+   "text": "Golden light reflects off the dark corridor.",
+   "duration": 2.26,
+   "speed": 1.0,
+   "budget_words": 6,
+   "attempts": [
+    {
+     "text": "Golden light reflects off the dark corridor.",
+     "seconds": 2.26,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S108"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD055.wav",
+   "verify_shots": [
+    "S108"
+   ]
+  },
+  {
+   "id": "AD056",
+   "start": 488.56,
+   "window_end": 495.48,
+   "avail": 6.92,
+   "text": "A masked figure raises a weapon as a mechanical creature crashes through the organ pipes.",
+   "duration": 5.06,
+   "speed": 1.0,
+   "budget_words": 17,
+   "attempts": [
+    {
+     "text": "A masked figure raises a weapon as a mechanical creature crashes through the organ pipes.",
+     "seconds": 5.06,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S109",
+    "S110"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD056.wav",
+   "verify_shots": [
+    "S109",
+    "S110"
+   ]
+  },
+  {
+   "id": "AD057",
+   "start": 497.43,
+   "window_end": 503.3,
+   "avail": 5.87,
+   "text": "An explosion erupts in the cathedral, sending fire and debris toward the organ pipes.",
+   "duration": 4.78,
+   "speed": 1.0,
+   "budget_words": 15,
+   "attempts": [
+    {
+     "text": "An explosion erupts in the cathedral, sending fire and debris toward the organ pipes.",
+     "seconds": 4.78,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S110",
+    "S111",
+    "S112"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD057.wav",
+   "verify_shots": [
+    "S110",
+    "S111"
+   ]
+  },
+  {
+   "id": "AD058",
+   "start": 508.43,
+   "window_end": 518.3,
+   "avail": 9.87,
+   "text": "Thom stands on a bridge, staring at a large mechanical structure beside him.",
+   "duration": 4.31,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "Thom stands on a bridge, staring at a large mechanical structure beside him.",
+     "seconds": 4.31,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S114",
+    "S115",
+    "S116"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD058.wav",
+   "verify_shots": [
+    "S114",
+    "S115"
+   ]
+  },
+  {
+   "id": "AD059",
+   "start": 520.59,
+   "window_end": 527.417,
+   "avail": 6.83,
+   "text": "Thom speaks seriously near a stone sculpture, then a large robot stands in a ruined interior.",
+   "duration": 5.39,
+   "speed": 1.0,
+   "budget_words": 17,
+   "attempts": [
+    {
+     "text": "Thom speaks seriously near a stone sculpture, then a large robot stands in a ruined interior.",
+     "seconds": 5.39,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S116",
+    "S117"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD059.wav",
+   "verify_shots": [
+    "S116",
+    "S117"
+   ]
+  },
+  {
+   "id": "AD060",
+   "start": 527.42,
+   "window_end": 531.208,
+   "avail": 3.79,
+   "text": "Steam rises from a complex mechanical structure.",
+   "duration": 2.74,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "Steam rises from a complex mechanical structure.",
+     "seconds": 2.74,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S118"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD060.wav",
+   "verify_shots": [
+    "S118"
+   ]
+  },
+  {
+   "id": "AD061",
+   "start": 531.21,
+   "window_end": 534.14,
+   "avail": 2.93,
+   "text": "The old man smiles faintly.",
+   "duration": 1.52,
+   "speed": 1.0,
+   "budget_words": 7,
+   "attempts": [
+    {
+     "text": "The old man smiles faintly.",
+     "seconds": 1.52,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S119"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD061.wav",
+   "verify_shots": [
+    "S119"
+   ]
+  },
+  {
+   "id": "AD062",
+   "start": 539.47,
+   "window_end": 543.167,
+   "avail": 3.7,
+   "text": "A caption: Memory overwrite ninety-nine point seven eight percent.",
+   "duration": 3.62,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "A caption: Memory overwrite ninety-nine point seven eight percent.",
+     "seconds": 3.62,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S121"
+   ],
+   "text_read": [
+    "MEMORY OVERWRITE 099.78%"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD062.wav",
+   "verify_shots": [
+    "S121"
+   ]
+  },
+  {
+   "id": "AD063",
+   "start": 543.89,
+   "window_end": 552.833,
+   "avail": 8.94,
+   "text": "The old man presses his hand against a glowing purple component of the large machine.",
+   "duration": 5.05,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The old man presses his hand against a glowing purple component of the large machine.",
+     "seconds": 5.05,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S122"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD063.wav",
+   "verify_shots": [
+    "S122"
+   ]
+  },
+  {
+   "id": "AD064",
+   "start": 552.83,
+   "window_end": 558.42,
+   "avail": 5.59,
+   "text": "The old man stares intently at a large metallic object.",
+   "duration": 3.47,
+   "speed": 1.0,
+   "budget_words": 14,
+   "attempts": [
+    {
+     "text": "The old man stares intently at a large metallic object.",
+     "seconds": 3.47,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S123",
+    "S124"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD064.wav",
+   "verify_shots": [
+    "S123"
+   ]
+  },
+  {
+   "id": "AD065",
+   "start": 563.95,
+   "window_end": 565.32,
+   "avail": 1.37,
+   "text": "Celia gestures.",
+   "duration": 1.02,
+   "speed": 1.0,
+   "budget_words": 3,
+   "attempts": [
+    {
+     "text": "Celia gestures at machinery.",
+     "seconds": 1.52,
+     "fit": false,
+     "speed": null,
+     "reason": "overflow 1.5s > 1.4s"
+    },
+    {
+     "text": "Celia gestures.",
+     "seconds": 1.02,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S124",
+    "S125"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD065.wav",
+   "verify_shots": [
+    "S124",
+    "S125"
+   ]
+  },
+  {
+   "id": "AD066",
+   "start": 567.15,
+   "window_end": 588.0,
+   "avail": 20.85,
+   "text": "Celia gestures at the large mechanical structure beside her on the metal platform.",
+   "duration": 5.0,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "Celia gestures at the large mechanical structure beside her on the metal platform.",
+     "seconds": 5.0,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S125"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD066.wav",
+   "verify_shots": [
+    "S125"
+   ]
+  },
+  {
+   "id": "AD067",
+   "start": 588.0,
+   "window_end": 597.32,
+   "avail": 9.32,
+   "text": "A cast list appears over a close-up of a blue-outlined robotic hand.",
+   "duration": 3.87,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "A cast list appears over a close-up of a blue-outlined robotic hand.",
+     "seconds": 3.87,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S126"
+   ],
+   "text_read": [
+    "Cast: Old Thom DEREK DE LINT, Barley SERGIO HASSELBAINK, Captain ROGIER SCHIPPERS, Thom YA"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD067.wav",
+   "verify_shots": [
+    "S126"
+   ]
+  },
+  {
+   "id": "AD068",
+   "start": 616.88,
+   "window_end": 620.5,
+   "avail": 3.62,
+   "text": "Blender development and studio pipeline",
+   "duration": 2.17,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "A glowing blue brain graphic appears on screen.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "Text: Blender development, scripting & studio pipeline, BRECHT VAN LOMMEL, CAMPBELL BARTON, SERG",
+     "seconds": 7.67,
+     "fit": false,
+     "speed": null,
+     "reason": "overflow 7.7s > 3.6s"
+    },
+    {
+     "text": "Blender development and studio pipeline",
+     "seconds": 2.17,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S127"
+   ],
+   "text_read": [
+    "Blender development, scripting & studio pipeline, BRECHT VAN LOMMEL, CAMPBELL BARTON, SERG"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD068.wav",
+   "verify_shots": [
+    "S127"
+   ]
+  },
+  {
+   "id": "AD069",
+   "start": 620.5,
+   "window_end": 624.2,
+   "avail": 3.7,
+   "text": "Credits: JustaCluster, Dell Lab Amsterdam",
+   "duration": 2.77,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "Credits scroll over a dark, abstract background.",
+     "seconds": null,
+     "fit": false,
+     "reason": "text gate: on-screen text not read"
+    },
+    {
+     "text": "Credits: Render farm 'JustaCluster' Arnd Marinissen, Additional render resources Dell Lab Amsterdam",
+     "seconds": 6.65,
+     "fit": false,
+     "speed": null,
+     "reason": "overflow 6.6s > 3.7s"
+    },
+    {
+     "text": "Credits: JustaCluster, Dell Lab Amsterdam",
+     "seconds": 2.77,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S128"
+   ],
+   "text_read": [
+    "Render farm 'JustaCluster' Arnd Marinissen, Additional render resources Dell Lab Amsterdam"
+   ],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD069.wav",
+   "verify_shots": [
+    "S128"
+   ]
+  },
+  {
+   "id": "AD070",
+   "start": 709.5,
+   "window_end": 727.76,
+   "avail": 18.26,
+   "text": "The sniper sits atop a pile of rusted robot wreckage, holding a rifle and a small white cup.",
+   "duration": 5.56,
+   "speed": 1.0,
+   "budget_words": 18,
+   "attempts": [
+    {
+     "text": "The sniper sits atop a pile of rusted robot wreckage, holding a rifle and a small white cup.",
+     "seconds": 5.56,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S129"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD070.wav",
+   "verify_shots": [
+    "S129"
+   ]
+  },
+  {
+   "id": "AD071",
+   "start": 729.71,
+   "window_end": 733.48,
+   "avail": 3.77,
+   "text": "The screen fades to black.",
+   "duration": 1.28,
+   "speed": 1.0,
+   "budget_words": 9,
+   "attempts": [
+    {
+     "text": "The screen fades to black.",
+     "seconds": 1.28,
+     "fit": true,
+     "speed": 1.0,
+     "reason": "fits"
+    }
+   ],
+   "status": "fit",
+   "shots": [
+    "S129",
+    "S130"
+   ],
+   "text_read": [],
+   "verify": {
+    "supported": true,
+    "unsupported": []
+   },
+   "flags": [],
+   "review": "pending",
+   "audio": "lines/AD071.wav",
+   "verify_shots": [
+    "S129",
+    "S130"
+   ]
+  }
+ ],
+ "metrics": {
+  "clip_seconds": 734.2,
+  "shots": 130,
+  "dialogue_spans": 63,
+  "gaps": 44,
+  "speech_seconds_asr": 152.3,
+  "speech_seconds_vad": 83.7,
+  "speech_seconds_merged": 170.3,
+  "usable_gap_seconds": 521.0,
+  "slots": 78,
+  "lines": 71,
+  "lines_placed": 70,
+  "skipped_repeats": 2,
+  "first_try_fit": 60,
+  "fit_after_loop": 70,
+  "mean_attempts": 1.24,
+  "rewrites": 17,
+  "ad_seconds": 214.9,
+  "ad_overlap_with_detected_dialogue_s": 0.0,
+  "flagged_lines": 12,
+  "unsupported_flags": 10,
+  "rescued_by_speed": 2,
+  "rescued_by_rewrite": 5,
+  "style_or_text_gate_rewrites": 13,
+  "shots_covered": 91,
+  "processing_seconds": 1679.7,
+  "seconds_per_content_minute": 137.3,
+  "stages": {
+   "prepare": 17.72,
+   "shots": 12.01,
+   "dialogue_map": 24.39,
+   "load_models": 8.09,
+   "shot_facts": 1333.73,
+   "write_fit_verify": 171.32,
+   "verify": 106.86,
+   "mix": 5.6,
+   "injected_error_test": 187.47
+  },
+  "llm": {
+   "calls": 296,
+   "seconds": 1602.7,
+   "prompt_tokens": 133982,
+   "gen_tokens": 17903
+  },
+  "tts": {
+   "calls": 88,
+   "audio_seconds": 286.4
+  },
+  "mlx_peak_memory_gb": 33.7,
+  "reference_dialogue_cues": 76,
+  "ad_overlap_with_reference_subtitles_s": 5.75,
+  "injected_error_test": {
+   "clean_lines": 40,
+   "false_alarms_on_clean_lines": 5,
+   "cases": [
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD001",
+     "original": "White text on black background.",
+     "corrupted": "White text on black background, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD001",
+     "original": "White text on black background.",
+     "corrupted": "A bright white beam rises from the industrial city.",
+     "caught": true,
+     "unsupported": [
+      "A bright white beam",
+      "rises",
+      "industrial city"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD002",
+     "original": "Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards.",
+     "corrupted": "Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD002",
+     "original": "Multiple large rocket engines ignite, emitting bright, glowing plumes of light and exhaust downwards.",
+     "corrupted": "Multiple large rocket engines ignite, facing bright, glowing plumes of light and exhaust downwards.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD003",
+     "original": "A bright white beam rises from the industrial city.",
+     "corrupted": "A bright white beam rises from the industrial city in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD003",
+     "original": "A bright white beam rises from the industrial city.",
+     "corrupted": "A caption: Simulation ready. Two people sit at a workbench facing a large screen.",
+     "caught": true,
+     "unsupported": [
+      "A caption: Simulation ready",
+      "Two people sit at a workbench",
+      "facing a large screen"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD004",
+     "original": "A caption: Forty years later.",
+     "corrupted": "A caption: Forty years later. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD004",
+     "original": "A caption: Forty years later.",
+     "corrupted": "A caption: Tears of Steel.",
+     "caught": true,
+     "unsupported": [
+      "A caption: Tears of Steel."
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD005",
+     "original": "A caption: Simulation ready. Two people sit at a workbench facing a large screen.",
+     "corrupted": "A caption: Simulation ready. Two people sit at a workbench facing a large screen beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD005",
+     "original": "A caption: Simulation ready. Two people sit at a workbench facing a large screen.",
+     "corrupted": "A caption: figure ready. Two people sit at a workbench facing a large screen.",
+     "caught": true,
+     "unsupported": [
+      "A caption: figure ready"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD006",
+     "original": "A caption: Tears of Steel.",
+     "corrupted": "A caption: Tears of Steel, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD006",
+     "original": "A caption: Tears of Steel.",
+     "corrupted": "The room remains still and unchanged.",
+     "caught": true,
+     "unsupported": [
+      "The room remains still and unchanged"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD007",
+     "original": "Smoke rises from a foggy, industrial city skyline.",
+     "corrupted": "Smoke rises from a foggy, industrial city skyline as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD007",
+     "original": "Smoke rises from a foggy, industrial city skyline.",
+     "corrupted": "A headline: Roboticist creates killer robots.",
+     "caught": true,
+     "unsupported": [
+      "A headline: Roboticist creates killer robots."
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD008",
+     "original": "The room remains still and unchanged.",
+     "corrupted": "The room remains still and unchanged in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD008",
+     "original": "The room remains still and unchanged.",
+     "corrupted": "The sniper aims his rifle.",
+     "caught": true,
+     "unsupported": [
+      "The sniper",
+      "aims his rifle"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD009",
+     "original": "A headline: Roboticist creates killer robots.",
+     "corrupted": "A headline: Roboticist creates killer robots. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT."
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD009",
+     "original": "A headline: Roboticist creates killer robots.",
+     "corrupted": "A headline: Roboticist creates brain robots.",
+     "caught": true,
+     "unsupported": [
+      "Roboticist creates brain robots"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD010",
+     "original": "The sniper aims his rifle.",
+     "corrupted": "The sniper aims his rifle beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD010",
+     "original": "The sniper aims his rifle.",
+     "corrupted": "The sniper makes his rifle.",
+     "caught": true,
+     "unsupported": [
+      "makes his rifle"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD011",
+     "original": "A mechanical vehicle with turrets sits in the fog.",
+     "corrupted": "A mechanical vehicle with turrets sits in the fog, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD011",
+     "original": "A mechanical vehicle with turrets sits in the fog.",
+     "corrupted": "The old man lies motionless on the balcony floor.",
+     "caught": true,
+     "unsupported": [
+      "The old man",
+      "lies motionless",
+      "on the balcony floor"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD012",
+     "original": "An airship hovers over the city.",
+     "corrupted": "An airship hovers over the city as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD012",
+     "original": "An airship hovers over the city.",
+     "corrupted": "The sniper aims his futuristic rifle through the scope at the hovering airship.",
+     "caught": true,
+     "unsupported": [
+      "sniper",
+      "futuristic rifle"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD013",
+     "original": "The old man lies motionless on the balcony floor.",
+     "corrupted": "The old man lies motionless on the balcony floor in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD013",
+     "original": "The old man lies motionless on the balcony floor.",
+     "corrupted": "The old man lies room on the balcony floor.",
+     "caught": true,
+     "unsupported": [
+      "lies room"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD014",
+     "original": "The sniper aims his futuristic rifle through the scope at the hovering airship.",
+     "corrupted": "The old man aims his futuristic rifle through the scope at the hovering airship.",
+     "caught": true,
+     "unsupported": [
+      "old man",
+      "futuristic rifle"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD014",
+     "original": "The sniper aims his futuristic rifle through the scope at the hovering airship.",
+     "corrupted": "The sniper stands his futuristic rifle through the scope at the hovering airship.",
+     "caught": true,
+     "unsupported": [
+      "The sniper",
+      "stands his futuristic rifle",
+      "airship"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD015",
+     "original": "The old man sits up and gestures while the sniper aims his rifle in the background.",
+     "corrupted": "The old man sits up and gestures while the sniper aims his rifle in the background beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "character",
+     "line": "AD015",
+     "original": "The old man sits up and gestures while the sniper aims his rifle in the background.",
+     "corrupted": "The old man sits up and gestures while the old man aims his rifle in the background.",
+     "caught": true,
+     "unsupported": [
+      "the old man aims his rifle in the background"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD016",
+     "original": "The old man crouches, looking down.",
+     "corrupted": "The old man crouches, looking down, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD016",
+     "original": "The old man crouches, looking down.",
+     "corrupted": "The old man grips a thick rope.",
+     "caught": true,
+     "unsupported": [
+      "grips a thick rope"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD017",
+     "original": "The sniper aims his rifle through the scope, looking intently.",
+     "corrupted": "The old man aims his rifle through the scope, looking intently.",
+     "caught": true,
+     "unsupported": [
+      "The old man aims his rifle through the scope"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD017",
+     "original": "The sniper aims his rifle through the scope, looking intently.",
+     "corrupted": "The rope aims his rifle through the scope, looking intently.",
+     "caught": true,
+     "unsupported": [
+      "The rope aims his rifle through the scope"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD018",
+     "original": "The old man grips a thick rope.",
+     "corrupted": "The old man grips a thick rope in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD018",
+     "original": "The old man grips a thick rope.",
+     "corrupted": "The old man rests a thick rope.",
+     "caught": true,
+     "unsupported": [
+      "rests a thick rope"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD019",
+     "original": "The sniper drinks from a mango juice pouch, then lowers it to look forward.",
+     "corrupted": "The sniper drinks from a mango juice pouch, then lowers it to look forward. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT."
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "character",
+     "line": "AD019",
+     "original": "The sniper drinks from a mango juice pouch, then lowers it to look forward.",
+     "corrupted": "The old man drinks from a mango juice pouch, then lowers it to look forward.",
+     "caught": true,
+     "unsupported": [
+      "The old man"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD020",
+     "original": "A figure in a dark coat hangs suspended in mid-air before the organ pipes.",
+     "corrupted": "A figure in a dark coat hangs suspended in mid-air before the organ pipes beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD020",
+     "original": "A figure in a dark coat hangs suspended in mid-air before the organ pipes.",
+     "corrupted": "The old man and Celia stand facing each other, staring intently in the dimly lit room.",
+     "caught": true,
+     "unsupported": [
+      "The old man",
+      "Celia",
+      "stand facing each other",
+      "staring intently",
+      "dimly lit room"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD021",
+     "original": "The old man touches his chest, then walks away toward a tunnel.",
+     "corrupted": "The old man touches his chest, then walks away toward a tunnel, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD021",
+     "original": "The old man touches his chest, then walks away toward a tunnel.",
+     "corrupted": "The old man touches his rifle, then walks away toward a tunnel.",
+     "caught": true,
+     "unsupported": [
+      "touches his rifle"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD022",
+     "original": "The old man and Celia stand facing each other, staring intently in the dimly lit room.",
+     "corrupted": "The old man and Celia stand facing each other, staring intently in the dimly lit room as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "Celia",
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD022",
+     "original": "The old man and Celia stand facing each other, staring intently in the dimly lit room.",
+     "corrupted": "The old man and Celia ornate facing each other, staring intently in the dimly lit room.",
+     "caught": true,
+     "unsupported": [
+      "Celia",
+      "ornate"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD023",
+     "original": "The old man stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+     "corrupted": "The sniper stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+     "caught": true,
+     "unsupported": [
+      "The sniper",
+      "stands on a cobblestone street",
+      "facing a massive mechanical structure",
+      "in the fog"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "character",
+     "line": "AD023",
+     "original": "The old man stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+     "corrupted": "The sniper stands on a cobblestone street, facing a massive mechanical structure in the fog.",
+     "caught": true,
+     "unsupported": [
+      "The sniper",
+      "stands on a cobblestone street",
+      "facing a massive mechanical structure",
+      "in the fog"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD024",
+     "original": "The man raises a gun.",
+     "corrupted": "The man raises a gun. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT."
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD024",
+     "original": "The man raises a gun.",
+     "corrupted": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.",
+     "caught": true,
+     "unsupported": [
+      "A person in a reddish-brown jacket",
+      "raises both arms",
+      "toward a massive, glowing geometric light structure"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD025",
+     "original": "Clock ticks.",
+     "corrupted": "Clock ticks beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "Clock ticks",
+      "white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD025",
+     "original": "Clock ticks.",
+     "corrupted": "Clock projections.",
+     "caught": true,
+     "unsupported": [
+      "Clock projections"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD026",
+     "original": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.",
+     "corrupted": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD026",
+     "original": "A person in a reddish-brown jacket raises both arms toward a massive, glowing geometric light structure.",
+     "corrupted": "A person in a reddish-brown jacket sits both arms toward a massive, glowing geometric light structure.",
+     "caught": true,
+     "unsupported": [
+      "sits both arms"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD027",
+     "original": "A man with a mechanical eye points and sticks out his tongue.",
+     "corrupted": "A man with a mechanical eye points and sticks out his tongue as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD027",
+     "original": "A man with a mechanical eye points and sticks out his tongue.",
+     "corrupted": "Celia and two men watch green holograms.",
+     "caught": true,
+     "unsupported": [
+      "Celia",
+      "green holograms",
+      "watch"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD028",
+     "original": "A heavyset man leans in to whisper to the old man.",
+     "corrupted": "A heavyset man leans in to whisper to the old man in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD028",
+     "original": "A heavyset man leans in to whisper to the old man.",
+     "corrupted": "Thom walks across a bridge with green railings, looking around with a serious expression.",
+     "caught": true,
+     "unsupported": [
+      "Thom",
+      "walks across a bridge",
+      "green railings",
+      "looking around",
+      "serious expression"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD029",
+     "original": "Celia and two men watch green holograms.",
+     "corrupted": "Thom and two men watch green holograms.",
+     "caught": true,
+     "unsupported": [
+      "Thom",
+      "two men"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "noun",
+     "line": "AD029",
+     "original": "Celia and two men watch green holograms.",
+     "corrupted": "Celia and two men watch green crouches.",
+     "caught": true,
+     "unsupported": [
+      "green crouches"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD030",
+     "original": "Thom walks across a bridge with green railings, looking around with a serious expression.",
+     "corrupted": "Thom walks across a bridge with green railings, looking around with a serious expression beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD030",
+     "original": "Thom walks across a bridge with green railings, looking around with a serious expression.",
+     "corrupted": "Thom rises across a bridge with green railings, looking around with a serious expression.",
+     "caught": true,
+     "unsupported": [
+      "rises"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD031",
+     "original": "A heavyset man sits at a desk, a device attached to his head.",
+     "corrupted": "A heavyset man sits at a desk, a device attached to his head, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "A heavyset man sits at a desk",
+      "a device attached to his head",
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD031",
+     "original": "A heavyset man sits at a desk, a device attached to his head.",
+     "corrupted": "Thom looks off-camera.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD032",
+     "original": "A man in a futuristic suit glows with white energy.",
+     "corrupted": "A woman in a futuristic suit glows with white energy.",
+     "caught": true,
+     "unsupported": [
+      "A woman"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD032",
+     "original": "A man in a futuristic suit glows with white energy.",
+     "corrupted": "A giant mechanical robot rises from the street, towering over historic buildings.",
+     "caught": true,
+     "unsupported": [
+      "A giant mechanical robot",
+      "rises from the street",
+      "towering over historic buildings"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD034",
+     "original": "Thom looks off-camera.",
+     "corrupted": "Thom looks off-camera in a crowded train station.",
+     "caught": true,
+     "unsupported": [
+      "crowded train station"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD034",
+     "original": "Thom looks off-camera.",
+     "corrupted": "Thom triggers off-camera.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD035",
+     "original": "A giant mechanical robot rises from the street, towering over historic buildings.",
+     "corrupted": "A giant mechanical robot rises from the street, towering over historic buildings. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD035",
+     "original": "A giant mechanical robot rises from the street, towering over historic buildings.",
+     "corrupted": "A giant mechanical robot raises from the street, towering over historic buildings.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD036",
+     "original": "A caption: Celia, I love your robot hand.",
+     "corrupted": "A caption: Thom, I love your robot hand.",
+     "caught": true,
+     "unsupported": [
+      "Thom, I love your robot hand"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "character",
+     "line": "AD036",
+     "original": "A caption: Celia, I love your robot hand.",
+     "corrupted": "A caption: Thom, I love your robot hand.",
+     "caught": true,
+     "unsupported": [
+      "Thom, I love your robot hand"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD037",
+     "original": "A robotic hand covers Thom’s face.",
+     "corrupted": "A robotic hand covers Thom’s face, holding a red umbrella.",
+     "caught": true,
+     "unsupported": [
+      "holding a red umbrella"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD037",
+     "original": "A robotic hand covers Thom’s face.",
+     "corrupted": "Thom presses a rifle to his face.",
+     "caught": true,
+     "unsupported": [
+      "rifle",
+      "presses a rifle to his face"
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD038",
+     "original": "A caption: Playback.",
+     "corrupted": "A caption: Playback as rain falls.",
+     "caught": true,
+     "unsupported": [
+      "rain falls"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD038",
+     "original": "A caption: Playback.",
+     "corrupted": "A curly-haired man stares in shock.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD039",
+     "original": "Thom presses a rifle to his face.",
+     "corrupted": "Celia presses a rifle to his face.",
+     "caught": true,
+     "unsupported": [
+      "Celia presses a rifle to his face"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "verb",
+     "line": "AD039",
+     "original": "Thom presses a rifle to his face.",
+     "corrupted": "Thom stands a rifle to his face.",
+     "caught": false,
+     "unsupported": []
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD040",
+     "original": "A curly-haired man stares in shock.",
+     "corrupted": "A curly-haired man stares in shock. A sign reads EXIT.",
+     "caught": true,
+     "unsupported": [
+      "A sign reads EXIT."
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD040",
+     "original": "A curly-haired man stares in shock.",
+     "corrupted": "A caption: Cool, I love your new hand.",
+     "caught": true,
+     "unsupported": [
+      "A caption: Cool, I love your new hand."
+     ]
+    },
+    {
+     "set": "easy",
+     "kind": "append/swap",
+     "line": "AD041",
+     "original": "The old man looks up with concern.",
+     "corrupted": "The old man looks up with concern beside a white horse.",
+     "caught": true,
+     "unsupported": [
+      "beside a white horse"
+     ]
+    },
+    {
+     "set": "hard",
+     "kind": "neighbour",
+     "line": "AD041",
+     "original": "The old man looks up with concern.",
+     "corrupted": "Thom mouths a word.",
+     "caught": true,
+     "unsupported": [
+      "Thom",
+      "mouths a word"
+     ]
+    }
+   ],
+   "easy": {
+    "planted": 40,
+    "caught": 40,
+    "catch_rate": 1.0
+   },
+   "hard": {
+    "planted": 40,
+    "caught": 34,
+    "catch_rate": 0.85,
+    "by_kind": {
+     "noun": "7/7",
+     "verb": "6/10",
+     "character": "4/4",
+     "neighbour": "17/19"
+    }
+   },
+   "planted": 40,
+   "caught": 40,
+   "catch_rate": 1.0
+  }
+ }
+}

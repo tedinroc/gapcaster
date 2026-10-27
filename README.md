@@ -16,8 +16,8 @@ Measured on an Apple M5 Max laptop, not on a B70 yet. Demo content: *Tears of St
 |---|---:|---:|
 | Programme analysed | 140 s | 734 s |
 | Shots · dialogue spans · usable silences | 25 · 9 · 9 | 130 · 63 · 44 |
-| **Lines that fit their silence** | **17/17** | **70/71** |
-| …first draft · rescued by speed ladder · by rewrite | 15 · 2 · 0 | 60 · 2 · 5 |
+| **Lines that fit their silence⁴** | **17/17** | **70/71** |
+| …first draft · speed ladder · length rewrite · style rewrite | 15 · 2 · 0 · 0 | 60 · 2 · 5 · 3 |
 | **Narration over official subtitle cues¹** | **0.4 s** | **5.8 s** |
 | Narration over detected speech (internal check) | 0.0 s | 0.0 s |
 | **Manual frame check: accurate · minor · wrong²** | **13 · 4 · 0** | — |
@@ -27,9 +27,10 @@ Measured on an Apple M5 Max laptop, not on a B70 yet. Demo content: *Tears of St
 | Processing per content minute | 125 s | 137 s |
 | Peak model memory | 33 GB | 34 GB |
 
-¹ The film's official subtitles are an independent reference. Cues are rounded to whole seconds and stay on screen after a line ends, so most of the overlap sits at cue tails. In the full film about 1.4 s falls in cues where neither detector heard speech (short shouts under loud music).
+¹ The film's official subtitles are an independent reference. Cues are rounded to whole or half seconds and stay on screen after a line ends, so most of the overlap sits at cue tails. In the full film about 1.4 s falls in cues where neither detector heard speech (short shouts under loud music).
 ² Every excerpt line compared with the frame at its midpoint: [`eval/spotcheck_tears_of_steel_0-140.csv`](eval/spotcheck_tears_of_steel_0-140.csv).
-³ Easy: an absurd detail appended to a finished line. Hard: a noun, verb or character borrowed from another shot of the same film, or the line written for a neighbouring silence. The verifier checks each line against the facts of the shots on screen while it plays; perception errors already in those facts are left to the cast sheet and the human reviewer.
+³ Easy: an absurd detail appended to a finished line, or a character swapped. Hard: a noun, verb or character borrowed from another shot of the same film, or the line written for a neighbouring silence. The verifier checks each line against the facts of the shots on screen while it plays; perception errors already in those facts are left to the cast sheet and the human reviewer.
+⁴ Every spoken line fits its silence. The one unplaced line in the full film reads an on-screen quote containing "we"; the first-person rule held it back for the describer (full-film script in [`samples/tears-of-steel-full`](samples/tears-of-steel-full)).
 
 Sample outputs from the 140-second run are in [`samples/tears-of-steel-0-140`](samples/tears-of-steel-0-140): the description script ([`ad_script.txt`](samples/tears-of-steel-0-140/ad_script.txt)), a WebVTT `kind="descriptions"` track, SRT, the full JSON script with provenance, and the review page.
 
@@ -115,7 +116,7 @@ The orchestrator stays the same; the models move to the card.
 | Shot detection | PySceneDetect | PySceneDetect on hardware-decoded frames | BSD-3-Clause |
 | Media | ffmpeg | ffmpeg with QSV / VA-API decode on the card's media engines | external tool |
 
-Planned residency on one 32 GB card (estimate, to be measured): Qwen3.8-27B INT4 with FP8 KV cache, vLLM capped at 0.70 (≈ 23 GB) · Whisper large-v3-turbo (≈ 2.5 GB) · Kokoro-82M (≤ 1 GB) · runtime contexts (≈ 2 GB) → **≈ 28.5 GB**. Intel's published Qwen3.8-27B recipe uses two GPUs, so single-card INT4 with image input is a Stage II experiment; the fallback puts shot facts on Qwen3-VL-8B or 30B-A3B (both in llm-scaler's vision-language list).
+Planned residency on one 32 GB card (estimate, to be measured): Qwen3.8-27B INT4 with FP8 KV cache, vLLM capped at 0.72 (≈ 23 GB) · Whisper large-v3-turbo (≈ 2.5 GB) · Kokoro-82M (≤ 1 GB) · runtime contexts (≈ 2 GB) → **≈ 28.5 GB**. Intel's published Qwen3.8-27B recipe uses two GPUs, so single-card INT4 with image input is a Stage II experiment; the fallback puts shot facts on Qwen3-VL-8B or 30B-A3B (both in llm-scaler's vision-language list).
 
 Three ways to deploy one card: an **overnight queue** (full card, shot facts batched through vLLM), **describer seats** (the B70 supports up to 4 SR-IOV virtual GPUs; each runs a lean ≈ 7 GB profile of Qwen3-VL-8B INT4 + Whisper INT8 for interactive redrafts), and a **two-card studio** (64 GB, parallel language tracks).
 
@@ -130,13 +131,14 @@ gapcaster/      pipeline: media, scenes, gapmap (Whisper MLX/OpenVINO + VAD), ll
 eval/           parity check for the portable speech path; local OpenAI-compatible test server;
                 manual frame spot-check
 configs/        cast sheet for the demo film
-samples/        outputs of the 140-second demo run
+samples/        outputs of the 140-second demo run; full-film script and metrics;
+                portable-path metrics
 tests/          unit tests (pytest)
 ```
 
 ## Credits and licences
 
 - Code: MIT, © 2026 Ted Chen.
-- Demo footage and frames: *Tears of Steel* © Blender Foundation | mango.blender.org, licensed CC BY 3.0. Official subtitles are used only for evaluation.
+- Demo footage and frames: *Tears of Steel* © Blender Foundation | mango.blender.org, licensed CC BY 3.0. `samples/tears-of-steel-0-140/clip_with_ad.mp4` is an excerpt (0:00–2:20) with GapCaster's synthetic description track mixed in; it is a modified work and is not endorsed by the Blender Foundation. Official subtitles are used only for evaluation.
 - Models: Qwen3.8-27B (Apache-2.0), Whisper large-v3-turbo (MIT), Silero VAD (MIT), Kokoro-82M (Apache-2.0). Voices are synthetic stock voices; no voice cloning.
 - Libraries include MLX, mlx-vlm, mlx-audio, OpenVINO GenAI, PyTorch (BSD-3-Clause), PySceneDetect and spaCy. Kokoro's English G2P can fall back to espeak-ng (GPL-3.0), installed separately; ffmpeg is called as a subprocess.

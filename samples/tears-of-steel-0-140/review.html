@@ -36,7 +36,7 @@ button.ok{border-color:var(--ok);color:var(--ok)}button.no{border-color:#b91c1c;
 .state{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .txt[contenteditable=true]{outline:2px dashed var(--ad);outline-offset:4px;border-radius:4px}
 @media (max-width:820px){.line{grid-template-columns:1fr}}
-</style><body data-run="tears_of_steel_720p.mov:0-140"><div class=wrap>
+</style><body data-run="tears_of_steel_720p.mov:0-140:12c44591be4f"><div class=wrap>
 <div><h1>Gap<span>Caster</span> review</h1><div class=sub>tears_of_steel_720p.mov · 0–140 s · 17 draft lines awaiting describer approval</div></div>
 <div class=bar2><span>Describer review:</span> <b id=n-approved>0</b> approved · <b id=n-edited>0</b> edited · <b id=n-rejected>0</b> rejected · <b id=n-pending>0</b> pending <span style="flex:1"></span><button class=primary id=dl-json>Download approved.json</button><button id=dl-vtt>Download approved .vtt</button></div>
 <div class=kpis><div class=kpi><b>17/17</b><small>lines fit their silence</small></div><div class=kpi><b>15/17</b><small>fit on the first draft</small></div><div class=kpi><b>0.4 s</b><small>AD over official subtitle cues</small></div><div class=kpi><b>0.0 s</b><small>AD over detected speech</small></div><div class=kpi><b>125 s</b><small>processing per content minute</small></div><div class=kpi><b>25</b><small>shots analysed</small></div><div class=kpi><b>17/17 · 15/17</b><small>planted errors flagged (easy · hard)</small></div></div>
@@ -101,14 +101,16 @@ function paint(){let c={approved:0,edited:0,rejected:0,pending:0};
  document.querySelectorAll('.line').forEach(el=>{const id=el.dataset.id,s=st[id];const state=s?s.status:'pending';el.dataset.state=state;
   el.querySelector('.state').textContent=state;if(s&&s.text)el.querySelector('.txt').textContent=s.text;c[state]++;});
  for(const k in c)document.getElementById('n-'+k).textContent=c[k];}
+function finishEdit(el){const t=el.querySelector('.txt');if(t.isContentEditable){t.contentEditable=false;el.querySelector('button[data-act=edit]').textContent='Edit';}return t.textContent.trim();}
 document.addEventListener('click',e=>{const b=e.target.closest('button[data-act]');if(!b)return;const el=b.closest('.line'),id=el.dataset.id,t=el.querySelector('.txt');
- if(b.dataset.act==='approve'){st[id]={status:'approved',text:t.textContent.trim()};}
- if(b.dataset.act==='reject'){st[id]={status:'rejected',text:t.textContent.trim()};}
+ if(b.dataset.act==='approve'){const nt=finishEdit(el);st[id]={status:nt===el.dataset.orig?'approved':'edited',text:nt};}
+ if(b.dataset.act==='reject'){st[id]={status:'rejected',text:finishEdit(el)};}
  if(b.dataset.act==='edit'){if(t.isContentEditable){t.contentEditable=false;b.textContent='Edit';const orig=el.dataset.orig;const nt=t.textContent.trim();st[id]={status:nt===orig?'approved':'edited',text:nt};}
   else{t.contentEditable=true;t.focus();b.textContent='Save';return;}}
  save();paint();});
 function download(name,data,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type}));a.download=name;a.click();}
-document.getElementById('dl-json').onclick=()=>{const lines=[...document.querySelectorAll('.line')].map(el=>({id:el.dataset.id,status:(st[el.dataset.id]||{}).status||'pending',text:(st[el.dataset.id]||{}).text||el.dataset.orig}));
+document.getElementById('dl-json').onclick=()=>{document.querySelectorAll('.line').forEach(el=>{if(el.querySelector('.txt').isContentEditable)el.querySelector('button[data-act=edit]').click();});
+ const lines=[...document.querySelectorAll('.line')].map(el=>({id:el.dataset.id,status:(st[el.dataset.id]||{}).status||'pending',original:el.dataset.orig,text:(st[el.dataset.id]||{}).text||el.dataset.orig}));
  download('approved.json',JSON.stringify({run:document.body.dataset.run,lines},null,1),'application/json');};
 document.getElementById('dl-vtt').onclick=()=>{let v='WEBVTT\nKind: descriptions\n\n';document.querySelectorAll('.line').forEach(el=>{const s=st[el.dataset.id];if(!s||s.status==='rejected'||s.status==='pending')return;
  v+=el.dataset.id+'\n'+el.dataset.a+' --> '+el.dataset.b+'\n'+s.text+'\n\n';});download('approved.vtt',v,'text/vtt');};
